@@ -233,6 +233,19 @@ class Post extends Posts {
         ] );
 
         /**
+         * control for rgba-color-picker input
+         */
+        $this->add_control( [
+            'box_id'   => 'post_box_2',
+            'name'     => 'rgba_color',
+            'type'     => 'rgba-color-picker',
+            'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
+            'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
+            'value'    => 'rgba(255,25,0,0.99)',
+            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+        ] );
+
+        /**
          * control for gradient input
          */
         $this->add_control( [
@@ -247,6 +260,7 @@ class Post extends Posts {
             ],
         ] );
 
+        // dm_print(dm_p()->option('8', 'color'));
     }
 
 }
