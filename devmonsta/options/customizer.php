@@ -28,9 +28,6 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'priority' => 10,
         ]);
 
-       
-
-
         $this->add_control([
             'id' => 'devmonsta_custom_box_color',
             'label' => __('Box Color', 'devmonsta'),
@@ -39,7 +36,6 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'selector' => '',
         ]);
 
-
         $this->add_control([
             'id' => 'dm_ctrl_text_1',
             'label' => __('Title', 'devmonsta'),
@@ -47,17 +43,13 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'type' => 'text',
         ]);
 
-      
-
         $this->add_control([
             'id' => 'devmonsta_custom_text_color',
             'label' => __('Box Text color', 'devmonsta'),
             'section' => 'devmonsta_color_settings_section',
-            'type' => 'color'
+            'type' => 'color',
 
         ]);
-
-    
 
         $this->add_control([
             'id' => 'dm_box_text',
@@ -65,9 +57,15 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'section' => 'devmonsta_color_settings_section',
             'type' => 'text',
             'selector' => '.dm_h1',
+            'selectors' => [
+                '.elementor-widget-container, .xyz' => 'color',
+                '.elementor-widget' => [
+                    'background-color', 'border-color',
+                ],
+            ],
             'default' => 'Devmonsta',
-            'transport' => 'postMessage'
-          
+            'transport' => 'postMessage',
+
         ]);
 
     }
