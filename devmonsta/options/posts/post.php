@@ -139,6 +139,7 @@ class Post extends Posts {
             'box_id'       => 'post_box_2',
             'type'         => 'date-picker',
             'name'         => 'start_date',
+            'value'        => '',
             'label'        => __( 'Dat Picker', '{domain}' ),
             'desc'         => __( 'date picker description goes here', '{domain}' ),
             'monday-first' => true,          // The week will begin with Monday; for Sunday, set to false
@@ -152,7 +153,6 @@ class Post extends Posts {
         $this->add_control( [
             'box_id'          => 'post_box_2',
             'type'            => 'datetime-picker',
-            'value'           => '',
             'name'            => 'date_time_picker',
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
@@ -163,6 +163,29 @@ class Post extends Posts {
                 'timepicker'  => true,        // Show timepicker.
                 'datepicker'  => true,        // Show datepicker.
                 'defaultTime' => '12:00',     // If the input value is empty, timepicker will set time use defaultTime.
+            ],
+        ] );
+
+        /**
+         * control for datetime-picker input
+         */
+        $this->add_control( [
+            'box_id'           => 'post_box_2',
+            'type'             => 'datetime-range',
+            'value'            => [
+                'from' => '',
+                'to'   => '',
+            ],
+            'name'             => 'date_time_range_picker',
+            'label'            => __( 'Date Time Range Picker', '{domain}' ),
+            'desc'             => __( 'date time range picker description', '{domain}' ),
+            'datetime-pickers' => [
+                'minDate'     => '1970/01/01',         // By default minimum date will be current day, set a date in the datetime format.
+                'maxDate'     => '2038/01/19',         // By default there is not maximum date , set a date in the datetime format.
+                'format'      => 'YYYY-MM-DD hh:mm a', // Format datetime.
+                'time24hours' => true,
+                'timepicker'  => true, // Show timepicker.
+                'datepicker'  => true, // Show datepicker.
             ],
         ] );
 
@@ -242,7 +265,7 @@ class Post extends Posts {
             'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
             'value'    => 'rgba(255,25,0,0.99)',
-            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+            'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
 
         /**
@@ -259,6 +282,23 @@ class Post extends Posts {
                 'secondary' => '#0000FF',
             ],
         ] );
+
+        /**
+         * control for gradient input
+         */
+        // $this->add_control( [
+        //     'box_id'     => 'post_box_2',
+        //     'name'       => 'slider_widget',
+        //     'label'      => __( 'Wp Gradient Picker Example', '{domain}' ),
+        //     'desc'       => __( 'description of gradient-picker goes here', '{domain}' ),
+        //     'type'       => 'slider',
+        //     'value'      => 33,
+        //     'properties' => [
+        //         'min'  => 0,
+        //         'max'  => 100,
+        //         'step' => 1, // Set slider step. Always > 0. Could be fractional.
+        //     ],
+        // ] );
 
         // dm_print(dm_p()->option('8', 'color'));
     }
