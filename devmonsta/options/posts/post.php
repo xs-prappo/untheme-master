@@ -286,19 +286,40 @@ class Post extends Posts {
         /**
          * control for gradient input
          */
-        // $this->add_control( [
-        //     'box_id'     => 'post_box_2',
-        //     'name'       => 'slider_widget',
-        //     'label'      => __( 'Wp Gradient Picker Example', '{domain}' ),
-        //     'desc'       => __( 'description of gradient-picker goes here', '{domain}' ),
-        //     'type'       => 'slider',
-        //     'value'      => 33,
-        //     'properties' => [
-        //         'min'  => 0,
-        //         'max'  => 100,
-        //         'step' => 1, // Set slider step. Always > 0. Could be fractional.
-        //     ],
-        // ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'name'       => 'slider_widget',
+            'label'      => __( 'Wp Slider Example', '{domain}' ),
+            'desc'       => __( 'description of slider goes here', '{domain}' ),
+            'type'       => 'slider',
+            'value'      => 33,
+            'properties' => [
+                'min'  => 0,
+                'max'  => 100,
+                'step' => 1, // Set slider step. Always > 0. Could be fractional.
+            ],
+        ] );
+
+        /**
+         * control for gradient input
+         */
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'name'       => 'range_slider_widget',
+            'type'       => 'range-slider',
+            'label'      => __( 'Wp Range Slider Example', '{domain}' ),
+            'desc'       => __( 'description of range slider goes here', '{domain}' ),
+            'value'      => [
+                'from' => 10,
+                'to'   => 33,
+            ],
+            'properties' => [
+                'min'  => 0,
+                'max'  => 100,
+                'step' => 1, // Set slider step. Always > 0. Could be fractional.
+
+            ],
+        ] );
 
         // dm_print(dm_p()->option('8', 'color'));
     }
