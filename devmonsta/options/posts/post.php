@@ -372,6 +372,65 @@ class Post extends Posts {
         ] );
 
         // dm_print(dm_p()->option('8', 'color'));
+        /**
+         * Control switcher
+         */
+        $this->add_control([
+            'box_id'     => 'post_box_1',
+            'type'       => 'switcher',
+            'name'       => 'switcher',
+            'value'      => 'hello',
+            'label'      => __('Label', '{domain}'),
+            'desc'       => __('Description', '{domain}'),
+            'left-choice' => array(
+                'goodbye' => __('Goodbye', '{domain}'),
+            ),
+            'right-choice' => array(
+                'hello' => __('Hello', '{domain}'),
+            ),
+        ]);
+        /**
+         * Control Html
+         */
+        $this->add_control([
+            'box_id'     => 'post_box_1',
+            'label' => __('Label', '{domain}'),
+            'desc'  => __('Description', '{domain}'),
+            'type'       => 'html',
+            'name'       => 'html',
+            'value'      => 'Default hidden value',
+            'html'       => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+        ]);
+
+        /**
+         * Control Typography
+         */
+        $this->add_control([
+            'box_id'     => 'post_box_1',
+            'type'       => 'typography-v2',
+            'value'      => array(
+                'family' => 'Amarante',
+                // For standard fonts, instead of subset and variation you should set 'style' and 'weight'.
+                'style' => 'italic',
+                'weight' => 700,
+                'subset'         => 'latin-ext',
+                'variation'      => 'regular',
+                'size'           => 14,
+                'line-height'    => 13,
+                'letter-spacing' => -2,
+                'color'          => '#0000ff'
+            ),
+            'components' => array(
+                'family'         => true,
+                // 'style', 'weight', 'subset', 'variation' will appear and disappear along with 'family'
+                'size'           => true,
+                'line-height'    => true,
+                'letter-spacing' => true,
+                'color'          => true
+            ),
+            'label' => __('Typhography', '{domain}'),
+            'desc'  => __('Description', '{domain}'),
+        ]);
     }
 
 }
