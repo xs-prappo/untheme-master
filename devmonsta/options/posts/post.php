@@ -321,6 +321,56 @@ class Post extends Posts {
             ],
         ] );
 
+        /**
+         * control for icon-picker input
+         */
+        // $this->add_control( [
+        //     'box_id' => 'post_box_1',
+        //     'name'   => 'icon_picker',
+        //     'type'   => 'icon',
+        //     'label'  => __( 'Select Icon', '{domain}' ),
+        //     'desc'   => __( 'Select icon description', '{domain}' ),
+        //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        // ] );
+
+        /**
+         * control for oembed input
+         */
+        $this->add_control( [
+            'box_id'  => 'post_box_1',
+            'name'    => 'oembed_field',
+            'type'    => 'oembed',
+            'label'   => __( 'Oembed Input', '{domain}' ),
+            'desc'    => __( 'Oembed text description', '{domain}' ),
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'   => 'https://vimeo.com/1130783377',
+            'preview' => [
+                'width'      => 400, // optional, if you want to set the fixed width to iframe
+                'height'     => 400, // optional, if you want to set the fixed height to iframe
+                'keep_ratio' => false,
+            ],
+        ] );
+        
+        /**
+         * control for dimension input
+         */
+        $this->add_control( [
+            'box_id'  => 'post_box_2',
+            'name'    => 'padding_dimension',
+            'type'    => 'dimensions',
+            'label'   => __( 'Dimension Input', '{domain}' ),
+            'desc'    => __( 'Dimension text description', '{domain}' ),
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'   => [
+                'top' => '0',
+                'right' => '0',
+                'bottom' => '0',
+                'left' => '0',
+                'isLinked' => true,
+            ]
+            
+        ] );
+
         // dm_print(dm_p()->option('8', 'color'));
         /**
          * Control switcher
