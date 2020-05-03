@@ -381,6 +381,31 @@ class Post extends Posts {
             'label' => __('Typhography', '{domain}'),
             'desc'  => __('Description', '{domain}'),
         ]);
+
+        /**
+         * Control Image picker 
+         */
+        $this->add_control([
+            'box_id'     => 'post_box_1',
+            'type'       => 'image-picker',
+            'value'      => 'image-2',
+            'attr'       => array(
+                'class'   => 'custom-class',
+                'data-foo'=> 'bar',
+            ),
+            'label' => __('Label', '{domain}'),
+            'desc'  => __('Description', '{domain}'),
+            'help'  => __('Help tip', '{domain}'),
+            'choices' => array(
+                'value-1' => get_template_directory_uri() .'/images/thumbnail.png',
+                'value-2' => array(
+                    // (required) url for thumbnail
+                    'small' => get_template_directory_uri() .'/images/thumbnail.png',
+                    // (optional) url for large image that will appear in tooltip
+                    'large' => get_template_directory_uri() .'/images/preview.png',
+                ),
+                ),
+        ]);
     }
 
 }
