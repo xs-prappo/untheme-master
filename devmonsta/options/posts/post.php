@@ -394,7 +394,7 @@ class Post extends Posts {
          */
         $this->add_control( [
             'box_id' => 'post_box_2',
-            'label'  => __( 'Label', '{domain}' ),
+            'label'  => __( 'Html Input', '{domain}' ),
             'desc'   => __( 'Description', '{domain}' ),
             'type'   => 'html',
             'name'   => 'html',
