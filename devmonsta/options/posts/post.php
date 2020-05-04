@@ -350,112 +350,114 @@ class Post extends Posts {
                 'keep_ratio' => false,
             ],
         ] );
-        
+
         /**
          * control for dimension input
          */
         $this->add_control( [
-            'box_id'  => 'post_box_2',
-            'name'    => 'padding_dimension',
-            'type'    => 'dimensions',
-            'label'   => __( 'Dimension Input', '{domain}' ),
-            'desc'    => __( 'Dimension text description', '{domain}' ),
-            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            'value'   => [
-                'top' => '0',
-                'right' => '0',
-                'bottom' => '0',
-                'left' => '0',
+            'box_id' => 'post_box_2',
+            'name'   => 'padding_dimension',
+            'type'   => 'dimensions',
+            'label'  => __( 'Dimension Input', '{domain}' ),
+            'desc'   => __( 'Dimension text description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'  => [
+                'top'      => '0',
+                'right'    => '0',
+                'bottom'   => '0',
+                'left'     => '0',
                 'isLinked' => true,
-            ]
-            
+            ],
+
         ] );
 
-        // dm_print(dm_p()->option('8', 'color'));
         /**
-         * Control switcher
+         * Control for switcher input
          */
-        $this->add_control([
-            'box_id'     => 'post_box_1',
-            'type'       => 'switcher',
-            'name'       => 'switcher',
-            'value'      => 'hello',
-            'label'      => __('Label', '{domain}'),
-            'desc'       => __('Description', '{domain}'),
-            'left-choice' => array(
-                'goodbye' => __('Goodbye', '{domain}'),
-            ),
-            'right-choice' => array(
-                'hello' => __('Hello', '{domain}'),
-            ),
-        ]);
-        /**
-         * Control Html
-         */
-        $this->add_control([
-            'box_id'     => 'post_box_1',
-            'label' => __('Label', '{domain}'),
-            'desc'  => __('Description', '{domain}'),
-            'type'       => 'html',
-            'name'       => 'html',
-            'value'      => 'Default hidden value',
-            'html'       => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
-        ]);
+        $this->add_control( [
+            'box_id'       => 'post_box_2',
+            'type'         => 'switcher',
+            'name'         => 'switcher',
+            'value'        => 'hello',
+            'label'        => __( 'Label', '{domain}' ),
+            'desc'         => __( 'Description', '{domain}' ),
+            'left-choice'  => [
+                'goodbye' => __( 'Goodbye', '{domain}' ),
+            ],
+            'right-choice' => [
+                'hello' => __( 'Hello', '{domain}' ),
+            ],
+        ] );
 
         /**
-         * Control Typography
+         * Control for Html input
          */
-        $this->add_control([
-            'box_id'     => 'post_box_1',
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'label'  => __( 'Label', '{domain}' ),
+            'desc'   => __( 'Description', '{domain}' ),
+            'type'   => 'html',
+            'name'   => 'html',
+            'value'  => 'Default hidden value',
+            'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+        ] );
+
+        /**
+         * Control for Typography Input
+         */
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
             'type'       => 'typography-v2',
-            'value'      => array(
-                'family' => 'Amarante',
+            'value'      => [
+                'family'         => 'Amarante',
                 // For standard fonts, instead of subset and variation you should set 'style' and 'weight'.
-                'style' => 'italic',
-                'weight' => 700,
+                'style'          => 'italic',
+                'weight'         => 700,
                 'subset'         => 'latin-ext',
                 'variation'      => 'regular',
                 'size'           => 14,
                 'line-height'    => 13,
                 'letter-spacing' => -2,
-                'color'          => '#0000ff'
-            ),
-            'components' => array(
+                'color'          => '#0000ff',
+            ],
+            'components' => [
                 'family'         => true,
                 // 'style', 'weight', 'subset', 'variation' will appear and disappear along with 'family'
                 'size'           => true,
                 'line-height'    => true,
                 'letter-spacing' => true,
-                'color'          => true
-            ),
-            'label' => __('Typhography', '{domain}'),
-            'desc'  => __('Description', '{domain}'),
-        ]);
+                'color'          => true,
+            ],
+            'label'      => __( 'Typhography', '{domain}' ),
+            'desc'       => __( 'Description', '{domain}' ),
+        ] );
 
         /**
-         * Control Image picker 
+         * Control for Thumbnail Image picker Input
          */
-        $this->add_control([
-            'box_id'     => 'post_box_1',
-            'type'       => 'image-picker',
-            'value'      => 'image-2',
-            'attr'       => array(
-                'class'   => 'custom-class',
-                'data-foo'=> 'bar',
-            ),
-            'label' => __('Label', '{domain}'),
-            'desc'  => __('Description', '{domain}'),
-            'help'  => __('Help tip', '{domain}'),
-            'choices' => array(
-                'value-1' => get_template_directory_uri() .'/images/thumbnail.png',
-                'value-2' => array(
+        $this->add_control( [
+            'box_id'  => 'post_box_2',
+            'type'    => 'image-picker',
+            'value'   => 'image-2',
+            'attr'    => [
+                'class'    => 'custom-class',
+                'data-foo' => 'bar',
+            ],
+            'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
+            'desc'    => __( 'Description', '{domain}' ),
+            'help'    => __( 'Help tip', '{domain}' ),
+            'choices' => [
+                'value-1' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                'value-2' => [
                     // (required) url for thumbnail
-                    'small' => get_template_directory_uri() .'/images/thumbnail.png',
+                    'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
                     // (optional) url for large image that will appear in tooltip
-                    'large' => get_template_directory_uri() .'/images/preview.png',
-                ),
-                ),
-        ]);
+                    'large' => get_template_directory_uri() . '/images/preview.png',
+                ],
+            ],
+        ] );
+
+        // dm_print(dm_p()->option('8', 'color'));
     }
 
 }
