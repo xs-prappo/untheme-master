@@ -74,34 +74,81 @@ class Post extends Posts {
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
-        // /**
-        //  * control for hidden input
-        //  */
-        // $this->add_control( [
-        //     'box_id' => 'post_box_2',
-        //     'type'   => 'hidden',
-        //     'value'  => 'defaultvalue',
-        //     'name'   => 'hidden_field',
-        //     'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        // ] );
+         * control for checkbox input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'checkbox',
+            'name'   => 'graduate',
+            'value'  => false, // checked/unchecked
+            'label'  => __( 'Graduated', '{domain}' ),
+            'desc'   => __( "check if you're graduated", '{domain}' ),
+            'text'   => __( 'Yes', '{domain}' ),
+        ] );
 
-        // /**
-        //  * control for dropdown select
-        //  */
-        // $this->add_control( [
-        //     'box_id'  => 'post_box_2',
-        //     'name'    => 'select',
-        //     'type'    => 'select',
-        //     'value'   => 'choice-3',
-        //     'label'   => __( 'Select Single', '{domain}' ),
-        //     'desc'    => __( 'select description goes here', '{domain}' ),
-        //     'choices' => [
-        //         ''         => '---',
-        //         'choice-1' => __( 'Choice One', '{domain}' ),
-        //         'choice-2' => __( 'Choice Two', '{domain}' ),
-        //         'choice-3' => __( 'Choice Three', '{domain}' ),
-        //     ],
-        // ] );
+        /**
+         * control for color-picker input
+         */
+        $this->add_control( [
+            'box_id'   => 'post_box_2',
+            'name'     => 'color',
+            'type'     => 'color-picker',
+            'label'    => __( 'Wp Color Picker Example', '{domain}' ),
+            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+            'value'    => '#FF0000',
+            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+        ] );
+
+        /**
+         * control for multiple-checkbox input
+         */
+        $this->add_control( [
+            'box_id'  => 'post_box_2',
+            'name'    => 'multiple_checkboxes',
+            'type'    => 'checkboxes',
+            'value'   => [
+                'choice-1' => false,
+                'choice-2' => true,
+            ],
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'label'   => __( 'Multiple Chekbox', '{domain}' ),
+            'desc'    => __( 'Multi checkbox Description', '{domain}' ),
+            'choices' => [
+                'choice-1' => __( 'Choice 1', '{domain}' ),
+                'choice-2' => __( 'Choice 2', '{domain}' ),
+                'choice-3' => __( 'Choice 3', '{domain}' ),
+            ],
+            'inline'  => false,
+        ] );
+
+        /**
+         * control for hidden input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'hidden',
+            'value'  => 'defaultvalue',
+            'name'   => 'hidden_field',
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
+
+        /**
+         * control for dropdown select
+         */
+        $this->add_control( [
+            'box_id'  => 'post_box_2',
+            'name'    => 'select',
+            'type'    => 'select',
+            'value'   => 'choice-3',
+            'label'   => __( 'Select Single', '{domain}' ),
+            'desc'    => __( 'select description goes here', '{domain}' ),
+            'choices' => [
+                ''         => '---',
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
 
         // /**
         //  * control for multiple select
@@ -118,19 +165,6 @@ class Post extends Posts {
         //         'choice-3' => __( 'Choice Three', '{domain}' ),
         //     ],
         // ] );
-
-        // /**
-        //  * control for checkbox input
-        //  */
-        $this->add_control( [
-            'box_id' => 'post_box_2',
-            'type'   => 'checkbox',
-            'name'   => 'graduate',
-            'value'  => false, // checked/unchecked
-            'label'  => __( 'Graduated', '{domain}' ),
-            'desc'   => __( "check if you're graduated", '{domain}' ),
-            'text'   => __( 'Yes', '{domain}' ),
-        ] );
 
         // /**
         //  * control for date-picker input
@@ -205,28 +239,6 @@ class Post extends Posts {
         // ] );
 
         // /**
-        //  * control for multiple-checkbox input
-        //  */
-        // $this->add_control( [
-        //     'box_id'  => 'post_box_2',
-        //     'name'    => 'multiple_checkboxes',
-        //     'type'    => 'checkboxes',
-        //     'value'   => [
-        //         'choice-1' => false,
-        //         'choice-2' => true,
-        //     ],
-        //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        //     'label'   => __( 'Multiple Chekbox', '{domain}' ),
-        //     'desc'    => __( 'Multi checkbox Description', '{domain}' ),
-        //     'choices' => [
-        //         'choice-1' => __( 'Choice 1', '{domain}' ),
-        //         'choice-2' => __( 'Choice 2', '{domain}' ),
-        //         'choice-3' => __( 'Choice 3', '{domain}' ),
-        //     ],
-        //     'inline'  => false,
-        // ] );
-
-        // /**
         //  * control for wp-editor input
         //  */
         // $this->add_control( [
@@ -241,19 +253,6 @@ class Post extends Posts {
         //     'wpautop'       => true,
         //     'editor_type'   => true, // tinymce, false: HTML
         // ] );
-
-        // /**
-        //  * control for color-picker input
-        //  */
-        $this->add_control( [
-            'box_id'   => 'post_box_2',
-            'name'     => 'color',
-            'type'     => 'color-picker',
-            'label'    => __( 'Wp Color Picker Example', '{domain}' ),
-            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
-            'value'    => '#FF0000',
-            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
-        ] );
 
         // /**
         //  * control for rgba-color-picker input

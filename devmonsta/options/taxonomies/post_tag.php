@@ -6,6 +6,9 @@ class Post_Tag extends Taxonomies {
 
     public function register_controls() {
 
+        /**
+         * control for text input
+         */
         $this->add_control( [
             'type'        => 'text',
             'placeholder' => 'Tags first name',
@@ -13,6 +16,9 @@ class Post_Tag extends Taxonomies {
             'name'        => 'p_f_name',
         ] );
 
+        /**
+         * control for text-area input
+         */
         $this->add_control( [
             'name'        => 'p_l_name',
             'type'        => 'textarea',
@@ -74,6 +80,54 @@ class Post_Tag extends Taxonomies {
             'desc'          => __( "check if you're graduated", '{domain}' ),
             'text'          => __( 'Yes', '{domain}' ),
             'show_in_table' => false,
+        ] );
+
+        /**
+         * control for multiple-checkbox input
+         */
+        $this->add_control( [
+            'name'    => 'multiple_checkboxes',
+            'type'    => 'checkboxes',
+            'value'   => [
+                'choice-1' => false,
+                'choice-2' => true,
+            ],
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'label'   => __( 'Multiple Chekbox', '{domain}' ),
+            'desc'    => __( 'Multi checkbox Description', '{domain}' ),
+            'choices' => [
+                'choice-1' => __( 'Choice 1', '{domain}' ),
+                'choice-2' => __( 'Choice 2', '{domain}' ),
+                'choice-3' => __( 'Choice 3', '{domain}' ),
+            ],
+            'inline'  => false,
+        ] );
+
+        /**
+         * control for hidden input
+         */
+        $this->add_control( [
+            'type'  => 'hidden',
+            'value' => 'defaultvalue',
+            'name'  => 'hidden_field',
+            'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
+
+        /**
+         * control for dropdown select
+         */
+        $this->add_control( [
+            'name'    => 'select',
+            'type'    => 'select',
+            'value'   => 'choice-3',
+            'label'   => __( 'Select Single', '{domain}' ),
+            'desc'    => __( 'select description goes here', '{domain}' ),
+            'choices' => [
+                ''         => '---',
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
         ] );
 
     }
