@@ -55,3 +55,56 @@ wp_nav_menu(array(
 </div>
 
 <div class="dm"></div>
+<table>
+<tr>
+	<td>Name</td>
+	<td>Email</td>
+	<td>Date of birth</td>
+	<td>Child</td>
+	<td>Test field</td>
+</tr>
+<?php
+foreach(json_decode(get_theme_mod('devmonsta_repeater_control')) as $person){
+	?>
+	<tr>
+		<td><?php echo $person->person_name; ?></td>
+		<td><?php echo $person->person_email; ?></td>
+		<td><?php echo $person->person_birht_date; ?></td>
+		<td><?php echo $person->person_child; ?></td>
+		<td><?php echo $person->dm_sum_test_control_kk; ?></td>
+	</tr>
+
+	<?php
+}
+
+?>
+</table>
+<?php
+
+
+$customizer_repeater_example = get_theme_mod('customizer_repeater_example', json_encode(array( /*The content from your default parameter or delete this argument if you don't want a default*/)));
+/*This returns a json so we have to decode it*/
+$customizer_repeater_example_decoded = json_decode($customizer_repeater_example);
+foreach ($customizer_repeater_example_decoded as $repeater_item) {
+    // echo $repeater_item->icon_value;
+    // echo $repeater_item->text;
+    // echo $repeater_item->link;
+    // echo $repeater_item->image_url;
+    // echo $repeater_item->choice;
+    ?>
+<div style="padding: 10px; border:2px solid black">
+<h1><?php echo $repeater_item->title; ?></h1>
+</div>
+<?php
+
+  
+    // echo $repeater_item->shortcode;
+    /*Social repeater is also a repeater so we need to decode it*/
+    // $social_repeater = json_decode($repeater_item->social_repeater);
+    // foreach($social_repeater as $social_repeater){
+    //      echo $social_repeater->link;
+    //      echo $social_repeater->icon;
+    // }
+}
+
+?>
