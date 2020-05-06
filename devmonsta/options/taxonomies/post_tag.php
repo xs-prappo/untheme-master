@@ -76,9 +76,9 @@ class Post_Tag extends Taxonomies {
             'type'          => 'checkbox',
             'name'          => 'graduate',
             'value'         => false,
-            'label'         => __( 'Graduated', '{domain}' ),
-            'desc'          => __( "check if you're graduated", '{domain}' ),
-            'text'          => __( 'Yes', '{domain}' ),
+            'label'         => __( "Graduated", '{domain}' ),
+            'desc'          => __( "check if you are graduated", 'domain' ),
+            'text'          => __( "Yes", 'domain' ),
             'show_in_table' => false,
         ] );
 
@@ -124,6 +124,21 @@ class Post_Tag extends Taxonomies {
             'desc'    => __( 'select description goes here', '{domain}' ),
             'choices' => [
                 ''         => '---',
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
+
+        /**
+         * control for multiple select
+         */
+        $this->add_control( [
+            'name'    => 'select_multiple',
+            'type'    => 'multiselect',
+            'label'   => __( 'Select Multiple', '{domain}' ),
+            'desc'    => __( 'multiple select description goes here', '{domain}' ),
+            'choices' => [
                 'choice-1' => __( 'Choice One', '{domain}' ),
                 'choice-2' => __( 'Choice Two', '{domain}' ),
                 'choice-3' => __( 'Choice Three', '{domain}' ),

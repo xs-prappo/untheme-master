@@ -151,22 +151,23 @@ class Post extends Posts {
             ],
         ] );
 
-        // /**
-        //  * control for multiple select
-        //  */
-        // $this->add_control( [
-        //     'box_id'  => 'post_box_2',
-        //     'name'    => 'select_multiple',
-        //     'type'    => 'multiselect',
-        //     'label'   => __( 'Select Multiple', '{domain}' ),
-        //     'desc'    => __( 'multiple select description goes here', '{domain}' ),
-        //     'choices' => [
-        //         'choice-1' => __( 'Choice One', '{domain}' ),
-        //         'choice-2' => __( 'Choice Two', '{domain}' ),
-        //         'choice-3' => __( 'Choice Three', '{domain}' ),
-        //     ],
-        // ] );
+        /**
+         * control for multiple select
+         */
+        $this->add_control( [
+            'box_id'  => 'post_box_2',
+            'name'    => 'select_multiple',
+            'type'    => 'multiselect',
+            'label'   => __( 'Select Multiple', '{domain}' ),
+            'desc'    => __( 'multiple select description goes here', '{domain}' ),
+            'choices' => [
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
 
+        
         // /**
         //  * control for date-picker input
         //  */
