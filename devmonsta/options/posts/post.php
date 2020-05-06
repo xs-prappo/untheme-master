@@ -74,6 +74,7 @@ class Post extends Posts {
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
+        /**
          * control for checkbox input
          */
         $this->add_control( [
