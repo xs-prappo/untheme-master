@@ -380,7 +380,7 @@ class Post extends Posts {
             'type'       => 'switcher',
             'name'       => 'switcher',
             'value'      => 'hello',
-            'label'      => __('Label', '{domain}'),
+            'label'      => __('Switcher', '{domain}'),
             'desc'       => __('Description', '{domain}'),
             'left-choice' => array(
                 'goodbye' => __('Goodbye', '{domain}'),
@@ -394,7 +394,7 @@ class Post extends Posts {
          */
         $this->add_control([
             'box_id'     => 'post_box_1',
-            'label' => __('Label', '{domain}'),
+            'label' => __('Html', '{domain}'),
             'desc'  => __('Description', '{domain}'),
             'type'       => 'html',
             'name'       => 'html',
@@ -407,7 +407,7 @@ class Post extends Posts {
          */
         $this->add_control([
             'box_id'     => 'post_box_1',
-            'type'       => 'typography-v2',
+            'type'       => 'typography',
             'value'      => array(
                 'family' => 'Amarante',
                 // For standard fonts, instead of subset and variation you should set 'style' and 'weight'.
@@ -443,7 +443,7 @@ class Post extends Posts {
                 'class'   => 'custom-class',
                 'data-foo'=> 'bar',
             ),
-            'label' => __('Label', '{domain}'),
+            'label' => __('Image picker', '{domain}'),
             'desc'  => __('Description', '{domain}'),
             'help'  => __('Help tip', '{domain}'),
             'choices' => array(
