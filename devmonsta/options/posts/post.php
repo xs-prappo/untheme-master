@@ -379,7 +379,7 @@ class Post extends Posts {
         //     'type'         => 'switcher',
         //     'name'         => 'switcher',
         //     'value'        => 'hello',
-        //     'label'        => __( 'Label', '{domain}' ),
+        //     'label'        => __( 'Switcher', '{domain}' ),
         //     'desc'         => __( 'Description', '{domain}' ),
         //     'left-choice'  => [
         //         'goodbye' => __( 'Goodbye', '{domain}' ),
@@ -407,7 +407,7 @@ class Post extends Posts {
         //  */
         // $this->add_control( [
         //     'box_id'     => 'post_box_2',
-        //     'type'       => 'typography-v2',
+        //     'type'       => 'typography',
         //     'value'      => [
         //         'family'         => 'Amarante',
         //         // For standard fonts, instead of subset and variation you should set 'style' and 'weight'.
