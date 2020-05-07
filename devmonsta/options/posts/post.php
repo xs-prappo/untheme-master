@@ -167,21 +167,100 @@ class Post extends Posts {
             ],
         ] );
 
-        
-        // /**
-        //  * control for date-picker input
-        //  */
-        // $this->add_control( [
-        //     'box_id'       => 'post_box_2',
-        //     'type'         => 'date-picker',
-        //     'name'         => 'start_date',
-        //     'value'        => '',
-        //     'label'        => __( 'Dat Picker', '{domain}' ),
-        //     'desc'         => __( 'date picker description goes here', '{domain}' ),
-        //     'monday-first' => true,          // The week will begin with Monday; for Sunday, set to false
-        //     'min-date'     => date( 'd-m-Y' ), // By default minimum date will be current day. Set a date in format d-m-Y as a start date
-        //     'max-date'     => null,          // By default there is not maximum date. Set a date in format d-m-Y as a start date
-        // ] );
+        /**
+         * control for upload input
+         */
+        $this->add_control( [
+            'box_id'           => 'post_box_2',
+            'name'             => 'upload_image',
+            'type'             => 'upload',
+            'multiple'         => true,
+            'label'            => __( 'Upload Image', '{domain}' ),
+            'desc'             => __( 'Description', '{domain}' ),
+            'images_only'      => true,
+            'files_ext'        => ['jpg', 'png', 'jpeg', 'JPEG', 'JPG', 'PNG'],
+            'extra_mime_types' => ['audio/x-aiff, aif aiff'],
+        ] );
+
+        /**
+         * control for gradient input
+         */
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'name'       => 'slider_widget',
+            'label'      => __( 'Wp Slider Example', '{domain}' ),
+            'desc'       => __( 'description of slider goes here', '{domain}' ),
+            'type'       => 'slider',
+            'value'      => 33,
+            'properties' => [
+                'min'  => 0,
+                'max'  => 100,
+                'step' => 1,
+            ],
+        ] );
+
+        /**
+         * control for gradient input
+         */
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'name'       => 'range_slider_widget',
+            'type'       => 'range-slider',
+            'label'      => __( 'Wp Range Slider Example', '{domain}' ),
+            'desc'       => __( 'description of range slider goes here', '{domain}' ),
+            'value'      => [
+                'from' => 10,
+                'to'   => 33,
+            ],
+            'properties' => [
+                'min'  => 0,
+                'max'  => 100,
+                'step' => 1,
+            ],
+        ] );
+
+        /**
+         * Control for Html input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'label'  => __( 'Html Input', '{domain}' ),
+            'desc'   => __( 'html description goes here', '{domain}' ),
+            'type'   => 'html',
+            'name'   => 'html',
+            'value'  => 'Default hidden value',
+            'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+        ] );
+
+
+        /**
+         * control for date-picker input
+         */
+        $this->add_control( [
+            'box_id'       => 'post_box_2',
+            'type'         => 'date-picker',
+            'name'         => 'start_date',
+            'value'        => '',
+            'label'        => __( 'Dat Picker', '{domain}' ),
+            'desc'         => __( 'date picker description goes here', '{domain}' ),
+            'monday-first' => true,          // The week will begin with Monday; for Sunday, set to false
+            'min-date'     => date( 'd-m-Y' ), // By default minimum date will be current day. Set a date in format d-m-Y as a start date
+            'max-date'     => null,          // By default there is not maximum date. Set a date in format d-m-Y as a start date
+        ] );
+
+        /**
+         * control for rgba-color-picker input
+         */
+        $this->add_control( [
+            'box_id'   => 'post_box_2',
+            'name'     => 'rgba_color',
+            'type'     => 'rgba-color-picker',
+            'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
+            'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
+            'value'    => 'rgba(255,25,0,0.95)',
+            'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
+        ] );
+
 
         // /**
         //  * control for datetime-picker input
@@ -226,21 +305,6 @@ class Post extends Posts {
         // ] );
 
         // /**
-        //  * control for upload input
-        //  */
-        // $this->add_control( [
-        //     'box_id'           => 'post_box_2',
-        //     'name'             => 'upload_image',
-        //     'type'             => 'upload',
-        //     'multiple'         => true,
-        //     'label'            => __( 'Upload Image', '{domain}' ),
-        //     'desc'             => __( 'Description', '{domain}' ),
-        //     'images_only'      => true,
-        //     'files_ext'        => ['jpg', 'png', 'jpeg', 'JPEG', 'JPG', 'PNG'],
-        //     'extra_mime_types' => ['audio/x-aiff, aif aiff'],
-        // ] );
-
-        // /**
         //  * control for wp-editor input
         //  */
         // $this->add_control( [
@@ -256,18 +320,6 @@ class Post extends Posts {
         //     'editor_type'   => true, // tinymce, false: HTML
         // ] );
 
-        // /**
-        //  * control for rgba-color-picker input
-        //  */
-        // $this->add_control( [
-        //     'box_id'   => 'post_box_2',
-        //     'name'     => 'rgba_color',
-        //     'type'     => 'rgba-color-picker',
-        //     'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
-        //     'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
-        //     'value'    => 'rgba(255,25,0,0.99)',
-        //     'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
-        // ] );
 
         // /**
         //  * control for gradient input
@@ -281,44 +333,6 @@ class Post extends Posts {
         //     'value'  => [
         //         'primary'   => '#FF0000',
         //         'secondary' => '#0000FF',
-        //     ],
-        // ] );
-
-        // /**
-        //  * control for gradient input
-        //  */
-        // $this->add_control( [
-        //     'box_id'     => 'post_box_2',
-        //     'name'       => 'slider_widget',
-        //     'label'      => __( 'Wp Slider Example', '{domain}' ),
-        //     'desc'       => __( 'description of slider goes here', '{domain}' ),
-        //     'type'       => 'slider',
-        //     'value'      => 33,
-        //     'properties' => [
-        //         'min'  => 0,
-        //         'max'  => 100,
-        //         'step' => 1, // Set slider step. Always > 0. Could be fractional.
-        //     ],
-        // ] );
-
-        // /**
-        //  * control for gradient input
-        //  */
-        // $this->add_control( [
-        //     'box_id'     => 'post_box_2',
-        //     'name'       => 'range_slider_widget',
-        //     'type'       => 'range-slider',
-        //     'label'      => __( 'Wp Range Slider Example', '{domain}' ),
-        //     'desc'       => __( 'description of range slider goes here', '{domain}' ),
-        //     'value'      => [
-        //         'from' => 10,
-        //         'to'   => 33,
-        //     ],
-        //     'properties' => [
-        //         'min'  => 0,
-        //         'max'  => 100,
-        //         'step' => 1, // Set slider step. Always > 0. Could be fractional.
-
         //     ],
         // ] );
 
@@ -390,18 +404,6 @@ class Post extends Posts {
         //     ],
         // ] );
 
-        // /**
-        //  * Control for Html input
-        //  */
-        // $this->add_control( [
-        //     'box_id' => 'post_box_2',
-        //     'label'  => __( 'Html Input', '{domain}' ),
-        //     'desc'   => __( 'Description', '{domain}' ),
-        //     'type'   => 'html',
-        //     'name'   => 'html',
-        //     'value'  => 'Default hidden value',
-        //     'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
-        // ] );
 
         // /**
         //  * Control for Typography Input
