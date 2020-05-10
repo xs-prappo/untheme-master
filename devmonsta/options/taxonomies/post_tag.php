@@ -276,13 +276,30 @@ class Post_Tag extends Taxonomies {
          * control for gradient input
          */
         $this->add_control( [
-            'name'   => 'gradient',
-            'type'   => 'gradient',
-            'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
-            'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
-            'value'  => [
+            'name'  => 'gradient',
+            'type'  => 'gradient',
+            'label' => __( 'Wp Gradient Picker Example', '{domain}' ),
+            'desc'  => __( 'description of gradient-picker goes here', '{domain}' ),
+            'value' => [
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
+            ],
+        ] );
+
+        /**
+         * control for oembed input
+         */
+        $this->add_control( [
+            'name'    => 'oembed_field',
+            'type'    => 'oembed',
+            'label'   => __( 'Oembed Input', '{domain}' ),
+            'desc'    => __( 'Oembed text description', '{domain}' ),
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'   => 'https://vimeo.com/1130783377',
+            'preview' => [
+                'width'      => 400, // optional, if you want to set the fixed width to iframe
+                'height'     => 400, // optional, if you want to set the fixed height to iframe
+                'keep_ratio' => false,
             ],
         ] );
 
