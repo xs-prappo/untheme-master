@@ -232,7 +232,6 @@ class Post extends Posts {
             'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
         ] );
 
-
         /**
          * control for date-picker input
          */
@@ -260,7 +259,6 @@ class Post extends Posts {
             'value'    => 'rgba(255,25,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
-
 
         /**
          * control for datetime-picker input
@@ -337,6 +335,22 @@ class Post extends Posts {
             ],
         ] );
 
+        /**
+         * control for wp-editor input
+         */
+        $this->add_control( [
+            'box_id'        => 'post_box_2',
+            'name'          => 'wp_editor',
+            'type'          => 'wp-editor',
+            'value'         => 'default value',
+            'label'         => __( 'Wp Editor Example', '{domain}' ),
+            'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
+            'size'          => 'small',
+            'editor_height' => 400,
+            'wpautop'       => true,
+            'editor_type'   => true, // tinymce, false: HTML
+        ] );
+
         // /**
         //  * control for dimension input
         //  */
@@ -358,25 +372,6 @@ class Post extends Posts {
         // ] );
 
         // /**
-        //  * control for wp-editor input
-        //  */
-        // $this->add_control( [
-        //     'box_id'        => 'post_box_2',
-        //     'name'          => 'wp_editor',
-        //     'type'          => 'wp-editor',
-        //     'value'         => 'default value',
-        //     'label'         => __( 'Wp Editor Example', '{domain}' ),
-        //     'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-        //     'size'          => 'small',
-        //     'editor_height' => 400,
-        //     'wpautop'       => true,
-        //     'editor_type'   => true, // tinymce, false: HTML
-        // ] );
-
-
-        
-
-        // /**
         //  * control for icon-picker input
         //  */
         // // $this->add_control( [
@@ -387,7 +382,6 @@ class Post extends Posts {
         // //     'desc'   => __( 'Select icon description', '{domain}' ),
         // //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
         // // ] );
-
 
         // /**
         //  * Control for switcher input
@@ -406,7 +400,6 @@ class Post extends Posts {
         //         'hello' => __( 'Hello', '{domain}' ),
         //     ],
         // ] );
-
 
         // /**
         //  * Control for Typography Input
