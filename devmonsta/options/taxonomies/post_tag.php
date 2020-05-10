@@ -256,8 +256,8 @@ class Post_Tag extends Taxonomies {
         $this->add_control( [
             'type'             => 'datetime-range',
             'value'            => [
-                'from' => '',
-                'to'   => '',
+                'from' => '2020/05/10 12:00 am',
+                'to'   => '2020/05/18 07:55 pm',
             ],
             'name'             => 'date_time_range_picker',
             'label'            => __( 'Date Time Range Picker', '{domain}' ),
@@ -269,6 +269,20 @@ class Post_Tag extends Taxonomies {
                 'time24hours' => true,
                 'timepicker'  => true, // Show timepicker.
                 'datepicker'  => true, // Show datepicker.
+            ],
+        ] );
+
+        /**
+         * control for gradient input
+         */
+        $this->add_control( [
+            'name'   => 'gradient',
+            'type'   => 'gradient',
+            'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
+            'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+            'value'  => [
+                'primary'   => '#FF0000',
+                'secondary' => '#0000FF',
             ],
         ] );
 

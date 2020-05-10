@@ -304,6 +304,22 @@ class Post extends Posts {
             ],
         ] );
 
+        /**
+         * control for gradient input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'name'   => 'gradient',
+            'type'   => 'gradient',
+            'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
+            'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+            'value'  => [
+                'primary'   => '#FF0000',
+                'secondary' => '#0000FF',
+            ],
+        ] );
+
+
         // /**
         //  * control for wp-editor input
         //  */
@@ -321,20 +337,7 @@ class Post extends Posts {
         // ] );
 
 
-        // /**
-        //  * control for gradient input
-        //  */
-        // $this->add_control( [
-        //     'box_id' => 'post_box_2',
-        //     'name'   => 'gradient',
-        //     'type'   => 'gradient',
-        //     'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
-        //     'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
-        //     'value'  => [
-        //         'primary'   => '#FF0000',
-        //         'secondary' => '#0000FF',
-        //     ],
-        // ] );
+        
 
         // /**
         //  * control for icon-picker input
