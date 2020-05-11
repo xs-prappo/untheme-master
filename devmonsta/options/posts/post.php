@@ -371,17 +371,29 @@ class Post extends Posts {
 
         ] );
 
-        // /**
-        //  * control for icon-picker input
-        //  */
-        // // $this->add_control( [
-        // //     'box_id' => 'post_box_1',
-        // //     'name'   => 'icon_picker',
-        // //     'type'   => 'icon',
-        // //     'label'  => __( 'Select Icon', '{domain}' ),
-        // //     'desc'   => __( 'Select icon description', '{domain}' ),
-        // //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        // // ] );
+        /**
+         * Control for Thumbnail Image picker Input
+         */
+        $this->add_control( [
+            'name'    => 'i_p',
+            'box_id'  => 'post_box_2',
+            'type'    => 'image-picker',
+            'value'   => 'image-2',
+            'attr'    => [
+                'class'    => 'custom-class',
+                'data-foo' => 'bar',
+            ],
+            'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
+            'desc'    => __( 'Description', '{domain}' ),
+            'help'    => __( 'Help tip', '{domain}' ),
+            'choices' => [
+                'value-1' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                'value-2' => [
+                    'small' => get_template_directory_uri() . '/images/preview.png',
+                    'large' => get_template_directory_uri() . '/images/preview.png',
+                ],
+            ],
+        ] );
 
         /**
          * Control for switcher input
@@ -432,29 +444,16 @@ class Post extends Posts {
         // ] );
 
         // /**
-        //  * Control for Thumbnail Image picker Input
+        //  * control for icon-picker input
         //  */
-        // $this->add_control( [
-        //     'box_id'  => 'post_box_2',
-        //     'type'    => 'image-picker',
-        //     'value'   => 'image-2',
-        //     'attr'    => [
-        //         'class'    => 'custom-class',
-        //         'data-foo' => 'bar',
-        //     ],
-        //     'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
-        //     'desc'    => __( 'Description', '{domain}' ),
-        //     'help'    => __( 'Help tip', '{domain}' ),
-        //     'choices' => [
-        //         'value-1' => get_template_directory_uri() . '/images/thumbnail.jpg',
-        //         'value-2' => [
-        //             // (required) url for thumbnail
-        //             'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
-        //             // (optional) url for large image that will appear in tooltip
-        //             'large' => get_template_directory_uri() . '/images/preview.png',
-        //         ],
-        //     ],
-        // ] );
+        // // $this->add_control( [
+        // //     'box_id' => 'post_box_1',
+        // //     'name'   => 'icon_picker',
+        // //     'type'   => 'icon',
+        // //     'label'  => __( 'Select Icon', '{domain}' ),
+        // //     'desc'   => __( 'Select icon description', '{domain}' ),
+        // //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        // // ] );
 
         // dm_print(dm_p()->option('8', 'color'));
     }

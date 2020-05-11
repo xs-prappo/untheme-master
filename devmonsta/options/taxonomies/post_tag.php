@@ -353,6 +353,32 @@ class Post_Tag extends Taxonomies {
                 'hello' => __( 'Hello', '{domain}' ),
             ],
         ] );
+
+        /**
+         * Control for Thumbnail Image picker Input
+         */
+        $this->add_control( [
+            'name' => 'i_p',
+            'box_id'  => 'post_box_2',
+            'type'    => 'image-picker',
+            'value'   => 'image-2',
+            'attr'    => [
+                'class'    => 'custom-class',
+                'data-foo' => 'bar',
+            ],
+            'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
+            'desc'    => __( 'Description', '{domain}' ),
+            'help'    => __( 'Help tip', '{domain}' ),
+            'choices' => [
+                'value-1' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                'value-2' => [
+                    // (required) url for thumbnail
+                    'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                    // (optional) url for large image that will appear in tooltip
+                    'large' => get_template_directory_uri() . '/images/preview.png',
+                ],
+            ],
+        ] );
     }
 
 }
