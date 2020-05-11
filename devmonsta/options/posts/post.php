@@ -413,15 +413,15 @@ class Post extends Posts {
             ],
         ] );
 
-        // /**
-        //  * Control for Typography Input
-        //  */
+        /**
+         * Control for Typography Input
+         */
         // $this->add_control( [
+        //     'name' => 'typo',
         //     'box_id'     => 'post_box_2',
         //     'type'       => 'typography',
         //     'value'      => [
         //         'family'         => 'Amarante',
-        //         // For standard fonts, instead of subset and variation you should set 'style' and 'weight'.
         //         'style'          => 'italic',
         //         'weight'         => 700,
         //         'subset'         => 'latin-ext',
@@ -433,7 +433,6 @@ class Post extends Posts {
         //     ],
         //     'components' => [
         //         'family'         => true,
-        //         // 'style', 'weight', 'subset', 'variation' will appear and disappear along with 'family'
         //         'size'           => true,
         //         'line-height'    => true,
         //         'letter-spacing' => true,
