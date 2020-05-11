@@ -318,6 +318,41 @@ class Post_Tag extends Taxonomies {
             'editor_type'   => true, // tinymce, false: HTML
         ] );
 
+        /**
+         * control for dimension input
+         */
+        $this->add_control( [
+            'name'  => 'padding_dimension',
+            'type'  => 'dimensions',
+            'label' => __( 'Dimension Input', '{domain}' ),
+            'desc'  => __( 'Dimension text description', '{domain}' ),
+            'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value' => [
+                'top'      => '0',
+                'right'    => '0',
+                'bottom'   => '0',
+                'left'     => '0',
+                'isLinked' => true,
+            ],
+
+        ] );
+
+        /**
+         * Control for switcher input
+         */
+        $this->add_control( [
+            'type'         => 'switcher',
+            'name'         => 'switcher',
+            'value'        => 'hello',
+            'label'        => __( 'Switcher', '{domain}' ),
+            'desc'         => __( 'Description', '{domain}' ),
+            'left-choice'  => [
+                'goodbye' => __( 'Goodbye', '{domain}' ),
+            ],
+            'right-choice' => [
+                'hello' => __( 'Hello', '{domain}' ),
+            ],
+        ] );
     }
 
 }

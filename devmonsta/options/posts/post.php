@@ -351,25 +351,25 @@ class Post extends Posts {
             'editor_type'   => true, // tinymce, false: HTML
         ] );
 
-        // /**
-        //  * control for dimension input
-        //  */
-        // $this->add_control( [
-        //     'box_id' => 'post_box_2',
-        //     'name'   => 'padding_dimension',
-        //     'type'   => 'dimensions',
-        //     'label'  => __( 'Dimension Input', '{domain}' ),
-        //     'desc'   => __( 'Dimension text description', '{domain}' ),
-        //     'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        //     'value'  => [
-        //         'top'      => '0',
-        //         'right'    => '0',
-        //         'bottom'   => '0',
-        //         'left'     => '0',
-        //         'isLinked' => true,
-        //     ],
+        /**
+         * control for dimension input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'name'   => 'padding_dimension',
+            'type'   => 'dimensions',
+            'label'  => __( 'Dimension Input', '{domain}' ),
+            'desc'   => __( 'Dimension text description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'  => [
+                'top'      => '0',
+                'right'    => '0',
+                'bottom'   => '0',
+                'left'     => '0',
+                'isLinked' => true,
+            ],
 
-        // ] );
+        ] );
 
         // /**
         //  * control for icon-picker input
@@ -383,23 +383,23 @@ class Post extends Posts {
         // //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
         // // ] );
 
-        // /**
-        //  * Control for switcher input
-        //  */
-        // $this->add_control( [
-        //     'box_id'       => 'post_box_2',
-        //     'type'         => 'switcher',
-        //     'name'         => 'switcher',
-        //     'value'        => 'hello',
-        //     'label'        => __( 'Switcher', '{domain}' ),
-        //     'desc'         => __( 'Description', '{domain}' ),
-        //     'left-choice'  => [
-        //         'goodbye' => __( 'Goodbye', '{domain}' ),
-        //     ],
-        //     'right-choice' => [
-        //         'hello' => __( 'Hello', '{domain}' ),
-        //     ],
-        // ] );
+        /**
+         * Control for switcher input
+         */
+        $this->add_control( [
+            'box_id'       => 'post_box_2',
+            'type'         => 'switcher',
+            'name'         => 'switcher',
+            'value'        => 'hello',
+            'label'        => __( 'Switcher', '{domain}' ),
+            'desc'         => __( 'Description', '{domain}' ),
+            'left-choice'  => [
+                'goodbye' => __( 'Goodbye', '{domain}' ),
+            ],
+            'right-choice' => [
+                'hello' => __( 'Hello', '{domain}' ),
+            ],
+        ] );
 
         // /**
         //  * Control for Typography Input
