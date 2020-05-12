@@ -358,7 +358,7 @@ class Post_Tag extends Taxonomies {
          * Control for Thumbnail Image picker Input
          */
         $this->add_control( [
-            'name' => 'i_p',
+            'name'    => 'i_p',
             'box_id'  => 'post_box_2',
             'type'    => 'image-picker',
             'value'   => 'image-2',
@@ -380,33 +380,33 @@ class Post_Tag extends Taxonomies {
             ],
         ] );
 
-
         /**
          * Control for Typography Input
          */
-        // $this->add_control( [
-        //     'type'       => 'typography',
-        //     'value'      => [
-        //         'family'         => 'Amarante',
-        //         'style'          => 'italic',
-        //         'weight'         => 700,
-        //         'subset'         => 'latin-ext',
-        //         'variation'      => 'regular',
-        //         'size'           => 14,
-        //         'line-height'    => 13,
-        //         'letter-spacing' => -2,
-        //         'color'          => '#0000ff',
-        //     ],
-        //     'components' => [
-        //         'family'         => true,
-        //         'size'           => true,
-        //         'line-height'    => true,
-        //         'letter-spacing' => true,
-        //         'color'          => true,
-        //     ],
-        //     'label'      => __( 'Typhography', '{domain}' ),
-        //     'desc'       => __( 'Description', '{domain}' ),
-        // ] );
+        $this->add_control( [
+            'name'       => 'typo',
+            'type'       => 'typography',
+            'value'      => [
+                'family'         => 'Amarante',
+                'style'          => 'italic',
+                'weight'         => 700,
+                'subset'         => 'latin-ext',
+                'variation'      => 'regular',
+                'size'           => 14,
+                'line-height'    => 13,
+                'letter-spacing' => -2,
+                'color'          => '#0000ff',
+            ],
+            'components' => [
+                'family'         => true,
+                'size'           => true,
+                'line-height'    => true,
+                'letter-spacing' => true,
+                'color'          => true,
+            ],
+            'label'      => __( 'Typhography', '{domain}' ),
+            'desc'       => __( 'Description', '{domain}' ),
+        ] );
     }
 
 }

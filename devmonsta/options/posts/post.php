@@ -416,43 +416,43 @@ class Post extends Posts {
         /**
          * Control for Typography Input
          */
-        // $this->add_control( [
-        //     'name' => 'typo',
-        //     'box_id'     => 'post_box_2',
-        //     'type'       => 'typography',
-        //     'value'      => [
-        //         'family'         => 'Amarante',
-        //         'style'          => 'italic',
-        //         'weight'         => 700,
-        //         'subset'         => 'latin-ext',
-        //         'variation'      => 'regular',
-        //         'size'           => 14,
-        //         'line-height'    => 13,
-        //         'letter-spacing' => -2,
-        //         'color'          => '#0000ff',
-        //     ],
-        //     'components' => [
-        //         'family'         => true,
-        //         'size'           => true,
-        //         'line-height'    => true,
-        //         'letter-spacing' => true,
-        //         'color'          => true,
-        //     ],
-        //     'label'      => __( 'Typhography', '{domain}' ),
-        //     'desc'       => __( 'Description', '{domain}' ),
-        // ] );
+        $this->add_control( [
+            'name' => 'typo',
+            'box_id'     => 'post_box_2',
+            'type'       => 'typography',
+            'value'      => [
+                'family'         => 'Amarante',
+                'style'          => 'italic',
+                'weight'         => 700,
+                'subset'         => 'latin-ext',
+                'variation'      => 'regular',
+                'size'           => 14,
+                'line_height'    => 13,
+                'letter_spacing' => -2,
+                'color'          => '#0000ff',
+            ],
+            'components' => [
+                'family'         => true,
+                'size'           => true,
+                'line-height'    => true,
+                'letter-spacing' => true,
+                'color'          => true,
+            ],
+            'label'      => __( 'Typhography', '{domain}' ),
+            'desc'       => __( 'Description', '{domain}' ),
+        ] );
 
-        // /**
-        //  * control for icon-picker input
-        //  */
-        // // $this->add_control( [
-        // //     'box_id' => 'post_box_1',
-        // //     'name'   => 'icon_picker',
-        // //     'type'   => 'icon',
-        // //     'label'  => __( 'Select Icon', '{domain}' ),
-        // //     'desc'   => __( 'Select icon description', '{domain}' ),
-        // //     'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        // // ] );
+        /**
+         * control for icon-picker input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'name'   => 'icon_picker',
+            'type'   => 'icon',
+            'label'  => __( 'Select Icon', '{domain}' ),
+            'desc'   => __( 'Select icon description', '{domain}' ),
+            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
 
         // dm_print(dm_p()->option('8', 'color'));
     }
