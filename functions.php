@@ -140,3 +140,6 @@ add_action('wp_head', 'devmonsta_customizer_css');
 //         error_log('Cusomizer repeater does not class exists');
 //     }
 // }
+
+
+include get_template_directory() . '/customizer/function.php';

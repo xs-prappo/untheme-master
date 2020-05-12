@@ -1,0 +1,9 @@
+li[id*="ctmss_hidden_"],
+ul[id*="ctmss_hidden_"],
+.ctmss_hidden {
+    display: none !important;
+}
+
+.ctmss_section .accordion-section-title:active {
+    cursor: move !important;
+}

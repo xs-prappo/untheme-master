@@ -55,6 +55,7 @@ wp_nav_menu(array(
 </div>
 
 <div class="dm"></div>
+<!-- <?php print_r(get_theme_mod('devmonsta_repeater_control')); ?> -->
 <table>
 <tr>
 	<td>Name</td>
