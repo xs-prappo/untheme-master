@@ -87,10 +87,8 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'id' => 'test_button',
             'type' => 'test-button',
             'section' => 'devmonsta_text_settings_section',
-            'text' => 'cool btn'
+            'text' => 'cool btn',
         ]);
-
-        
 
         $this->add_control([
             'id' => 'dm_box_text',
@@ -175,7 +173,7 @@ class Customizer extends \Devmonsta\Libs\Customizer
 
             ],
         ]);
-        
+
         $this->add_control([
             'id' => 'devmonsta_repeater_popup_control',
             'label' => 'Popup',
@@ -277,6 +275,48 @@ class Customizer extends \Devmonsta\Libs\Customizer
             ),
             'section' => 'devmonsta_text_settings_section',
 
+        ]);
+
+        $this->add_tab([
+            'id' => 'first_tab',
+            'section' => 'devmonsta_text_settings_section',
+            'tabs' => [
+                [
+                    'id' => 'tab_1',
+                    'label' => 'Tab 1',
+                    'controls' => [
+                        'control_id_1',
+                        'control_id_2',
+                        'control_id_3',
+                    ],
+                ],
+            ],
+        ]);
+
+        $control_1 = [
+            'id' => 'dm_media',
+            'type' => 'media',
+            'section' => 'devmonsta_text_settings_section',
+            'label' => __('Media'),
+        ];
+
+        $control_2 = [
+            'id' => 'dm_media',
+            'type' => 'media',
+            'section' => 'devmonsta_text_settings_section',
+            'label' => __('Media'),
+        ];
+
+        $this->add_tab([
+            'id' => 'first_tab',
+            'section' => 'devmonsta_text_settings_section',
+            'tabs' => [
+                [
+                    'id' => 'tab_1',
+                    'label' => 'Tab 1',
+                    'controls' => [$control_1, $control_2],
+                ],
+            ],
         ]);
 
     }
