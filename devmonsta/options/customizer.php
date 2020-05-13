@@ -1,55 +1,128 @@
 <?php
 
-class Customizer extends \Devmonsta\Libs\Customizer
-{
+class Customizer extends \Devmonsta\Libs\Customizer {
 
-    public function register_controls()
-    {
+    public function register_controls() {
 
-        $this->add_panel([
-            'id' => 'devmonsta_panel',
-            'priority' => 0,
+        /**
+         * Add parent panels
+         */
+        $this->add_panel( [
+            'id'             => 'devmonsta_panel',
+            'priority'       => 0,
             'theme_supports' => '',
-            'title' => __('Devmonsta panel', 'devmonsta'),
-            'description' => __('Devmonsta options panel', 'devmonsta'),
-        ]);
+            'title'          => __( 'Devmonsta panel', 'devmonsta' ),
+            'description'    => __( 'Devmonsta options panel', 'devmonsta' ),
+        ] );
 
-        $this->add_section([
-            'id' => 'devmonsta_color_settings_section',
-            'title' => __('Box settings', 'devmonsta'),
-            'panel' => 'devmonsta_panel',
+        /**
+         * Sections will go inside panel
+         * sections will hold controls
+         */
+        $this->add_section( [
+            'id'       => 'devmonsta_color_settings_section',
+            'title'    => __( 'Box settings', 'devmonsta' ),
+            'panel'    => 'devmonsta_panel',
             'priority' => 10,
-        ]);
+        ] );
 
-        $this->add_section([
-            'id' => 'devmonsta_text_settings_section',
-            'title' => __('Text settings', 'devmonsta'),
-            'panel' => 'devmonsta_panel',
+        $this->add_section( [
+            'id'       => 'devmonsta_text_settings_section',
+            'title'    => __( 'Text settings', 'devmonsta' ),
+            'panel'    => 'devmonsta_panel',
             'priority' => 10,
-        ]);
+        ] );
 
-        $this->add_section([
-            'id' => 'dm_repeater_section',
-            'title' => 'Devmonsta repeater section',
-            'panel' => 'devmonsta_panel',
+        $this->add_section( [
+            'id'       => 'dm_repeater_section',
+            'title'    => 'Devmonsta repeater section',
+            'panel'    => 'devmonsta_panel',
             'priority' => 10,
-        ]);
+        ] );
 
-        // default controls
+        // default controls, held inside sections
 
-        $this->add_control([
-            'id' => 'dm_ctrl_text_1',
-            'label' => __('Title', 'devmonsta'),
+        /**
+         * Control for text input
+         */
+        $this->add_control( [
+            'id'      => 'dm_ctrl_text_1',
+            'label'   => __( 'Text Input', 'devmonsta' ),
             'section' => 'devmonsta_text_settings_section',
-            'type' => 'text',
-        ]);
+            'type'    => 'text',
+        ] );
 
-        $this->add_control([
-            'id' => 'dm_ctrl_text_2',
-            'label' => __('Title 2', 'devmonsta'),
+        /**
+         * Control for dropdown-page input
+         */
+        $this->add_control( [
+            'id'          => 'dm_dropdown_pages',
+            'type'        => 'dropdown-pages',
+            'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
+            'label'       => __( 'Custom Dropdown Pages' ),
+            'description' => __( 'This is a custom dropdown pages option.' ),
+        ] );
+
+        /**
+         * Control for color-picker input
+         */
+        $this->add_control( [
+            'id'      => 'person_hair_color',
+            'label'   => __( 'Hair Color', 'devmonsta' ),
+            'type'    => 'color',
             'section' => 'devmonsta_text_settings_section',
-            'type' => 'text',
-        ]);
+            'default' => '#eeee22',
+        ] );
+
+        /**
+         * Control for media input
+         */
+        $this->add_control( [
+            'id'      => 'dm_media',
+            'type'    => 'media',
+            'section' => 'devmonsta_text_settings_section',
+            'label'   => __( 'Media' ),
+        ] );
+
+        $this->add_control( [
+            'type'        => 'radio',
+            'id'          => 'dm_test_readio',
+            'label'       => __( 'Custom Radio Selection' ),
+            'description' => __( 'This is a custom radio input.' ),
+            'choices'     => [
+                'red'   => __( 'Red' ),
+                'blue'  => __( 'Blue' ),
+                'green' => __( 'Green' ),
+            ],
+            'section'     => 'devmonsta_text_settings_section',
+        ] );
+
+        $this->add_control( [
+            'id'          => 'dm_textarea',
+            'type'        => 'textarea',
+            'section'     => 'devmonsta_text_settings_section',
+            'label'       => __( 'Text area' ),
+            'description' => __( 'This is text area desctription' ),
+        ] );
+
+        /**
+         * control for datetime-picker input
+         */
+        $this->add_control( [
+            'id'              => 'dm_date_time',
+            'section'         => 'devmonsta_text_settings_section',
+            'type'            => 'datetime-picker',
+            'label'           => __( 'Date Time Picker', '{domain}' ),
+            'desc'            => __( 'date time picker description', '{domain}' ),
+            'datetime-picker' => [
+                'format'      => 'Y-m-d H:i',
+                'maxDate'     => false,
+                'minDate'     => false,
+                'timepicker'  => true,
+                'datepicker'  => true,
+                'defaultTime' => '12:00',
+            ],
+        ] );
 
         // $this->add_control([
         //     'id' => 'dm_ctrl_text_textarea',
@@ -67,215 +140,163 @@ class Customizer extends \Devmonsta\Libs\Customizer
         //     'transport' => 'postMessage',
         // ]);
 
-        $this->add_control([
-            'id' => 'dm_dropdown_pages',
-            'type' => 'dropdown-pages',
-            'section' => 'devmonsta_text_settings_section', // Add a default or your own section
-            'label' => __('Custom Dropdown Pages'),
-            'description' => __('This is a custom dropdown pages option.'),
-        ]);
-
-        $this->add_control([
-            'id' => 'dm_test_control_tt',
-            'type' => 'test-control',
-            'section' => 'devmonsta_text_settings_section', // Add a default or your own section
-            'label' => __('Test control'),
-            'description' => __('This is test control'),
-        ]);
-
-        $this->add_control([
-            'id' => 'test_button',
-            'type' => 'test-button',
+        $this->add_control( [
+            'id'      => 'test_button',
+            'type'    => 'test-button',
             'section' => 'devmonsta_text_settings_section',
-            'text' => 'cool btn',
-        ]);
+            'text'    => 'cool btn',
+        ] );
 
-        $this->add_control([
-            'id' => 'dm_box_text',
-            'label' => __('Box Text', 'devmonsta'),
-            'section' => 'devmonsta_color_settings_section',
-            'type' => 'text',
-            'selector' => '.dm_h1',
+        $this->add_control( [
+            'id'        => 'dm_box_text',
+            'label'     => __( 'Box Text', 'devmonsta' ),
+            'section'   => 'devmonsta_color_settings_section',
+            'type'      => 'text',
+            'selector'  => '.dm_h1',
             'selectors' => [
                 '.elementor-widget-container, .xyz' => 'color',
-                '.elementor-widget' => [
+                '.elementor-widget'                 => [
                     'background-color', 'border-color',
                 ],
             ],
-            'default' => 'Devmonsta',
+            'default'   => 'Devmonsta',
             'transport' => 'postMessage',
 
-        ]);
+        ] );
 
-        $this->add_control([
-            'id' => 'devmonsta_repeater_control',
-            'label' => 'List',
-            'type' => 'repeater',
-            'section' => 'dm_repeater_section',
-            'add_button_text' => __('Add new', 'devmonsta'),
-            'fields' => [
+        $this->add_control( [
+            'id'              => 'devmonsta_repeater_control',
+            'label'           => 'List',
+            'type'            => 'repeater',
+            'section'         => 'dm_repeater_section',
+            'add_button_text' => __( 'Add new', 'devmonsta' ),
+            'fields'          => [
                 [
-                    'id' => 'person_name',
-                    'label' => __('Name', 'devmonsta'),
-                    'type' => 'text',
+                    'id'    => 'person_name',
+                    'label' => __( 'Name', 'devmonsta' ),
+                    'type'  => 'text',
                 ],
                 [
-                    'id' => 'person_email',
-                    'label' => __('Email', 'devmonsta'),
-                    'type' => 'email',
+                    'id'    => 'person_email',
+                    'label' => __( 'Email', 'devmonsta' ),
+                    'type'  => 'email',
                 ],
                 [
-                    'id' => 'person_birht_date',
-                    'label' => __('Date of birth', 'devmonsta'),
-                    'type' => 'date',
-                ],
-
-                [
-                    'id' => 'person_child',
-                    'label' => __('Child', 'devmonsta'),
-                    'type' => 'number',
-                ],
-                [
-                    'id' => 'person_color',
-                    'label' => __('Awesome Color', 'devmonsta'),
-                    'type' => 'color',
-                ],
-                [
-                    'id' => 'person_hair_color',
-                    'label' => __('Hair Color', 'devmonsta'),
-                    'type' => 'color',
-                ],
-                [
-                    'id' => 'person_image',
-                    'type' => 'media',
-
-                    'label' => __('Media'),
-
-                ],
-                [
-                    'id' => 'dm_sum_test_control_kk',
-                    'type' => 'test-control',
-                    'section' => 'devmonsta_text_settings_section', // Add a default or your own section
-                    'label' => __('Custom Dropdown Pages'),
-                    'description' => __('This is a custom dropdown pages option.'),
-                ],
-                [
-                    'type' => 'radio',
-                    'id' => 'dm_test_readio_for_repeater',
-                    'label' => __('Custom Radio Selection'),
-                    'description' => __('This is a custom radio input.'),
-                    'choices' => array(
-                        'red' => __('Red'),
-                        'blue' => __('Blue'),
-                        'green' => __('Green'),
-                    ),
-                ],
-
-            ],
-        ]);
-
-        $this->add_control([
-            'id' => 'devmonsta_repeater_popup_control',
-            'label' => 'Popup',
-            'type' => 'addable-popup',
-            'section' => 'dm_repeater_section',
-            'add_button_text' => __('Add new', 'devmonsta'),
-            'fields' => [
-                [
-                    'id' => 'person_name_popup',
-                    'label' => __('Name', 'devmonsta'),
-                    'type' => 'text',
-                ],
-                [
-                    'id' => 'person_email_popup',
-                    'label' => __('Email', 'devmonsta'),
-                    'type' => 'email',
-                ],
-                [
-                    'id' => 'person_birht_date_popup',
-                    'label' => __('Date of birth', 'devmonsta'),
-                    'type' => 'date',
+                    'id'    => 'person_birht_date',
+                    'label' => __( 'Date of birth', 'devmonsta' ),
+                    'type'  => 'date',
                 ],
 
                 [
-                    'id' => 'person_child_popup',
-                    'label' => __('Child', 'devmonsta'),
-                    'type' => 'number',
+                    'id'    => 'person_child',
+                    'label' => __( 'Child', 'devmonsta' ),
+                    'type'  => 'number',
                 ],
                 [
-                    'id' => 'person_color_popup',
-                    'label' => __('Awesome Color', 'devmonsta'),
-                    'type' => 'color',
+                    'id'    => 'person_color',
+                    'label' => __( 'Awesome Color', 'devmonsta' ),
+                    'type'  => 'color',
                 ],
                 [
-                    'id' => 'person_hair_color_popup',
-                    'label' => __('Hair Color', 'devmonsta'),
-                    'type' => 'color',
+                    'id'    => 'person_hair_color',
+                    'label' => __( 'Hair Color', 'devmonsta' ),
+                    'type'  => 'color',
                 ],
                 [
-                    'id' => 'person_image_popup',
-                    'type' => 'media',
+                    'id'    => 'person_image',
+                    'type'  => 'media',
 
-                    'label' => __('Media'),
+                    'label' => __( 'Media' ),
 
                 ],
                 [
-                    'id' => 'dm_sum_test_control_kk_popup',
-                    'type' => 'test-control',
-                    'section' => 'devmonsta_text_settings_section', // Add a default or your own section
-                    'label' => __('Custom Dropdown Pages'),
-                    'description' => __('This is a custom dropdown pages option.'),
+                    'id'          => 'dm_sum_test_control_kk',
+                    'type'        => 'test-control',
+                    'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
+                    'label'       => __( 'Custom Dropdown Pages' ),
+                    'description' => __( 'This is a custom dropdown pages option.' ),
                 ],
                 [
-                    'type' => 'radio',
-                    'id' => 'dm_test_readio_for_repeater_popup',
-                    'label' => __('Custom Radio Selection'),
-                    'description' => __('This is a custom radio input.'),
-                    'choices' => array(
-                        'red' => __('Red'),
-                        'blue' => __('Blue'),
-                        'green' => __('Green'),
-                    ),
+                    'type'        => 'radio',
+                    'id'          => 'dm_test_readio_for_repeater',
+                    'label'       => __( 'Custom Radio Selection' ),
+                    'description' => __( 'This is a custom radio input.' ),
+                    'choices'     => [
+                        'red'   => __( 'Red' ),
+                        'blue'  => __( 'Blue' ),
+                        'green' => __( 'Green' ),
+                    ],
                 ],
 
             ],
-        ]);
+        ] );
 
-        $this->add_control([
-            'id' => 'devmonsta_custom_box_color',
-            'label' => __('Box Color', 'devmonsta'),
-            'section' => 'devmonsta_text_settings_section',
-            'type' => 'color',
-        ]);
-        $this->add_control([
-            'id' => 'person_hair_color',
-            'label' => __('Hair Color', 'devmonsta'),
-            'type' => 'color',
-            'section' => 'devmonsta_text_settings_section',
-            'default' => '#eeee22',
+        $this->add_control( [
+            'id'              => 'devmonsta_repeater_popup_control',
+            'label'           => 'Popup',
+            'type'            => 'addable-popup',
+            'section'         => 'dm_repeater_section',
+            'add_button_text' => __( 'Add new', 'devmonsta' ),
+            'fields'          => [
+                [
+                    'id'    => 'person_name_popup',
+                    'label' => __( 'Name', 'devmonsta' ),
+                    'type'  => 'text',
+                ],
+                [
+                    'id'    => 'person_email_popup',
+                    'label' => __( 'Email', 'devmonsta' ),
+                    'type'  => 'email',
+                ],
+                [
+                    'id'    => 'person_birht_date_popup',
+                    'label' => __( 'Date of birth', 'devmonsta' ),
+                    'type'  => 'date',
+                ],
 
-        ]);
+                [
+                    'id'    => 'person_child_popup',
+                    'label' => __( 'Child', 'devmonsta' ),
+                    'type'  => 'number',
+                ],
+                [
+                    'id'    => 'person_color_popup',
+                    'label' => __( 'Awesome Color', 'devmonsta' ),
+                    'type'  => 'color',
+                ],
+                [
+                    'id'    => 'person_hair_color_popup',
+                    'label' => __( 'Hair Color', 'devmonsta' ),
+                    'type'  => 'color',
+                ],
+                [
+                    'id'    => 'person_image_popup',
+                    'type'  => 'media',
 
-        $this->add_control([
-            'id' => 'dm_media',
-            'type' => 'media',
-            'section' => 'devmonsta_text_settings_section',
-            'label' => __('Media'),
-        ]);
+                    'label' => __( 'Media' ),
 
-        $this->add_control([
-            'type' => 'radio',
-            'id' => 'dm_test_readio',
-            'label' => __('Custom Radio Selection'),
-            'description' => __('This is a custom radio input.'),
-            'choices' => array(
-                'red' => __('Red'),
-                'blue' => __('Blue'),
-                'green' => __('Green'),
-            ),
-            'section' => 'devmonsta_text_settings_section',
+                ],
+                [
+                    'id'          => 'dm_sum_test_control_kk_popup',
+                    'type'        => 'test-control',
+                    'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
+                    'label'       => __( 'Custom Dropdown Pages' ),
+                    'description' => __( 'This is a custom dropdown pages option.' ),
+                ],
+                [
+                    'type'        => 'radio',
+                    'id'          => 'dm_test_readio_for_repeater_popup',
+                    'label'       => __( 'Custom Radio Selection' ),
+                    'description' => __( 'This is a custom radio input.' ),
+                    'choices'     => [
+                        'red'   => __( 'Red' ),
+                        'blue'  => __( 'Blue' ),
+                        'green' => __( 'Green' ),
+                    ],
+                ],
 
-        ]);
+            ],
+        ] );
 
         $this->add_tab([
             'id' => 'first_tab',

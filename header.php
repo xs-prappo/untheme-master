@@ -65,18 +65,6 @@ wp_nav_menu(array(
 	<td>Test field</td>
 </tr>
 <?php
-foreach(json_decode(get_theme_mod('devmonsta_repeater_control')) as $person){
-	?>
-	<tr>
-		<td><?php echo $person->person_name; ?></td>
-		<td><?php echo $person->person_email; ?></td>
-		<td><?php echo $person->person_birht_date; ?></td>
-		<td><?php echo $person->person_child; ?></td>
-		<td><?php echo $person->dm_sum_test_control_kk; ?></td>
-	</tr>
-
-	<?php
-}
 
 ?>
 </table>
