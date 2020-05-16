@@ -313,7 +313,7 @@ class Post_Tag extends Taxonomies {
             'value'         => 'default value',
             'label'         => __( 'Wp Editor Example', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-            'editor_height' => 200,
+            'editor_height' => 400,
             'wpautop'       => true,
             'editor_type'   => true, // tinymce, false: HTML
         ] );
