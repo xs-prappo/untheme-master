@@ -9,7 +9,7 @@ class Post extends Posts {
         $this->add_box( [
             'id'        => 'post_box_1',
             'post_type' => 'post',
-            'title'     => 'First metabox for post',
+            'title'     => 'First metabox for post ffff',
         ] );
 
         $this->add_box( [
@@ -370,6 +370,23 @@ class Post extends Posts {
 
         ] );
 
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'name'   => 'padding_dimension_1',
+            'type'   => 'dimensions',
+            'label'  => __( 'Dimension Input', '{domain}' ),
+            'desc'   => __( 'Dimension text description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'  => [
+                'top'      => '0',
+                'right'    => '0',
+                'bottom'   => '0',
+                'left'     => '0',
+                'isLinked' => true,
+            ],
+
+        ] );
+
         /**
          * Control for Thumbnail Image picker Input
          */
@@ -462,10 +479,20 @@ class Post extends Posts {
             'box_id' => 'post_box_1',
             'name'   => 'icon_picker',
             'type'   => 'icon',
-            'label'  => __( 'Select Icon', '{domain}' ),
+            'label'  => __( 'Select Icon fsadfsafafsad', '{domain}' ),
             'desc'   => __( 'Select icon description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
+
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'name'   => 'icon_picker_2',
+            'type'   => 'icon',
+            'label'  => __( 'Select Icon arnob', '{domain}' ),
+            'desc'   => __( 'Select icon ', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
+        
 
         // dm_print(dm_p()->option('8', 'color'));
     }

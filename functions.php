@@ -67,6 +67,11 @@ function untheme_scripts()
 }
 add_action('wp_enqueue_scripts', 'untheme_scripts');
 
+add_action('admin_enqueue_scripts', function(){
+    wp_enqueue_script( 'untheme-vue-scripts', 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js' );
+});
+
+
 function untheme_create_post_custom_post()
 {
     register_post_type('custom_post',
