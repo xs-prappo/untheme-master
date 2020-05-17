@@ -68,7 +68,7 @@ class Post extends Posts
                         'choice-3' => __('Others', '{domain}'),
                     ],
                     // Display choices inline instead of list
-                    'inline' => false,
+                    'inline' => true,
                 ],
             ],
         ]);
@@ -414,7 +414,7 @@ class Post extends Posts
             'name' => 'i_p',
             'box_id' => 'post_box_2',
             'type' => 'image-picker',
-            'value' => 'image-2',
+            'value' => 'value-2',
             'attr' => [
                 'class' => 'custom-class',
                 'data-foo' => 'bar',
@@ -423,10 +423,25 @@ class Post extends Posts
             'desc' => __('Description', '{domain}'),
             'help' => __('Help tip', '{domain}'),
             'choices' => [
-                'value-1' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                'value-1' => [
+                    'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                    'large' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                ],
                 'value-2' => [
                     'small' => get_template_directory_uri() . '/images/preview.png',
                     'large' => get_template_directory_uri() . '/images/preview.png',
+                ],
+                'value-3' => [
+                    'small' => get_template_directory_uri() . '/images/a.jpg',
+                    'large' => get_template_directory_uri() . '/images/a.jpg',
+                ],
+                'value-4' => [
+                    'small' => get_template_directory_uri() . '/images/b.jpg',
+                    'large' => get_template_directory_uri() . '/images/b.jpg',
+                ],
+                'value-5' => [
+                    'small' => get_template_directory_uri() . '/images/c.jpg',
+                    'large' => get_template_directory_uri() . '/images/c.jpg',
                 ],
             ],
         ]);
