@@ -160,6 +160,10 @@ class Post extends Posts {
             'type'    => 'multiselect',
             'label'   => __( 'Select Multiple', '{domain}' ),
             'desc'    => __( 'multiple select description goes here', '{domain}' ),
+            'value'   => [
+                'choice-1',
+                'choice-2',
+            ],
             'choices' => [
                 'choice-1' => __( 'Choice One', '{domain}' ),
                 'choice-2' => __( 'Choice Two', '{domain}' ),
