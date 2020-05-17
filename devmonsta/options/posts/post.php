@@ -486,15 +486,6 @@ class Post extends Posts
             'attr' => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ]);
 
-        $this->add_control([
-            'box_id' => 'post_box_1',
-            'name' => 'icon_picker_1',
-            'type' => 'icon',
-            'label' => __('Select Icon', '{domain}'),
-            'desc' => __('Select icon description', '{domain}'),
-            'attr' => ['class' => 'custom-class', 'data-foo' => 'bar'],
-        ]);
-
         // dm_print(dm_p()->option('8', 'color'));
 
     }
