@@ -70,6 +70,14 @@ class Post extends Posts
                     // Display choices inline instead of list
                     'inline' => false,
                 ],
+                [
+                    'name' => 'color',
+                    'type' => 'color-picker',
+                    'label' => __('Wp Color Picker Example', '{domain}'),
+                    'desc' => __('description of color-picker goes here', '{domain}'),
+                    'value' => '#FF0000',
+                    'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+                ],
             ],
         ]);
 
