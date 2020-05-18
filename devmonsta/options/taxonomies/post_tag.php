@@ -10,88 +10,90 @@ class Post_Tag extends Taxonomies {
          * control for text input
          */
         $this->add_control( [
-            'type'        => 'text',
-            'placeholder' => 'Tags first name',
-            'label'       => 'Name',
-            'name'        => 'p_f_name',
-        ] );
-
-        /**
-         * control for text-area input
-         */
-        $this->add_control( [
-            'name'        => 'p_l_name',
-            'type'        => 'textarea',
-            'placeholder' => 'Tags last name',
-            'label'       => __( 'Details', '{domain}' ),
-            'desc'        => __( 'this is small description', '{domain}' ),
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'f_name',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'First name', '{domain}' ),
         ] );
 
         /**
          * control for url input
          */
         $this->add_control( [
-            'name'          => 'tax_url',
-            'type'          => 'url',
-            'label'         => __( 'URL', '{domain}' ),
-            'desc'          => __( 'Url Description', '{domain}' ),
-            'show_in_table' => true,
+            'box_id' => 'post_box_1',
+            'name'   => 'user_url',
+            'type'   => 'url',
+            'label'  => __( 'Enter valid URL', '{domain}' ),
+            'desc'   => __( 'Url Description', '{domain}' ),
         ] );
 
         /**
          * control for radio input
          */
         $this->add_control( [
-            'name'          => 'gender',
-            'type'          => 'radio',
-            'desc'          => 'use this area to input radio',
-            'label'         => __( 'Gender', '{domain}' ),
-            'value'         => 'choice-3',
-            'choices'       => [
+            'box_id'  => 'post_box_2',
+            'type'    => 'radio',
+            'name'    => 'gender',
+            'desc'    => 'use this area to input radio',
+            'label'   => __( 'Gender', '{domain}' ),
+            'value'   => 'choice-3',
+            'choices' => [
+                // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
                 'choice-1' => __( 'Male', '{domain}' ),
                 'choice-2' => __( 'Female', '{domain}' ),
                 'choice-3' => __( 'Others', '{domain}' ),
             ],
-            'inline'        => false,
-            'show_in_table' => false,
+            // Display choices inline instead of list
+            'inline'  => false,
         ] );
 
         /**
-         * control for color-picker input
+         * control for textarea
          */
         $this->add_control( [
-            'name'          => 'color',
-            'type'          => 'color-picker',
-            'label'         => __( 'Wp Color Picker Example', '{domain}' ),
-            'desc'          => __( 'description of color-picker goes here', '{domain}' ),
-            'value'         => '#FF0055',
-            'palettes'      => ['#ba4e4e', '#0ce9ed', '#941940'],
-            'show_in_table' => false,
+            'box_id' => 'post_box_2',
+            'type'   => 'textarea',
+            'name'   => 'txt_area',
+            'label'  => __( 'Text Area', '{domain}' ),
+            'desc'   => 'use this area to input large text',
+            'value'  => '',
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
         /**
          * control for checkbox input
          */
         $this->add_control( [
-            'type'          => 'checkbox',
-            'name'          => 'graduate',
-            'value'         => false,
-            'label'         => __( "Graduated", '{domain}' ),
-            'desc'          => __( "check if you are graduated", 'domain' ),
-            'text'          => __( "Yes", 'domain' ),
-            'show_in_table' => false,
+            'box_id' => 'post_box_2',
+            'type'   => 'checkbox',
+            'name'   => 'graduate',
+            'value'  => false, // checked/unchecked
+            'label'  => __( 'Graduated', '{domain}' ),
+            'desc'   => __( "check if you're graduated", '{domain}' ),
+            'text'   => __( 'Yes', '{domain}' ),
+        ] );
+
+        /**
+         * control for color-picker input
+         */
+        $this->add_control( [
+            'box_id'   => 'post_box_2',
+            'name'     => 'color',
+            'type'     => 'color-picker',
+            'label'    => __( 'Wp Color Picker Example', '{domain}' ),
+            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+            'value'    => '#FF0000',
+            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
 
         /**
          * control for multiple-checkbox input
          */
         $this->add_control( [
+            'box_id'  => 'post_box_2',
             'name'    => 'multiple_checkboxes',
             'type'    => 'checkboxes',
-            'value'   => [
-                'choice-1' => false,
-                'choice-2' => true,
-            ],
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'label'   => __( 'Multiple Chekbox', '{domain}' ),
             'desc'    => __( 'Multi checkbox Description', '{domain}' ),
@@ -107,19 +109,20 @@ class Post_Tag extends Taxonomies {
          * control for hidden input
          */
         $this->add_control( [
-            'type'  => 'hidden',
-            'value' => 'defaultvalue',
-            'name'  => 'hidden_field',
-            'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'box_id' => 'post_box_2',
+            'type'   => 'hidden',
+            'value'  => 'defaultvalue',
+            'name'   => 'hidden_field',
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
         /**
          * control for dropdown select
          */
         $this->add_control( [
+            'box_id'  => 'post_box_2',
             'name'    => 'select',
             'type'    => 'select',
-            'value'   => 'choice-3',
             'label'   => __( 'Select Single', '{domain}' ),
             'desc'    => __( 'select description goes here', '{domain}' ),
             'choices' => [
@@ -134,6 +137,7 @@ class Post_Tag extends Taxonomies {
          * control for multiple select
          */
         $this->add_control( [
+            'box_id'  => 'post_box_2',
             'name'    => 'select_multiple',
             'type'    => 'multiselect',
             'label'   => __( 'Select Multiple', '{domain}' ),
@@ -149,6 +153,7 @@ class Post_Tag extends Taxonomies {
          * control for upload input
          */
         $this->add_control( [
+            'box_id'           => 'post_box_2',
             'name'             => 'upload_image',
             'type'             => 'upload',
             'multiple'         => true,
@@ -163,6 +168,7 @@ class Post_Tag extends Taxonomies {
          * control for gradient input
          */
         $this->add_control( [
+            'box_id'     => 'post_box_2',
             'name'       => 'slider_widget',
             'label'      => __( 'Wp Slider Example', '{domain}' ),
             'desc'       => __( 'description of slider goes here', '{domain}' ),
@@ -179,6 +185,7 @@ class Post_Tag extends Taxonomies {
          * control for gradient input
          */
         $this->add_control( [
+            'box_id'     => 'post_box_2',
             'name'       => 'range_slider_widget',
             'type'       => 'range-slider',
             'label'      => __( 'Wp Range Slider Example', '{domain}' ),
@@ -198,18 +205,20 @@ class Post_Tag extends Taxonomies {
          * Control for Html input
          */
         $this->add_control( [
-            'label' => __( 'Html Input', '{domain}' ),
-            'desc'  => __( 'html description goes here', '{domain}' ),
-            'type'  => 'html',
-            'name'  => 'html',
-            'value' => 'Default hidden value',
-            'html'  => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+            'box_id' => 'post_box_2',
+            'label'  => __( 'Html Input', '{domain}' ),
+            'desc'   => __( 'html description goes here', '{domain}' ),
+            'type'   => 'html',
+            'name'   => 'html',
+            'value'  => 'Default hidden value',
+            'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
         ] );
 
         /**
          * control for date-picker input
          */
         $this->add_control( [
+            'box_id'       => 'post_box_2',
             'type'         => 'date-picker',
             'name'         => 'start_date',
             'value'        => '',
@@ -224,11 +233,12 @@ class Post_Tag extends Taxonomies {
          * control for rgba-color-picker input
          */
         $this->add_control( [
+            'box_id'   => 'post_box_2',
             'name'     => 'rgba_color',
             'type'     => 'rgba-color-picker',
             'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
-            'value'    => 'rgba(255,25,0,0.99)',
+            'value'    => 'rgba(255,25,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
 
@@ -236,6 +246,7 @@ class Post_Tag extends Taxonomies {
          * control for datetime-picker input
          */
         $this->add_control( [
+            'box_id'          => 'post_box_2',
             'type'            => 'datetime-picker',
             'name'            => 'date_time_picker',
             'label'           => __( 'Date Time Picker', '{domain}' ),
@@ -254,11 +265,8 @@ class Post_Tag extends Taxonomies {
          * control for datetime-picker input
          */
         $this->add_control( [
+            'box_id'           => 'post_box_2',
             'type'             => 'datetime-range',
-            'value'            => [
-                'from' => '2020/05/10 12:00 am',
-                'to'   => '2020/05/18 07:55 pm',
-            ],
             'name'             => 'date_time_range_picker',
             'label'            => __( 'Date Time Range Picker', '{domain}' ),
             'desc'             => __( 'date time range picker description', '{domain}' ),
@@ -276,11 +284,12 @@ class Post_Tag extends Taxonomies {
          * control for gradient input
          */
         $this->add_control( [
-            'name'  => 'gradient',
-            'type'  => 'gradient',
-            'label' => __( 'Wp Gradient Picker Example', '{domain}' ),
-            'desc'  => __( 'description of gradient-picker goes here', '{domain}' ),
-            'value' => [
+            'box_id' => 'post_box_2',
+            'name'   => 'gradient',
+            'type'   => 'gradient',
+            'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
+            'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+            'value'  => [
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
             ],
@@ -290,6 +299,7 @@ class Post_Tag extends Taxonomies {
          * control for oembed input
          */
         $this->add_control( [
+            'box_id'  => 'post_box_1',
             'name'    => 'oembed_field',
             'type'    => 'oembed',
             'label'   => __( 'Oembed Input', '{domain}' ),
@@ -310,7 +320,6 @@ class Post_Tag extends Taxonomies {
             'box_id'        => 'post_box_2',
             'name'          => 'wp_editor',
             'type'          => 'wp-editor',
-            'value'         => 'default value',
             'label'         => __( 'Wp Editor Example', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
             'editor_height' => 400,
@@ -322,12 +331,13 @@ class Post_Tag extends Taxonomies {
          * control for dimension input
          */
         $this->add_control( [
-            'name'  => 'padding_dimension',
-            'type'  => 'dimensions',
-            'label' => __( 'Dimension Input', '{domain}' ),
-            'desc'  => __( 'Dimension text description', '{domain}' ),
-            'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            'value' => [
+            'box_id' => 'post_box_2',
+            'name'   => 'padding_dimension',
+            'type'   => 'dimensions',
+            'label'  => __( 'Dimension Input', '{domain}' ),
+            'desc'   => __( 'Dimension text description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'  => [
                 'top'      => '0',
                 'right'    => '0',
                 'bottom'   => '0',
@@ -338,26 +348,10 @@ class Post_Tag extends Taxonomies {
         ] );
 
         /**
-         * Control for switcher input
-         */
-        $this->add_control( [
-            'type'         => 'switcher',
-            'name'         => 'switcher',
-            'value'        => 'hello',
-            'label'        => __( 'Switcher', '{domain}' ),
-            'desc'         => __( 'Description', '{domain}' ),
-            'left-choice'  => [
-                'goodbye' => __( 'Goodbye', '{domain}' ),
-            ],
-            'right-choice' => [
-                'hello' => __( 'Hello', '{domain}' ),
-            ],
-        ] );
-
-        /**
          * Control for Thumbnail Image picker Input
          */
         $this->add_control( [
+            'box_id'  => 'post_box_2',
             'name'    => 'i_p',
             'type'    => 'image-picker',
             'value'   => 'value-1',
@@ -392,10 +386,29 @@ class Post_Tag extends Taxonomies {
         ] );
 
         /**
+         * Control for switcher input
+         */
+        $this->add_control( [
+            'box_id'       => 'post_box_2',
+            'type'         => 'switcher',
+            'name'         => 'switcher',
+            'value'        => 'hello',
+            'label'        => __( 'Switcher', '{domain}' ),
+            'desc'         => __( 'Description', '{domain}' ),
+            'left-choice'  => [
+                'goodbye' => __( 'Goodbye', '{domain}' ),
+            ],
+            'right-choice' => [
+                'hello' => __( 'Hello', '{domain}' ),
+            ],
+        ] );
+
+        /**
          * Control for Typography Input
          */
         $this->add_control( [
             'name'       => 'typo',
+            'box_id'     => 'post_box_2',
             'type'       => 'typography',
             'value'      => [
                 'family'         => 'Amarante',
@@ -404,8 +417,8 @@ class Post_Tag extends Taxonomies {
                 'subset'         => 'latin-ext',
                 'variation'      => 'regular',
                 'size'           => 14,
-                'line-height'    => 13,
-                'letter-spacing' => -2,
+                'line_height'    => 13,
+                'letter_spacing' => -2,
                 'color'          => '#0000ff',
             ],
             'components' => [
@@ -417,6 +430,18 @@ class Post_Tag extends Taxonomies {
             ],
             'label'      => __( 'Typhography', '{domain}' ),
             'desc'       => __( 'Description', '{domain}' ),
+        ] );
+
+        /**
+         * control for icon-picker input
+         */
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'name'   => 'icon_picker',
+            'type'   => 'icon',
+            'label'  => __( 'Select Icon', '{domain}' ),
+            'desc'   => __( 'Select icon description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
     }
 
