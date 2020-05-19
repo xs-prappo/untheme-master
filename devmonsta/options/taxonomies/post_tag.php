@@ -222,7 +222,7 @@ class Post_Tag extends Taxonomies {
             'type'         => 'date-picker',
             'name'         => 'start_date',
             'value'        => '',
-            'label'        => __( 'Dat Picker', '{domain}' ),
+            'label'        => __( 'Date Picker', '{domain}' ),
             'desc'         => __( 'date picker description goes here', '{domain}' ),
             'monday-first' => true,          // The week will begin with Monday; for Sunday, set to false
             'min-date'     => date( 'd-m-Y' ), // By default minimum date will be current day. Set a date in format d-m-Y as a start date
