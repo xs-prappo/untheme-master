@@ -69,11 +69,11 @@ class Post extends Posts {
                     'inline'  => true,
                 ],
                 [
-                    'name' => 'color',
-                    'type' => 'color-picker',
-                    'label' => __('Wp Color Picker Example', '{domain}'),
-                    'desc' => __('description of color-picker goes here', '{domain}'),
-                    'value' => '#FF0000',
+                    'name'     => 'color',
+                    'type'     => 'color-picker',
+                    'label'    => __( 'Wp Color Picker Example', '{domain}' ),
+                    'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+                    'value'    => '#FF0000',
                     'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
                 ],
             ],
@@ -284,9 +284,9 @@ class Post extends Posts {
             'value'        => '',
             'label'        => __( 'Date Picker', '{domain}' ),
             'desc'         => __( 'date picker description goes here', '{domain}' ),
-            'monday-first' => true,          // The week will begin with Monday; for Sunday, set to false
-            'min-date'     => date( 'd-m-Y' ), // By default minimum date will be current day. Set a date in format d-m-Y as a start date
-            'max-date'     => null,          // By default there is not maximum date. Set a date in format d-m-Y as a start date
+            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
+            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
         ] );
 
         /**
@@ -312,12 +312,11 @@ class Post extends Posts {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'format'      => 'Y-m-d H:i', // Format datetime.
-                'maxDate'     => false,       // By default there is not maximum date , set a date in the datetime format.
-                'minDate'     => false,       // By default minimum date will be current day, set a date in the datetime format.
-                'timepicker'  => true,        // Show timepicker.
-                'datepicker'  => true,        // Show datepicker.
-                'defaultTime' => '12:00',     // If the input value is empty, timepicker will set time use defaultTime.
+                'format'      => 'Y-m-d H:i',  // Format datetime.
+                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                'max-date'    => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker'  => true,         // Show timepicker.
+                'defaultTime' => '12:00',      // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
 
