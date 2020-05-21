@@ -47,9 +47,9 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          */
         $this->add_control( [
             'id'      => 'dm_ctrl_text_1',
+            'type'    => 'text',
             'label'   => __( 'Text Input', 'devmonsta' ),
             'section' => 'devmonsta_text_settings_section',
-            'type'    => 'text',
         ] );
 
         /**
@@ -84,6 +84,9 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'   => __( 'Media' ),
         ] );
 
+        /**
+         * control for radio input
+         */
         $this->add_control( [
             'type'        => 'radio',
             'id'          => 'dm_test_readio',
@@ -97,12 +100,16 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'     => 'devmonsta_text_settings_section',
         ] );
 
+        /**
+         * control for textarea input
+         */
         $this->add_control( [
             'id'          => 'dm_textarea',
             'type'        => 'textarea',
             'section'     => 'devmonsta_text_settings_section',
             'label'       => __( 'Text area' ),
             'description' => __( 'This is text area desctription' ),
+            "value"       => 'default value for text area',
         ] );
 
         /**
@@ -115,13 +122,52 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'format'      => 'Y-m-d H:i',
-                'maxDate'     => false,
-                'minDate'     => false,
-                'timepicker'  => true,
-                'datepicker'  => true,
-                'defaultTime' => '12:00',
+                'date-format' => 'Y-m-d',            // Format datetime.
+                'time-format' => 'H:i',              // Format datetime.
+                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker'  => true,               // Show timepicker.
+                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
+        ] );
+
+        /**
+         * control for checkbox input
+         */
+        $this->add_control( [
+            'id'      => 'dm_checkbox',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'checkbox',
+            'value'   => false, // checked/unchecked
+            'label'   => __( 'Checkbox example', '{domain}' ),
+            'desc'    => __( "checkbox example details", '{domain}' ),
+            'text'    => __( 'Yes', '{domain}' ),
+        ] );
+
+        /**
+         * control for url input
+         */
+        $this->add_control( [
+            'id'      => 'dm_url',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'url',
+            'value'   => 'http://www.xs.com',
+            'label'   => __( 'Enter valid URL', '{domain}' ),
+            'desc'    => __( 'Url Description', '{domain}' ),
+        ] );
+
+        /**
+         * control for number input
+         */
+        $this->add_control( [
+            'id'      => 'dm_number',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'number',
+            'value'   => 3,
+            'min'     => 0,
+            'max'     => 100,
+            'label'   => __( 'Enter Number', '{domain}' ),
+            'desc'    => __( 'number input description', '{domain}' ),
         ] );
 
         // $this->add_control([
@@ -298,13 +344,13 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             ],
         ] );
 
-        $this->add_tab([
-            'id' => 'first_tab',
+        $this->add_tab( [
+            'id'      => 'first_tab',
             'section' => 'devmonsta_text_settings_section',
-            'tabs' => [
+            'tabs'    => [
                 [
-                    'id' => 'tab_1',
-                    'label' => 'Tab 1',
+                    'id'       => 'tab_1',
+                    'label'    => 'Tab 1',
                     'controls' => [
                         'control_id_1',
                         'control_id_2',
@@ -312,33 +358,33 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                     ],
                 ],
             ],
-        ]);
+        ] );
 
         $control_1 = [
-            'id' => 'dm_media',
-            'type' => 'media',
+            'id'      => 'dm_media',
+            'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
-            'label' => __('Media'),
+            'label'   => __( 'Media' ),
         ];
 
         $control_2 = [
-            'id' => 'dm_media',
-            'type' => 'media',
+            'id'      => 'dm_media',
+            'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
-            'label' => __('Media'),
+            'label'   => __( 'Media' ),
         ];
 
-        $this->add_tab([
-            'id' => 'first_tab',
+        $this->add_tab( [
+            'id'      => 'first_tab',
             'section' => 'devmonsta_text_settings_section',
-            'tabs' => [
+            'tabs'    => [
                 [
-                    'id' => 'tab_1',
-                    'label' => 'Tab 1',
+                    'id'       => 'tab_1',
+                    'label'    => 'Tab 1',
                     'controls' => [$control_1, $control_2],
                 ],
             ],
-        ]);
+        ] );
 
     }
 

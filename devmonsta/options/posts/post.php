@@ -36,7 +36,7 @@ class Post extends Posts {
             'box_id' => 'post_box_1',
             'name'   => 'user_url',
             'type'   => 'url',
-            'value'  => 'http://www.reza-khan.com',
+            'value'  => 'http://www.xs.com',
             'label'  => __( 'Enter valid URL', '{domain}' ),
             'desc'   => __( 'Url Description', '{domain}' ),
         ] );
