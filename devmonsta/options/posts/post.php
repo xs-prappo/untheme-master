@@ -312,7 +312,8 @@ class Post extends Posts {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'format'      => 'Y-m-d H:i',  // Format datetime.
+                'date-format'      => 'Y-m-d',  // Format datetime.
+                'time-format'      => 'H:i',  // Format datetime.
                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                 'max-date'    => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'  => true,         // Show timepicker.
