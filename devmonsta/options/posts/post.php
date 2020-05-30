@@ -25,116 +25,25 @@ class Post extends Posts
          */
         $this->add_control([
             'box_id' => 'post_box_1',
-            'type' => 'text',
-            'name' => 'f_name',
-            'desc' => 'use this area to input text',
-            'label' => __('First name', '{domain}'),
-        ]);
+            'type'   => 'text',
+            'name'   => 'f_name',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'First name', '{domain}' ),
+        ] );
 
         /**
          * control for url input
          */
         $this->add_control([
             'box_id' => 'post_box_1',
-            'name' => 'user_url',
-            'type' => 'url',
-            'value' => 'http://www.xs.com',
-            'label' => __('Enter valid URL', '{domain}'),
-            'desc' => __('Url Description', '{domain}'),
-        ]);
+            'name'   => 'user_url',
+            'type'   => 'url',
+            'value'  => 'http://www.xs.com',
+            'label'  => __( 'Enter valid URL', '{domain}' ),
+            'desc'   => __( 'Url Description', '{domain}' ),
+        ] );
 
-        // repeater
-
-        $this->add_control([
-            'box_id' => 'post_box_1',
-            'type' => 'repeater',
-            'name' => 'repeater_1',
-            'label' => 'My Repeater 1',
-            'add_new' => 'Add new 1',
-            'controls' => [
-                [
-                    'name' => 'user_url_1',
-                    'type' => 'url',
-                    'value' => 'http://www.reza-khan.com',
-                    'label' => __('Enter valid URL', '{domain}'),
-                    'desc' => __('Url Description', '{domain}'),
-                    'attr' => [
-                        'id' => 'test_id',
-                    ],
-
-                ],
-                [
-                    'name' => 'color_xyz',
-                    'type' => 'color-picker',
-                    'label' => __('Wp Color Picker Example', '{domain}'),
-                    'desc' => __('description of color-picker goes here', '{domain}'),
-                    'value' => '#FF0000',
-                    'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
-                ],
-                [
-                    'type' => 'repeater',
-                    'name' => 'repeater_nested_1',
-                    'controls' => [
-                        [
-                            'name' => 'user_url_1',
-                            'type' => 'url',
-                            'value' => 'http://www.reza-khan.com',
-                            'label' => __('Enter valid URL', '{domain}'),
-                            'desc' => __('Url Description', '{domain}'),
-                            'attr' => [
-                                'id' => 'test_id',
-                            ],
-
-                        ],
-                    ],
-                ],
-
-            ],
-        ]);
-
-        $this->add_control([
-            'box_id' => 'post_box_1',
-            'type' => 'repeater',
-            'name' => 'repeater_2',
-            'label' => 'My Repeater 2',
-            'add_new' => 'Add new 2',
-            'controls' => [
-                [
-                    'name' => 'user_url_2',
-                    'type' => 'url',
-                    'value' => 'http://www.reza-khan.com',
-                    'label' => __('Enter valid URL', '{domain}'),
-                    'desc' => __('Url Description', '{domain}'),
-                    'attr' => [
-                        'id' => 'test_id',
-                    ],
-
-                ],
-
-            ],
-        ]);
-
-        $this->add_control([
-            'box_id' => 'post_box_1',
-            'type' => 'repeater',
-            'name' => 'repeater_3',
-            'label' => 'My Repeater 3',
-            'add_new' => 'Add new 3',
-            'controls' => [
-                [
-                    'name' => 'user_url_3',
-                    'type' => 'url',
-                    'value' => 'http://www.reza-khan.com',
-                    'label' => __('Enter valid URL', '{domain}'),
-                    'desc' => __('Url Description', '{domain}'),
-                    'attr' => [
-                        'id' => 'test_id',
-                    ],
-
-                ],
-
-            ],
-        ]);
 
         /**
          * control for radio input
@@ -147,10 +56,9 @@ class Post extends Posts
             'label' => __('Gender', '{domain}'),
             'value' => 'choice-3',
             'choices' => [
-                // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
-                'choice-1' => __('Male', '{domain}'),
-                'choice-2' => __('Female', '{domain}'),
-                'choice-3' => __('Others', '{domain}'),
+                'choice-1' => __( 'Male', '{domain}' ),
+                'choice-2' => __( 'Female', '{domain}' ),
+                'choice-3' => __( 'Others', '{domain}' ),
             ],
             // Display choices inline instead of list
             'inline' => false,
@@ -577,6 +485,47 @@ class Post extends Posts
             'desc' => __('Select icon description', '{domain}'),
             'attr' => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ]);
+
+        
+
+        // $this->add_control( [
+        //     'box_id'   => 'post_box_2',
+        //     'type'     => 'repeater',
+        //     'label'    => 'My Repeater',
+        //     'controls' => [
+        //         [
+        //             'name'  => 'user_url_1',
+        //             'type'  => 'url',
+        //             'value' => 'http://www.reza-khan.com',
+        //             'label' => __( 'Enter valid URL', '{domain}' ),
+        //             'desc'  => __( 'Url Description', '{domain}' ),
+        //         ],
+        //         [
+        //             'type'    => 'radio',
+        //             'name'    => 'gender_1',
+        //             'desc'    => 'use this area to input radio',
+        //             'label'   => __( 'Gender', '{domain}' ),
+        //             'value'   => 'choice-3',
+        //             'choices' => [
+        //                 // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
+        //                 'choice-1' => __( 'Male', '{domain}' ),
+        //                 'choice-2' => __( 'Female', '{domain}' ),
+        //                 'choice-3' => __( 'Others', '{domain}' ),
+        //             ],
+        //             // Display choices inline instead of list
+        //             'inline'  => true,
+        //         ],
+        //         [
+        //             'name'     => 'color',
+        //             'type'     => 'color-picker',
+        //             'label'    => __( 'Wp Color Picker Example', '{domain}' ),
+        //             'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+        //             'value'    => '#FF0000',
+        //             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+        //         ],
+        //     ],
+        // ] );
+
 
         // dm_print(dm_p()->option('8', 'color'));
 
