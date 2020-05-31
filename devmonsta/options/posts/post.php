@@ -270,6 +270,20 @@ class Post extends Posts
                 'max' => 100,
                 'step' => 1,
             ],
+            'active_callback' => [
+                [
+
+                    'setting'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+
+                ],
+                [
+                    'setting'  => 'setting_3',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+            ]
         ]);
 
         /**
@@ -368,6 +382,20 @@ class Post extends Posts
                 'primary' => '#FF0000',
                 'secondary' => '#0000FF',
             ],
+            'active_callback' => [
+                [
+
+                    'setting'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+
+                ],
+                [
+                    'setting'  => 'setting_3',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+            ]
         ]);
 
         /**
