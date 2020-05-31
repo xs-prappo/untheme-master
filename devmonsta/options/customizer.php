@@ -122,12 +122,12 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format' => 'Y-m-d',            // Format datetime.
-                'time-format' => 'H:i',              // Format datetime.
-                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
-                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
-                'timepicker'  => true,               // Show timepicker.
-                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                'date-format'  => 'Y-m-d',            // Format datetime.
+                'time-format'  => 'H:i',              // Format datetime.
+                'min-date'     => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                'max-date'     => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker'   => true,               // Show timepicker.
+                'default-time' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
 
@@ -154,6 +154,76 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'value'   => 'http://www.xs.com',
             'label'   => __( 'Enter valid URL', '{domain}' ),
             'desc'    => __( 'Url Description', '{domain}' ),
+        ] );
+
+        /**
+         * control for dimension input
+         */
+        $this->add_control( [
+            'id'      => 'padding_dimension',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'dimensions',
+            'label'   => __( 'Dimension Input', '{domain}' ),
+            'desc'    => __( 'Dimension text description', '{domain}' ),
+            'value'   => [
+                'top'      => '2',
+                'right'    => '3',
+                'bottom'   => '4',
+                'left'     => '0',
+                'isLinked' => true,
+            ],
+        ] );
+
+        /**
+         * Control for switcher input
+         */
+        $this->add_control( [
+            'section'      => 'devmonsta_text_settings_section',
+            'type'         => 'switcher',
+            'id'           => 'dm_switcher',
+            'value'        => 'hello',
+            'label'        => __( 'Switcher', '{domain}' ),
+            'desc'         => __( 'Description', '{domain}' ),
+            'left-choice'  => [
+                'goodbye' => __( 'Goodbye', '{domain}' ),
+            ],
+            'right-choice' => [
+                'hello' => __( 'Hello', '{domain}' ),
+            ],
+        ] );
+
+        /**
+         * Control for Thumbnail Image picker Input
+         */
+        $this->add_control( [
+            'id'      => 'i_p',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'image-picker',
+            'value'   => 'value-2',
+            'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
+            'desc'    => __( 'Description', '{domain}' ),
+            'choices' => [
+                'value-1' => [
+                    'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                    'large' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                ],
+                'value-2' => [
+                    'small' => get_template_directory_uri() . '/images/preview.png',
+                    'large' => get_template_directory_uri() . '/images/preview.png',
+                ],
+                'value-3' => [
+                    'small' => get_template_directory_uri() . '/images/a.jpg',
+                    'large' => get_template_directory_uri() . '/images/a.jpg',
+                ],
+                'value-4' => [
+                    'small' => get_template_directory_uri() . '/images/b.jpg',
+                    'large' => get_template_directory_uri() . '/images/b.jpg',
+                ],
+                'value-5' => [
+                    'small' => get_template_directory_uri() . '/images/c.jpg',
+                    'large' => get_template_directory_uri() . '/images/c.jpg',
+                ],
+            ],
         ] );
 
         /**

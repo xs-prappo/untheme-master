@@ -28,6 +28,20 @@ class Post extends Posts {
             'value'  => 'default text value',
             'desc'   => 'use this area to input text',
             'label'  => __( 'First name', '{domain}' ),
+            'active_callback' => [
+                [
+
+                    'setting'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+
+                ],
+                [
+                    'setting'  => 'setting_3',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+            ]
         ] );
 
         /**
@@ -40,8 +54,19 @@ class Post extends Posts {
             'value'  => 'http://www.xs.com',
             'label'  => __( 'Enter valid URL', '{domain}' ),
             'desc'   => __( 'Url Description', '{domain}' ),
+            'active_callback' => [
+                [
+                    'setting'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+                [
+                    'setting'  => 'setting_3',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+            ]
         ] );
-
 
         /**
          * control for radio input
@@ -176,32 +201,43 @@ class Post extends Posts {
          * control for upload input
          */
         $this->add_control( [
-            'box_id'           => 'post_box_2',
-            'name'             => 'upload_image',
-            'type'             => 'upload',
-            'multiple'         => true,
-            'label'            => __( 'Upload Image', '{domain}' ),
-            'desc'             => __( 'Description', '{domain}' ),
-            'images_only'      => true,
-            'files_ext'        => ['jpg', 'png', 'jpeg', 'JPEG', 'JPG', 'PNG'],
-            'extra_mime_types' => ['audio/x-aiff, aif aiff'],
+            'box_id'   => 'post_box_2',
+            'name'     => 'upload_image',
+            'type'     => 'upload',
+            'label'    => __( 'Upload Image', '{domain}' ),
+            'desc'     => __( 'Description', '{domain}' ),
+            'multiple' => true,
         ] );
 
         /**
-         * control for gradient input
+         * control for slider input
          */
         $this->add_control( [
-            'box_id'     => 'post_box_2',
-            'name'       => 'slider_widget',
-            'label'      => __( 'Wp Slider Example', '{domain}' ),
-            'desc'       => __( 'description of slider goes here', '{domain}' ),
-            'type'       => 'slider',
-            'value'      => 33,
-            'properties' => [
+            'box_id'          => 'post_box_2',
+            'name'            => 'slider_widget',
+            'label'           => __( 'Wp Slider Example', '{domain}' ),
+            'desc'            => __( 'description of slider goes here', '{domain}' ),
+            'type'            => 'slider',
+            'value'           => 33,
+            'properties'      => [
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
             ],
+            'active_callback' => [
+                [
+
+                    'setting'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+
+                ],
+                [
+                    'setting'  => 'setting_3',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+            ]
         ] );
 
         /**
@@ -275,12 +311,12 @@ class Post extends Posts {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format'      => 'Y-m-d',  // Format datetime.
-                'time-format'      => 'H:i',  // Format datetime.
+                'date-format' => 'Y-m-d',            // Format datetime.
+                'time-format' => 'H:i',              // Format datetime.
                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
-                'max-date'    => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
-                'timepicker'  => true,         // Show timepicker.
-                'defaultTime' => '12:00',      // If the input value is empty, timepicker will set time use defaultTime.
+                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker'  => true,               // Show timepicker.
+                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
 
@@ -474,8 +510,6 @@ class Post extends Posts {
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
-        
-
         // $this->add_control( [
         //     'box_id'   => 'post_box_2',
         //     'type'     => 'repeater',
@@ -513,7 +547,6 @@ class Post extends Posts {
         //         ],
         //     ],
         // ] );
-
 
         // dm_print(dm_p()->option('8', 'color'));
 
