@@ -305,9 +305,23 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
         // New controls
 
-        $this->add_control( [
-            'id'      => 'dm_toggle',
-            'lable'   => __( 'Toggle', 'devmonsta' ),
+        $this->add_control([
+            'id' => 'dm_toggle',
+            'label' => __('Toggle','devmonsta'),
+            'section' => 'dm_new_controls',
+            'type' => 'toggle',
+        ]);
+
+        $this->add_control([
+            'id' => 'dm_tswitch',
+            'type' => 'tswitch',
+            'label' => __('Tswitch', 'devmonsta'),
+            'section' => 'dm_new_controls',
+        ]);
+        
+        $this->add_control([
+            'id' => 'dm_accordion',
+            'lable' => __('Accordion','devmonsta'),
             'section' => 'dm_new_controls',
             'type'    => 'toggle',
         ] );
