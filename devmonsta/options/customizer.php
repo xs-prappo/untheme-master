@@ -60,6 +60,9 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'label' => __('Text Input', 'devmonsta'),
             'section' => 'devmonsta_text_settings_section',
         ]);
+        
+        
+        
 
         /**
          * Control for dropdown-page input
@@ -223,9 +226,16 @@ class Customizer extends \Devmonsta\Libs\Customizer
 
         $this->add_control([
             'id' => 'dm_toggle',
-            'lable' => __('Toggle','devmonsta'),
+            'label' => __('Toggle','devmonsta'),
             'section' => 'dm_new_controls',
             'type' => 'toggle',
+        ]);
+
+        $this->add_control([
+            'id' => 'dm_tswitch',
+            'type' => 'tswitch',
+            'label' => __('Tswitch', 'devmonsta'),
+            'section' => 'dm_new_controls',
         ]);
         
         $this->add_control([
