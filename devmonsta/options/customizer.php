@@ -274,6 +274,7 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'section' => 'devmonsta_text_settings_section',
             'text' => 'cool btn',
         ]);
+        
 
         $this->add_control([
             'id' => 'dm_box_text',
@@ -299,6 +300,13 @@ class Customizer extends \Devmonsta\Libs\Customizer
             'label' => __('Toggle','devmonsta'),
             'section' => 'dm_new_controls',
             'type' => 'toggle',
+        ]);
+
+        $this->add_control([
+            'id' => 'typography',
+            'type' => 'typography',
+            'lable' => 'typography',
+            'section' => 'dm_new_controls'
         ]);
 
         $this->add_control([
