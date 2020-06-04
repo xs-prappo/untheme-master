@@ -28,19 +28,19 @@ class Post extends Posts {
             'value'           => 'default text value',
             'desc'            => 'use this area to input text',
             'label'           => __( 'First name', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
+            'conditions' => [
+                [
+                    'control_name'  => 'setting_1',
+                    'operator' => '==',
+                    'value' => true,
 
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            // ],
+                ],
+                [
+                    'control_name'  => 'setting_3',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+            ],
         ] );
 
         /**
@@ -53,18 +53,18 @@ class Post extends Posts {
             'value'           => 'http://www.xs.com',
             'label'           => __( 'Enter valid URL', '{domain}' ),
             'desc'            => __( 'Url Description', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            // ],
+            'conditions' => [
+                [
+                    'control_name'  => 'setting_1',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+                [
+                    'control_name'  => 'setting_3',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+            ],
         ] );
 
         /**
@@ -78,9 +78,9 @@ class Post extends Posts {
             'label'   => __( 'Gender', '{domain}' ),
             'value'   => 'choice-3',
             'choices' => [
-                'choice-1' => __( 'Male', '{domain}' ),
-                'choice-2' => __( 'Female', '{domain}' ),
-                'choice-3' => __( 'Others', '{domain}' ),
+                'choice-1' => __('Male', '{domain}'),
+                'choice-2' => __('Female', '{domain}'),
+                'choice-3' => __('Others', '{domain}'),
             ],
             // Display choices inline instead of list
             'inline'  => false,
@@ -209,42 +209,42 @@ class Post extends Posts {
         /**
          * control for upload input
          */
-        $this->add_control( [
-            'box_id'   => 'post_box_2',
-            'name'     => 'upload_image',
-            'type'     => 'upload',
-            'label'    => __( 'Upload Image', '{domain}' ),
-            'desc'     => __( 'Description', '{domain}' ),
+        $this->add_control([
+            'box_id' => 'post_box_2',
+            'name' => 'upload_image',
+            'type' => 'upload',
+            'label' => __('Upload Image', '{domain}'),
+            'desc' => __('Description', '{domain}'),
             'multiple' => true,
-        ] );
+        ]);
 
         /**
          * control for slider input
          */
-        $this->add_control( [
-            'box_id'          => 'post_box_2',
-            'name'            => 'slider_widget',
-            'label'           => __( 'Wp Slider Example', '{domain}' ),
-            'desc'            => __( 'description of slider goes here', '{domain}' ),
-            'type'            => 'slider',
-            'value'           => 33,
-            'properties'      => [
-                'min'  => 0,
-                'max'  => 100,
+        $this->add_control([
+            'box_id' => 'post_box_2',
+            'name' => 'slider_widget',
+            'label' => __('Wp Slider Example', '{domain}'),
+            'desc' => __('description of slider goes here', '{domain}'),
+            'type' => 'slider',
+            'value' => 33,
+            'properties' => [
+                'min' => 0,
+                'max' => 100,
                 'step' => 1,
             ],
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            // ],
+            'conditions' => [
+                [
+                    'control_name'  => 'setting_1',
+                    'operator' => '==',
+                    'value'    => true,
+                ],
+                [
+                    'control_name'  => 'setting_3',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+            ],
         ] );
 
         /**
@@ -270,13 +270,13 @@ class Post extends Posts {
 
                     'control_name'  => 'setting_1',
                     'operator' => '==',
-                    'value'    => true,
+                    'value' => true,
 
                 ],
                 [
                     'control_name'  => 'setting_3',
                     'operator' => '==',
-                    'value'    => true,
+                    'value' => true,
                 ],
             ],
         ] );
@@ -332,12 +332,12 @@ class Post extends Posts {
             'label'           => __( 'Date Time Picker', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format' => 'Y-m-d',            // Format datetime.
-                'time-format' => 'H:i',              // Format datetime.
-                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
-                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
-                'timepicker'  => true,               // Show timepicker.
-                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                'date-format' => 'Y-m-d', // Format datetime.
+                'time-format' => 'H:i', // Format datetime.
+                'min-date' => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                'max-date' => null, // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker' => true, // Show timepicker.
+                'defaultTime' => '12:00', // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
 
@@ -377,20 +377,18 @@ class Post extends Posts {
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
             ],
-            // 'conditions' => [
-            //     [
-
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
-
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            // ],
+            'conditions' => [
+                [
+                    'control_name'  => 'setting_1',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+                [
+                    'control_name'  => 'setting_3',
+                    'operator' => '==',
+                    'value' => true,
+                ],
+            ],
         ] );
 
         /**
@@ -556,33 +554,55 @@ class Post extends Posts {
             'add_new'  => 'Add new',
             'controls' => [
                 [
-                    'name'  => 'user_url_1',
-                    'type'  => 'url',
+                    'name' => 'user_url_1',
+                    'type' => 'url',
                     'value' => 'http://www.reza-khan.com',
-                    'label' => __( 'Enter valid URL', '{domain}' ),
-                    'desc'  => __( 'Url Description', '{domain}' ),
+                    'label' => __('Enter valid URL', '{domain}'),
+                    'desc' => __('Url Description', '{domain}'),
                 ],
                 [
-                    'type'    => 'radio',
-                    'name'    => 'gender_1',
-                    'desc'    => 'use this area to input radio',
-                    'label'   => __( 'Gender', '{domain}' ),
-                    'value'   => 'choice-3',
+                    'name' => 'child_repeater_1',
+                    'lable' => 'Child repeater 1',
+                    'type' => 'repeater',
+                    'controls' => [
+                        [
+                            'name' => 'color_child',
+                            'type' => 'color-picker',
+                            'label' => __('Wp Color Picker Example', '{domain}'),
+                            'desc' => __('description of color-picker goes here', '{domain}'),
+                            'value' => '#FF0000',
+                            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+                        ],
+                        [
+                            'name' => 'user_url_1_child',
+                            'type' => 'url',
+                            'value' => 'http://www.reza-khan.com',
+                            'label' => __('Enter valid URL', '{domain}'),
+                            'desc' => __('Url Description', '{domain}'),
+                        ]
+                    ],
+                ],
+                [
+                    'type' => 'radio',
+                    'name' => 'gender_1',
+                    'desc' => 'use this area to input radio',
+                    'label' => __('Gender', '{domain}'),
+                    'value' => 'choice-3',
                     'choices' => [
                         // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
-                        'choice-1' => __( 'Male', '{domain}' ),
-                        'choice-2' => __( 'Female', '{domain}' ),
-                        'choice-3' => __( 'Others', '{domain}' ),
+                        'choice-1' => __('Male', '{domain}'),
+                        'choice-2' => __('Female', '{domain}'),
+                        'choice-3' => __('Others', '{domain}'),
                     ],
                     // Display choices inline instead of list
-                    'inline'  => true,
+                    'inline' => true,
                 ],
                 [
-                    'name'     => 'color',
-                    'type'     => 'color-picker',
-                    'label'    => __( 'Wp Color Picker Example', '{domain}' ),
-                    'desc'     => __( 'description of color-picker goes here', '{domain}' ),
-                    'value'    => '#FF0000',
+                    'name' => 'color',
+                    'type' => 'color-picker',
+                    'label' => __('Wp Color Picker Example', '{domain}'),
+                    'desc' => __('description of color-picker goes here', '{domain}'),
+                    'value' => '#FF0000',
                     'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
                 ],
                 [
@@ -831,7 +851,7 @@ class Post extends Posts {
                 ],
 
             ],
-        ] );
+        ]);
 
         //  dm_print(dm_p()->option('8', 'color'));
 
