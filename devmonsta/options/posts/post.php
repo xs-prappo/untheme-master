@@ -28,19 +28,19 @@ class Post extends Posts {
             'value'           => 'default text value',
             'desc'            => 'use this area to input text',
             'label'           => __( 'First name', '{domain}' ),
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value'    => true,
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value'    => true,
 
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-            ],
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -53,18 +53,18 @@ class Post extends Posts {
             'value'           => 'http://www.xs.com',
             'label'           => __( 'Enter valid URL', '{domain}' ),
             'desc'            => __( 'Url Description', '{domain}' ),
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -233,18 +233,18 @@ class Post extends Posts {
                 'max'  => 100,
                 'step' => 1,
             ],
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -377,20 +377,20 @@ class Post extends Posts {
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
             ],
-            'conditions' => [
-                [
+            // 'conditions' => [
+            //     [
 
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value'    => true,
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value'    => true,
 
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-            ],
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -545,6 +545,9 @@ class Post extends Posts {
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
+        /**
+         * control for repeater input
+         */
         $this->add_control( [
             'box_id'   => 'post_box_2',
             'type'     => 'repeater',
@@ -830,7 +833,7 @@ class Post extends Posts {
             ],
         ] );
 
-        // dm_print(dm_p()->option('8', 'color'));
+        //  dm_print(dm_p()->option('8', 'color'));
 
     }
 
