@@ -28,19 +28,19 @@ class Post extends Posts {
             'value'           => 'default text value',
             'desc'            => 'use this area to input text',
             'label'           => __( 'First name', '{domain}' ),
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value' => true,
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value' => true,
 
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-            ],
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -53,18 +53,18 @@ class Post extends Posts {
             'value'           => 'http://www.xs.com',
             'label'           => __( 'Enter valid URL', '{domain}' ),
             'desc'            => __( 'Url Description', '{domain}' ),
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -233,18 +233,18 @@ class Post extends Posts {
                 'max' => 100,
                 'step' => 1,
             ],
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value'    => true,
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value'    => true,
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -265,20 +265,20 @@ class Post extends Posts {
                 'max'  => 100,
                 'step' => 1,
             ],
-            'conditions' => [
-                [
+            // 'conditions' => [
+            //     [
 
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value' => true,
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value' => true,
 
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-            ],
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -377,18 +377,18 @@ class Post extends Posts {
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
             ],
-            'conditions' => [
-                [
-                    'control_name'  => 'setting_1',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-                [
-                    'control_name'  => 'setting_3',
-                    'operator' => '==',
-                    'value' => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'setting_1',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            //     [
+            //         'control_name'  => 'setting_3',
+            //         'operator' => '==',
+            //         'value' => true,
+            //     ],
+            // ],
         ] );
 
         /**

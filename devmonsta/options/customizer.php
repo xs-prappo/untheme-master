@@ -407,11 +407,11 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * control for slider input
          */
         $this->add_control( [
+            'type'       => 'slider',
             'id'         => 'slider_widget',
             'section'    => 'devmonsta_text_settings_section',
             'label'      => __( 'Wp Slider Example', '{domain}' ),
             'desc'       => __( 'description of slider goes here', '{domain}' ),
-            'type'       => 'slider',
             'value'      => 33,
             'properties' => [
                 'min'  => 0,
@@ -423,23 +423,22 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         /**
          * control for range-slider input
          */
-        // $this->add_control( [
-        //     'id'         => 'slider_widget',
-        //     'section'    => 'devmonsta_text_settings_section',
-        //     'name'       => 'range_slider_widget',
-        //     'type'       => 'range-slider',
-        //     'label'      => __( 'Wp Range Slider Example', '{domain}' ),
-        //     'desc'       => __( 'description of range slider goes here', '{domain}' ),
-        //     'value'      => [
-        //         'from' => 10,
-        //         'to'   => 33,
-        //     ],
-        //     'properties' => [
-        //         'min'  => 0,
-        //         'max'  => 100,
-        //         'step' => 1,
-        //     ]
-        // ] );
+        $this->add_control( [
+            'id'         => 'range_slider_widget',
+            'section'    => 'devmonsta_text_settings_section',
+            'type'       => 'range-slider',
+            'label'      => __( 'Wp Range Slider Example', '{domain}' ),
+            'desc'       => __( 'description of range slider goes here', '{domain}' ),
+            'value'      => [
+                'from' => 10,
+                'to'   => 33,
+            ],
+            'properties' => [
+                'min'  => 0,
+                'max'  => 100,
+                'step' => 1,
+            ]
+        ] );
 
         
         /**
@@ -471,6 +470,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'      => __( 'Typhography', '{domain}' ),
             'desc'       => __( 'Description', '{domain}' ),
         ] );
+
+        
         /**
          * ===========================================
          *      Custom control end
