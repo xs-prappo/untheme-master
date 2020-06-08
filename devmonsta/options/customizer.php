@@ -478,29 +478,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * ===========================================
          */
 
-        $this->add_control( [
-            'id'      => 'test_button',
-            'type'    => 'test-button',
-            'section' => 'devmonsta_text_settings_section',
-            'text'    => 'cool btn',
-        ] );
-
-        $this->add_control( [
-            'id'        => 'dm_box_text',
-            'label'     => __( 'Box Text', 'devmonsta' ),
-            'section'   => 'devmonsta_color_settings_section',
-            'type'      => 'text',
-            'selector'  => '.dm_h1',
-            'selectors' => [
-                '.elementor-widget-container, .xyz' => 'color',
-                '.elementor-widget'                 => [
-                    'background-color', 'border-color',
-                ],
-            ],
-            'default'   => 'Devmonsta',
-            'transport' => 'postMessage',
-
-        ] );
 
         // New controls
 
@@ -511,12 +488,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'    => 'toggle',
         ] );
 
-        $this->add_control( [
-            'id'      => 'dm_tswitch',
-            'type'    => 'tswitch',
-            'label'   => __( 'Tswitch', 'devmonsta' ),
-            'section' => 'dm_new_controls',
-        ] );
 
         $this->add_control( [
             'id'      => 'dm_accordion',
