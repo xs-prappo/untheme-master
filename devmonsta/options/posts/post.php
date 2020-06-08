@@ -125,16 +125,6 @@ class Post extends Posts {
             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
 
-        $this->add_control( [
-            'box_id'   => 'post_box_2',
-            'name'     => 'color_kk',
-            'type'     => 'color-picker',
-            'label'    => __( 'Wp Color Picker Example', '{domain}' ),
-            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
-            'value'    => '#FF0000',
-            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
-        ] );
-
         /**
          * control for multiple-checkbox input
          */
@@ -554,19 +544,19 @@ class Post extends Posts {
             'add_new'  => 'Add new',
             'controls' => [
                 [
-                    'name' => 'user_url_1',
+                    'name' => 'user_url_1111',
                     'type' => 'url',
                     'value' => 'http://www.reza-khan.com',
                     'label' => __('Enter valid URL', '{domain}'),
                     'desc' => __('Url Description', '{domain}'),
                 ],
                 [
-                    'name' => 'child_repeater_1',
+                    'name' => 'child_repeater_1111',
                     'lable' => 'Child repeater 1',
                     'type' => 'repeater',
                     'controls' => [
                         [
-                            'name' => 'color_child',
+                            'name' => 'color_child1111',
                             'type' => 'color-picker',
                             'label' => __('Wp Color Picker Example', '{domain}'),
                             'desc' => __('description of color-picker goes here', '{domain}'),
@@ -574,7 +564,7 @@ class Post extends Posts {
                             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
                         ],
                         [
-                            'name' => 'user_url_1_child',
+                            'name' => 'user_url_1_child1111',
                             'type' => 'url',
                             'value' => 'http://www.reza-khan.com',
                             'label' => __('Enter valid URL', '{domain}'),
@@ -584,7 +574,7 @@ class Post extends Posts {
                 ],
                 [
                     'type' => 'radio',
-                    'name' => 'gender_1',
+                    'name' => 'gender_1111',
                     'desc' => 'use this area to input radio',
                     'label' => __('Gender', '{domain}'),
                     'value' => 'choice-3',
@@ -598,7 +588,7 @@ class Post extends Posts {
                     'inline' => true,
                 ],
                 [
-                    'name' => 'color',
+                    'name' => 'color1111',
                     'type' => 'color-picker',
                     'label' => __('Wp Color Picker Example', '{domain}'),
                     'desc' => __('description of color-picker goes here', '{domain}'),
@@ -607,7 +597,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'  => 'post_box_2',
-                    'name'    => 'select',
+                    'name'    => 'select111',
                     'type'    => 'select',
                     'value'   => 'choice-3',
                     'label'   => __( 'Select Single', '{domain}' ),
@@ -621,7 +611,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'  => 'post_box_2',
-                    'name'    => 'select_multiple',
+                    'name'    => 'select_multiple1111',
                     'type'    => 'multiselect',
                     'label'   => __( 'Select Multiple', '{domain}' ),
                     'desc'    => __( 'multiple select description goes here', '{domain}' ),
@@ -637,7 +627,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'   => 'post_box_2',
-                    'name'     => 'upload_image',
+                    'name'     => 'upload_image1111',
                     'type'     => 'upload',
                     'label'    => __( 'Upload Image', '{domain}' ),
                     'desc'     => __( 'Description', '{domain}' ),
@@ -645,7 +635,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'     => 'post_box_2',
-                    'name'       => 'slider_widget',
+                    'name'       => 'slider_widget1111',
                     'label'      => __( 'Wp Slider Example', '{domain}' ),
                     'desc'       => __( 'description of slider goes here', '{domain}' ),
                     'type'       => 'slider',
@@ -658,7 +648,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'     => 'post_box_2',
-                    'name'       => 'range_slider_widget',
+                    'name'       => 'range_slider_widget1111',
                     'type'       => 'range-slider',
                     'label'      => __( 'Wp Range Slider Example', '{domain}' ),
                     'desc'       => __( 'description of range slider goes here', '{domain}' ),
@@ -675,7 +665,7 @@ class Post extends Posts {
                 [
                     'box_id'       => 'post_box_2',
                     'type'         => 'date-picker',
-                    'name'         => 'start_date',
+                    'name'         => 'start_date11111',
                     'value'        => '',
                     'label'        => __( 'Date Picker', '{domain}' ),
                     'desc'         => __( 'date picker description goes here', '{domain}' ),
@@ -685,7 +675,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'   => 'post_box_2',
-                    'name'     => 'rgba_color',
+                    'name'     => 'rgba_color1111',
                     'type'     => 'rgba-color-picker',
                     'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
                     'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
@@ -699,7 +689,7 @@ class Post extends Posts {
                         'from' => '2020/05/10 12:00 am',
                         'to'   => '2020/05/18 07:55 pm',
                     ],
-                    'name'             => 'date_time_range_picker',
+                    'name'             => 'date_time_range_picker1111',
                     'label'            => __( 'Date Time Range Picker', '{domain}' ),
                     'desc'             => __( 'date time range picker description', '{domain}' ),
                     'datetime-pickers' => [
@@ -714,7 +704,7 @@ class Post extends Posts {
                 [
                     'box_id'          => 'post_box_2',
                     'type'            => 'datetime-picker',
-                    'name'            => 'date_time_picker',
+                    'name'            => 'date_time_picker11111',
                     'label'           => __( 'Date Time Picker', '{domain}' ),
                     'desc'            => __( 'date time picker description', '{domain}' ),
                     'datetime-picker' => [
@@ -728,7 +718,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id' => 'post_box_2',
-                    'name'   => 'gradient',
+                    'name'   => 'gradient11111',
                     'type'   => 'gradient',
                     'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
                     'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
@@ -739,7 +729,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id'  => 'post_box_1',
-                    'name'    => 'oembed_field',
+                    'name'    => 'oembed_field1111',
                     'type'    => 'oembed',
                     'label'   => __( 'Oembed Input', '{domain}' ),
                     'desc'    => __( 'Oembed text description', '{domain}' ),
@@ -753,7 +743,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id' => 'post_box_2',
-                    'name'   => 'padding_dimension',
+                    'name'   => 'padding_dimension1111',
                     'type'   => 'dimensions',
                     'label'  => __( 'Dimension Input', '{domain}' ),
                     'desc'   => __( 'Dimension text description', '{domain}' ),
@@ -768,7 +758,7 @@ class Post extends Posts {
 
                 ],
                 [
-                    'name'    => 'i_p',
+                    'name'    => 'i_p111111',
                     'box_id'  => 'post_box_2',
                     'type'    => 'image-picker',
                     'value'   => 'value-2',
@@ -805,7 +795,7 @@ class Post extends Posts {
                 [
                     'box_id'       => 'post_box_2',
                     'type'         => 'switcher',
-                    'name'         => 'switcher',
+                    'name'         => 'switcher11111',
                     'value'        => 'hello',
                     'label'        => __( 'Switcher', '{domain}' ),
                     'desc'         => __( 'Description', '{domain}' ),
@@ -817,7 +807,7 @@ class Post extends Posts {
                     ],
                 ],
                 [
-                    'name'       => 'typo',
+                    'name'       => 'typo11111',
                     'box_id'     => 'post_box_2',
                     'type'       => 'typography',
                     'value'      => [
@@ -843,7 +833,7 @@ class Post extends Posts {
                 ],
                 [
                     'box_id' => 'post_box_1',
-                    'name'   => 'icon_picker',
+                    'name'   => 'icon_picker11111',
                     'type'   => 'icon',
                     'label'  => __( 'Select Icon', '{domain}' ),
                     'desc'   => __( 'Select icon description', '{domain}' ),
