@@ -131,7 +131,31 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'         => 'devmonsta_text_settings_section',
             'type'            => 'datetime-picker',
             'label'           => __( 'Date Time Picker', '{domain}' ),
+            'value'           => '10-05-2020 12:00',
             'desc'            => __( 'date time picker description', '{domain}' ),
+            'datetime-picker' => [
+                'date-format'  => 'Y-m-d',            // Format datetime.
+                'time-format'  => 'H:i',              // Format datetime.
+                'min-date'     => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                'max-date'     => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                'timepicker'   => true,               // Show timepicker.
+                'default-time' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+            ],
+        ] );
+
+        /**
+         * control for datetime-range input
+         */
+        $this->add_control( [
+            'id'              => 'date_time_range_picker',
+            'section'         => 'devmonsta_text_settings_section',
+            'type'            => 'datetime-range',
+            'value'           => [
+                'from' => '10-05-2020 12:00',
+                'to'   => '15-05-2020 04:00',
+            ],
+            'label'           => __( 'Date Time Range Picker', '{domain}' ),
+            'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
                 'date-format'  => 'Y-m-d',            // Format datetime.
                 'time-format'  => 'H:i',              // Format datetime.
@@ -200,6 +224,20 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             ],
             'right-choice' => [
                 'hello' => __( 'Hello', '{domain}' ),
+            ],
+            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'conditions'   => [
+                [
+                    'control_name' => 'setting_1',
+                    'operator'     => '==',
+                    'value'        => true,
+
+                ],
+                [
+                    'control_name' => 'setting_3',
+                    'operator'     => '==',
+                    'value'        => true,
+                ],
             ],
         ] );
 
@@ -390,7 +428,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
         ] );
 
-
         /**
          * control for icon-picker input
          */
@@ -437,10 +474,9 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
-            ]
+            ],
         ] );
 
-        
         /**
          * Control for Typography Input
          */
@@ -471,13 +507,11 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'desc'       => __( 'Description', '{domain}' ),
         ] );
 
-        
         /**
          * ===========================================
          *      Custom control end
          * ===========================================
          */
-
 
         // New controls
 
@@ -487,7 +521,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section' => 'dm_new_controls',
             'type'    => 'toggle',
         ] );
-
 
         $this->add_control( [
             'id'      => 'dm_accordion',
