@@ -563,6 +563,7 @@ class Post extends Posts {
                     'name' => 'child_repeater_1',
                     'lable' => 'Child repeater 1',
                     'type' => 'repeater',
+                    'add_new' => 'Add new',
                     'controls' => [
                         [
                             'name' => 'color_child',
