@@ -558,6 +558,13 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
         $this->add_control( [
+            'id'          => 'dm_html_editor',
+            'lable'       => __( 'HTML Editor', 'devmonsta' ),
+            'section'     => 'dm_new_controls',
+            'type'        => 'html-editor',
+        ] );
+
+        $this->add_control( [
             'id'              => 'devmonsta_repeater_control',
             'label'           => 'List',
             'type'            => 'repeater',
