@@ -47,20 +47,82 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'priority' => 10,
         ] );
 
+
+
         /**
          * ===========================================
-         *      Custom control start
+         *      Default control start
          * ===========================================
          */
-
+        
         /**
          * Control for text input
          */
         $this->add_control( [
             'id'      => 'dm_ctrl_text_1',
             'type'    => 'text',
+            'value'   => 'default text',
             'label'   => __( 'Text Input', 'devmonsta' ),
             'section' => 'devmonsta_text_settings_section',
+        ] );
+
+        /**
+         * control for checkbox input
+         */
+        $this->add_control( [
+            'id'      => 'dm_checkbox',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'checkbox',
+            'value'   => false, // checked/unchecked
+            'label'   => __( 'Checkbox example', '{domain}' ),
+            'desc'    => __( "checkbox example details", '{domain}' ),
+            'text'    => __( 'Yes', '{domain}' ),
+        ] );
+
+        /**
+         * control for radio input
+         */
+        $this->add_control( [
+            'type'        => 'radio',
+            'id'          => 'dm_test_readio',
+            'label'       => __( 'Custom Radio Selection' ),
+            'description' => __( 'This is a custom radio input.' ),
+            'choices'     => [
+                'red'   => __( 'Red' ),
+                'blue'  => __( 'Blue' ),
+                'green' => __( 'Green' ),
+            ],
+            'section'     => 'devmonsta_text_settings_section',
+        ] );
+
+        /**
+         * control for dropdown select
+         */
+        $this->add_control( [
+            'id'      => 'select',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'select',
+            'value'   => 'choice-3',
+            'label'   => __( 'Select Single', '{domain}' ),
+            'desc'    => __( 'select description goes here', '{domain}' ),
+            'choices' => [
+                ''         => '---',
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
+
+        /**
+         * control for textarea input
+         */
+        $this->add_control( [
+            'id'          => 'dm_textarea',
+            'type'        => 'textarea',
+            'section'     => 'devmonsta_text_settings_section',
+            'label'       => __( 'Text area' ),
+            'description' => __( 'This is text area desctription' ),
+            "value"       => 'default value for text area',
         ] );
 
         /**
@@ -72,6 +134,18 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
             'label'       => __( 'Custom Dropdown Pages' ),
             'description' => __( 'This is a custom dropdown pages option.' ),
+        ] );
+
+        /**
+         * control for url input
+         */
+        $this->add_control( [
+            'id'      => 'dm_url',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'url',
+            'value'   => 'http://www.xs.com',
+            'label'   => __( 'Enter valid URL', '{domain}' ),
+            'desc'    => __( 'Url Description', '{domain}' ),
         ] );
 
         /**
@@ -92,35 +166,37 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'      => 'dm_media',
             'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
-            'label'   => __( 'Media' ),
+            'label'   => __( 'Media', 'devmonsta' ),
         ] );
 
         /**
-         * control for radio input
+         * ===========================================
+         *      Default control end
+         * ===========================================
          */
-        $this->add_control( [
-            'type'        => 'radio',
-            'id'          => 'dm_test_readio',
-            'label'       => __( 'Custom Radio Selection' ),
-            'description' => __( 'This is a custom radio input.' ),
-            'choices'     => [
-                'red'   => __( 'Red' ),
-                'blue'  => __( 'Blue' ),
-                'green' => __( 'Green' ),
-            ],
-            'section'     => 'devmonsta_text_settings_section',
-        ] );
+
+
 
         /**
-         * control for textarea input
+         * ===========================================
+         *      Custom control start
+         * ===========================================
+         */
+
+
+        /**
+         * control for date-picker input
          */
         $this->add_control( [
-            'id'          => 'dm_textarea',
-            'type'        => 'textarea',
-            'section'     => 'devmonsta_text_settings_section',
-            'label'       => __( 'Text area' ),
-            'description' => __( 'This is text area desctription' ),
-            "value"       => 'default value for text area',
+            'id'           => 'start_date',
+            'section'      => 'devmonsta_text_settings_section',
+            'type'         => 'date-picker',
+            'value'        => '2020/05/10 12:00 am',
+            'label'        => __( 'Date Picker', '{domain}' ),
+            'desc'         => __( 'date picker description goes here', '{domain}' ),
+            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
+            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
         ] );
 
         /**
@@ -164,31 +240,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 'timepicker'   => true,               // Show timepicker.
                 'default-time' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
-        ] );
-
-        /**
-         * control for checkbox input
-         */
-        $this->add_control( [
-            'id'      => 'dm_checkbox',
-            'section' => 'devmonsta_text_settings_section',
-            'type'    => 'checkbox',
-            'value'   => false, // checked/unchecked
-            'label'   => __( 'Checkbox example', '{domain}' ),
-            'desc'    => __( "checkbox example details", '{domain}' ),
-            'text'    => __( 'Yes', '{domain}' ),
-        ] );
-
-        /**
-         * control for url input
-         */
-        $this->add_control( [
-            'id'      => 'dm_url',
-            'section' => 'devmonsta_text_settings_section',
-            'type'    => 'url',
-            'value'   => 'http://www.xs.com',
-            'label'   => __( 'Enter valid URL', '{domain}' ),
-            'desc'    => __( 'Url Description', '{domain}' ),
         ] );
 
         /**
@@ -260,7 +311,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
         /**
-         * Control for Thumbnail Image picker Input
+         * Control for Image picker Input
          */
         $this->add_control( [
             'id'      => 'i_p',
@@ -290,24 +341,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                     'small' => get_template_directory_uri() . '/images/c.jpg',
                     'large' => get_template_directory_uri() . '/images/c.jpg',
                 ],
-            ],
-        ] );
-
-        /**
-         * control for dropdown select
-         */
-        $this->add_control( [
-            'id'      => 'select',
-            'section' => 'devmonsta_text_settings_section',
-            'type'    => 'select',
-            'value'   => 'choice-3',
-            'label'   => __( 'Select Single', '{domain}' ),
-            'desc'    => __( 'select description goes here', '{domain}' ),
-            'choices' => [
-                ''         => '---',
-                'choice-1' => __( 'Choice One', '{domain}' ),
-                'choice-2' => __( 'Choice Two', '{domain}' ),
-                'choice-3' => __( 'Choice Three', '{domain}' ),
             ],
         ] );
 
@@ -411,21 +444,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
             'value'    => 'rgba(255,25,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
-        ] );
-
-        /**
-         * control for date-picker input
-         */
-        $this->add_control( [
-            'id'           => 'start_date',
-            'section'      => 'devmonsta_text_settings_section',
-            'type'         => 'date-picker',
-            'value'        => '',
-            'label'        => __( 'Date Picker', '{domain}' ),
-            'desc'         => __( 'date picker description goes here', '{domain}' ),
-            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
-            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
-            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
         ] );
 
         /**
