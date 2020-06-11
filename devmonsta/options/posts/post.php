@@ -324,7 +324,7 @@ class Post extends Posts {
             'type'     => 'color-picker',
             'label'    => __( 'Wp Color Picker One', '{domain}' ),
             'desc'     => __( 'description of color-picker goes here', '{domain}' ),
-            'value'    => '#FF0000',
+            'value'    => 'kjshfsdkfhskdjfsd',
             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
 
@@ -362,7 +362,7 @@ class Post extends Posts {
             'name'    => 'multiple_checkboxes_one',
             'type'    => 'checkboxes',
             'value'   => [
-                'choice-1' => false,
+                'choice-1' => true,
                 'choice-2' => true,
             ],
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
@@ -779,8 +779,7 @@ class Post extends Posts {
             'desc'   => __( 'html description goes here', '{domain}' ),
             'type'   => 'html',
             'name'   => 'html_one',
-            'value'  => 'Default hidden value',
-            'html'   => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+            'value'  => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
         ] );
 
         /**
@@ -931,15 +930,15 @@ class Post extends Posts {
          * control for datetime-range input
          */
         $this->add_control( [
-            'box_id'           => 'post_box_2',
-            'type'             => 'datetime-range',
-            'value'            => [
+            'box_id'          => 'post_box_2',
+            'type'            => 'datetime-range',
+            'value'           => [
                 'from' => 'kjhsdakjhaskdhakd',
                 'to'   => 'nbhjvkdskvhdsv jksfhksjh',
             ],
-            'name'             => 'date_time_range_picker_one',
-            'label'            => __( 'Date Time Range One', '{domain}' ),
-            'desc'             => __( 'date time range picker description', '{domain}' ),
+            'name'            => 'date_time_range_picker_one',
+            'label'           => __( 'Date Time Range One', '{domain}' ),
+            'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
                 'date-format' => 'Y-m-d',            // Format datetime.
                 'time-format' => 'H:i',              // Format datetime.
@@ -954,15 +953,15 @@ class Post extends Posts {
          * control for datetime-range input
          */
         $this->add_control( [
-            'box_id'           => 'post_box_2',
-            'type'             => 'datetime-range',
-            'value'            => [
+            'box_id'          => 'post_box_2',
+            'type'            => 'datetime-range',
+            'value'           => [
                 'from' => '2020/05/10 12:00 am',
                 'to'   => '2020/05/18 07:55 pm',
             ],
-            'name'             => 'date_time_range_picker_two',
-            'label'            => __( 'Date Time Range Two', '{domain}' ),
-            'desc'             => __( 'date time range picker description', '{domain}' ),
+            'name'            => 'date_time_range_picker_two',
+            'label'           => __( 'Date Time Range Two', '{domain}' ),
+            'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
                 'date-format' => 'Y-m-d',            // Format datetime.
                 'time-format' => 'H:i',              // Format datetime.
@@ -977,15 +976,15 @@ class Post extends Posts {
          * control for datetime-range input
          */
         $this->add_control( [
-            'box_id'           => 'post_box_2',
-            'type'             => 'datetime-range',
-            'value'            => [
+            'box_id'          => 'post_box_2',
+            'type'            => 'datetime-range',
+            'value'           => [
                 'from' => '2020/05/10 12:00 am',
                 'to'   => '2020/05/18 07:55 pm',
             ],
-            'name'             => 'date_time_range_picker_three',
-            'label'            => __( 'Date Time Range Three', '{domain}' ),
-            'desc'             => __( 'date time range picker description', '{domain}' ),
+            'name'            => 'date_time_range_picker_three',
+            'label'           => __( 'Date Time Range Three', '{domain}' ),
+            'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
                 'date-format' => 'Y-m-d',            // Format datetime.
                 'time-format' => 'H:i',              // Format datetime.
@@ -1006,8 +1005,8 @@ class Post extends Posts {
             'label'  => __( 'Wp Gradient Picker Example', '{domain}' ),
             'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
             'value'  => [
-                'primary'   => '#FF0000',
-                'secondary' => '#0000FF',
+                'primary'   => '#FF00FF',
+                'secondary' => '#00FFFF',
             ],
             // 'conditions' => [
             //     [
@@ -1136,7 +1135,7 @@ class Post extends Posts {
             'desc'   => __( 'Dimension text description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value'  => [
-                'top'      => '0',
+                'top'      => '6',
                 'right'    => '1',
                 'bottom'   => '2',
                 'left'     => '3',
@@ -1155,7 +1154,7 @@ class Post extends Posts {
             'desc'   => __( 'Dimension text description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value'  => [
-                'top'      => '0',
+                'top'      => '8',
                 'right'    => '2',
                 'bottom'   => '4',
                 'left'     => '6',
@@ -1174,7 +1173,7 @@ class Post extends Posts {
             'desc'   => __( 'Dimension text description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value'  => [
-                'top'      => '0',
+                'top'      => '9',
                 'right'    => '10',
                 'bottom'   => '5',
                 'left'     => '0',
@@ -1305,16 +1304,29 @@ class Post extends Posts {
         $this->add_control( [
             'box_id'       => 'post_box_2',
             'type'         => 'switcher',
-            'name'         => 'switcher_one',
+            'name'         => 'dm_switcher',
             'value'        => 'hello',
-            'label'        => __( 'Switcher One', '{domain}' ),
+            'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
-                'goodbye' => __( 'Goodbye', '{domain}' ),
+                'goodbye' => __( 'Go Now', '{domain}' ),
             ],
             'right-choice' => [
-                'hello' => __( 'Hello', '{domain}' ),
+                'hello' => __( 'Hi', '{domain}' ),
             ],
+            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            // 'conditions'   => [
+            //     [
+            //         'control_name' => 'setting_1',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            //     [
+            //         'control_name' => 'setting_3',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -1324,7 +1336,7 @@ class Post extends Posts {
             'box_id'       => 'post_box_2',
             'type'         => 'switcher',
             'name'         => 'switcher_two',
-            'value'        => 'hello',
+            'value'        => 'goodbye',
             'label'        => __( 'Switcher Two', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
@@ -1591,15 +1603,15 @@ class Post extends Posts {
                     'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
                 ],
                 [
-                    'box_id'           => 'post_box_2',
-                    'type'             => 'datetime-range',
-                    'value'            => [
+                    'box_id'          => 'post_box_2',
+                    'type'            => 'datetime-range',
+                    'value'           => [
                         'from' => '2020/05/10 12:00 am',
                         'to'   => '2020/05/18 07:55 pm',
                     ],
-                    'name'             => 'date_time_range_picker1111',
-                    'label'            => __( 'Date Time Range Picker', '{domain}' ),
-                    'desc'             => __( 'date time range picker description', '{domain}' ),
+                    'name'            => 'date_time_range_picker1111',
+                    'label'           => __( 'Date Time Range Picker', '{domain}' ),
+                    'desc'            => __( 'date time range picker description', '{domain}' ),
                     'datetime-picker' => [
                         'date-format' => 'Y-m-d',            // Format datetime.
                         'time-format' => 'H:i',              // Format datetime.

@@ -88,7 +88,7 @@ class Post_Tag extends Taxonomies {
             'name'    => 'multiple_checkboxes',
             'type'    => 'checkboxes',
             'value'   => [
-                'choice-1' => false,
+                'choice-1' => true,
                 'choice-2' => true,
             ],
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
@@ -202,8 +202,7 @@ class Post_Tag extends Taxonomies {
             'desc'  => __( 'html description goes here', '{domain}' ),
             'type'  => 'html',
             'name'  => 'html',
-            'value' => 'Default hidden value',
-            'html'  => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
+            'value' => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
         ] );
 
         /**
@@ -341,10 +340,10 @@ class Post_Tag extends Taxonomies {
             'desc'  => __( 'Dimension text description', '{domain}' ),
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value' => [
-                'top'      => '0',
-                'right'    => '0',
-                'bottom'   => '0',
-                'left'     => '0',
+                'top'      => '9',
+                'right'    => '8',
+                'bottom'   => '4',
+                'left'     => '1',
                 'isLinked' => true,
             ],
 
@@ -388,21 +387,34 @@ class Post_Tag extends Taxonomies {
             ],
         ] );
 
-        /**
+       /**
          * Control for switcher input
          */
         $this->add_control( [
             'type'         => 'switcher',
-            'name'         => 'switcher',
+            'name'         => 'dm_switcher',
             'value'        => 'hello',
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
-                'goodbye' => __( 'Goodbye', '{domain}' ),
+                'goodbye' => __( 'Go Now', '{domain}' ),
             ],
             'right-choice' => [
-                'hello' => __( 'Hello', '{domain}' ),
+                'hello' => __( 'Hi', '{domain}' ),
             ],
+            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            // 'conditions'   => [
+            //     [
+            //         'control_name' => 'setting_1',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            //     [
+            //         'control_name' => 'setting_3',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            // ],
         ] );
 
         /**

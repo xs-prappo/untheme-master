@@ -255,8 +255,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 'top'      => '2',
                 'right'    => '3',
                 'bottom'   => '4',
-                'left'     => '0',
-                'isLinked' => true,
+                'left'     => '56',
+                'isLinked' => false,
             ],
         ] );
 
@@ -271,25 +271,24 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
-                'goodbye' => __( 'Goodbye', '{domain}' ),
+                'goodbye' => __( 'Go Now', '{domain}' ),
             ],
             'right-choice' => [
-                'hello' => __( 'Hello', '{domain}' ),
+                'hello' => __( 'Hi', '{domain}' ),
             ],
             'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            'conditions'   => [
-                [
-                    'control_name' => 'setting_1',
-                    'operator'     => '==',
-                    'value'        => true,
-
-                ],
-                [
-                    'control_name' => 'setting_3',
-                    'operator'     => '==',
-                    'value'        => true,
-                ],
-            ],
+            // 'conditions'   => [
+            //     [
+            //         'control_name' => 'setting_1',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            //     [
+            //         'control_name' => 'setting_3',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -299,6 +298,10 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section' => 'devmonsta_text_settings_section',
             'id'      => 'multiple_checkboxes',
             'type'    => 'checkbox-multiple',
+            'value'   => [
+                'choice-1' => true,
+                'choice-2' => true,
+            ],
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'label'   => __( 'Multiple Chekbox', '{domain}' ),
             'desc'    => __( 'Multi checkbox Description', '{domain}' ),
@@ -317,7 +320,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'      => 'i_p',
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'image-picker',
-            'value'   => 'value-2',
+            'value'   => 'value-5',
             'label'   => __( 'Thumbnail Image Picker', '{domain}' ),
             'desc'    => __( 'Description', '{domain}' ),
             'choices' => [
@@ -366,22 +369,21 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'      => __( 'Wp Gradient Picker Example', '{domain}' ),
             'desc'       => __( 'description of gradient-picker goes here', '{domain}' ),
             'value'      => [
-                'primary'   => '#FF0000',
+                'primary'   => '#FF00FF',
                 'secondary' => '#0000FF',
             ],
-            'conditions' => [
-                [
-                    'control_name' => 'setting_1',
-                    'operator'     => '==',
-                    'value'        => true,
-
-                ],
-                [
-                    'control_name' => 'setting_3',
-                    'operator'     => '==',
-                    'value'        => true,
-                ],
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name' => 'setting_1',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            //     [
+            //         'control_name' => 'setting_3',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            // ],
         ] );
 
         /**
@@ -393,11 +395,28 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'    => 'multiple-select',
             'label'   => __( 'Select Multiple', '{domain}' ),
             'desc'    => __( 'multiple select description goes here', '{domain}' ),
+            'value'   => [
+                'choice-3',
+                'choice-2',
+            ],
             'choices' => [
                 'choice-1' => __( 'Choice One', '{domain}' ),
                 'choice-2' => __( 'Choice Two', '{domain}' ),
                 'choice-3' => __( 'Choice Three', '{domain}' ),
             ],
+        ] );
+
+        /**
+         * control for color-picker input
+         */
+        $this->add_control( [
+            'id'      => 'color_one',
+            'section' => 'devmonsta_text_settings_section',
+            'type'     => 'color-picker',
+            'label'    => __( 'Wp Color Picker One', '{domain}' ),
+            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+            'value'    => '#FFFFFF',
+            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
 
         /**
