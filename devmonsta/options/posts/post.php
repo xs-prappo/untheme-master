@@ -250,7 +250,7 @@ class Post extends Posts {
             'name'   => 'txt_area_one',
             'label'  => __( 'Text Area', '{domain}' ),
             'desc'   => 'use this area to input large text',
-            'value'  => '',
+            'value'  => 'default text for textarea',
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
@@ -287,7 +287,7 @@ class Post extends Posts {
             'box_id' => 'post_box_2',
             'type'   => 'checkbox',
             'name'   => 'graduate',
-            'value'  => false, // checked/unchecked
+            'value'  => true, // checked/unchecked
             'label'  => __( 'Graduated One', '{domain}' ),
             'desc'   => __( "check if you're graduated", '{domain}' ),
             'text'   => __( 'Yes', '{domain}' ),
@@ -558,7 +558,7 @@ class Post extends Posts {
             'type'     => 'upload',
             'label'    => __( 'Upload Image One', '{domain}' ),
             'desc'     => __( 'Description', '{domain}' ),
-            'multiple' => true,
+            'multiple' => false,
         ] );
 
         /**
@@ -1090,10 +1090,9 @@ class Post extends Posts {
             'value'         => 'default value',
             'label'         => __( 'Wp Editor One', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-            'size'          => 'small',
             'editor_height' => 400,
             'wpautop'       => true,
-            'editor_type'   => true, // tinymce, false: HTML
+            'editor_type'   => false, // tinymce, false: HTML
         ] );
 
         /**
@@ -1107,9 +1106,9 @@ class Post extends Posts {
             'label'         => __( 'Wp Editor Two', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
             'size'          => 'small',
-            'editor_height' => 400,
+            'editor_height' => 200,
             'wpautop'       => true,
-            'editor_type'   => true, // tinymce, false: HTML
+            'editor_type'   => false, // tinymce, false: HTML
         ] );
 
         /**

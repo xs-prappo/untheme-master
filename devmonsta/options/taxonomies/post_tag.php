@@ -53,7 +53,7 @@ class Post_Tag extends Taxonomies {
             'name'  => 'txt_area',
             'label' => __( 'Text Area', '{domain}' ),
             'desc'  => 'use this area to input large text',
-            'value' => '',
+            'value' => 'default text area value',
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
@@ -63,7 +63,7 @@ class Post_Tag extends Taxonomies {
         $this->add_control( [
             'type'  => 'checkbox',
             'name'  => 'graduate',
-            'value' => false, // checked/unchecked
+            'value' => "true", // checked/unchecked
             'label' => __( 'Graduated', '{domain}' ),
             'desc'  => __( "check if you're graduated", '{domain}' ),
             'text'  => __( 'Yes', '{domain}' ),
@@ -324,7 +324,6 @@ class Post_Tag extends Taxonomies {
             'type'          => 'wp-editor',
             'label'         => __( 'Wp Editor Example', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-            'size'          => 'small',
             'editor_height' => 400,
             'wpautop'       => true,
             'editor_type'   => true, // tinymce, false: HTML
