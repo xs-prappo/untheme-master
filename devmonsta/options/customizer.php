@@ -392,7 +392,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_control( [
             'id'      => 'select_multiple',
             'section' => 'devmonsta_text_settings_section',
-            'type'    => 'multiple-select',
+            'type'    => 'multiselect',
             'label'   => __( 'Select Multiple', '{domain}' ),
             'desc'    => __( 'multiple select description goes here', '{domain}' ),
             'value'   => [
@@ -415,7 +415,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'     => 'color-picker',
             'label'    => __( 'Wp Color Picker One', '{domain}' ),
             'desc'     => __( 'description of color-picker goes here', '{domain}' ),
-            'value'    => '#FFFFFF',
+            'value'    => '#FF0000',
             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
 
@@ -429,10 +429,11 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'   => __( 'Oembed Input', '{domain}' ),
             'desc'    => __( 'Oembed text description', '{domain}' ),
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'value'   => 'https://www.youtube.com/watch?v=0Nh11GI4-Gc',
             'preview' => [
                 'width'      => 200, // optional, if you want to set the fixed width to iframe
                 'height'     => 100, // optional, if you want to set the fixed height to iframe
-                'keep_ratio' => false,
+                'keep_ratio' => true,
             ],
         ] );
 
@@ -461,7 +462,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'     => 'rgba-color-picker',
             'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
-            'value'    => 'rgba(255,25,0,0.95)',
+            'value'    => 'rgba(255,255,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
 
@@ -472,6 +473,10 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'      => 'icon_picker',
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'icon',
+            'value'  => [
+                'icon' => 'fas fa-at',
+                'type' => 'dm-font-awesome',
+            ],
             'label'   => __( 'Select Icon', '{domain}' ),
             'desc'    => __( 'Select icon description', '{domain}' ),
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
@@ -530,7 +535,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 'size'           => 14,
                 'line_height'    => 13,
                 'letter_spacing' => -2,
-                'color'          => '#0000ff',
+                'color'          => '#FF0000',
             ],
             'components' => [
                 'family'         => true,
@@ -542,14 +547,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'      => __( 'Typhography', '{domain}' ),
             'desc'       => __( 'Description', '{domain}' ),
         ] );
-
-        // $this->add_control( [
-        //     'id'          => 'dm_html_editor_one',
-        //     'lable'       => __( 'HTML Editor', 'devmonsta' ),
-        //     'section'     => 'devmonsta_text_settings_section',
-        //     'type'        => 'html-editor',
-        // ] );
-
+        
         /**
          * ===========================================
          *      Custom control end

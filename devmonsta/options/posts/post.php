@@ -151,6 +151,10 @@ class Post extends Posts {
             'box_id' => 'post_box_1',
             'name'   => 'icon_picker_one',
             'type'   => 'icon',
+            'value'  => [
+                'icon' => 'fas fa-at',
+                'type' => 'dm-font-awesome',
+            ],
             'label'  => __( 'Select Icon Three', '{domain}' ),
             'desc'   => __( 'Select icon description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
@@ -360,7 +364,7 @@ class Post extends Posts {
         $this->add_control( [
             'box_id'  => 'post_box_2',
             'name'    => 'multiple_checkboxes_one',
-            'type'    => 'checkboxes',
+            'type'    => 'checkbox-multiple',
             'value'   => [
                 'choice-1' => true,
                 'choice-2' => true,
@@ -382,9 +386,9 @@ class Post extends Posts {
         $this->add_control( [
             'box_id'  => 'post_box_2',
             'name'    => 'multiple_checkboxes_two',
-            'type'    => 'checkboxes',
+            'type'    => 'checkbox-multiple',
             'value'   => [
-                'choice-1' => false,
+                'choice-3' => true,
                 'choice-2' => true,
             ],
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
@@ -404,7 +408,7 @@ class Post extends Posts {
         $this->add_control( [
             'box_id'  => 'post_box_2',
             'name'    => 'multiple_checkboxes_three',
-            'type'    => 'checkboxes',
+            'type'    => 'checkbox-multiple',
             'value'   => [
                 'choice-1' => false,
                 'choice-2' => true,

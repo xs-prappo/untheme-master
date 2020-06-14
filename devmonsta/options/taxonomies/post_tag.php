@@ -86,7 +86,7 @@ class Post_Tag extends Taxonomies {
          */
         $this->add_control( [
             'name'    => 'multiple_checkboxes',
-            'type'    => 'checkboxes',
+            'type'    => 'checkbox-multiple',
             'value'   => [
                 'choice-1' => true,
                 'choice-2' => true,
@@ -308,7 +308,7 @@ class Post_Tag extends Taxonomies {
             'label'   => __( 'Oembed Input', '{domain}' ),
             'desc'    => __( 'Oembed text description', '{domain}' ),
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            'value'   => 'https://vimeo.com/1130783377',
+            'value'   => 'https://www.youtube.com/watch?v=0Nh11GI4-Gc',
             'preview' => [
                 'width'      => 400, // optional, if you want to set the fixed width to iframe
                 'height'     => 400, // optional, if you want to set the fixed height to iframe
@@ -451,6 +451,10 @@ class Post_Tag extends Taxonomies {
         $this->add_control( [
             'name'  => 'icon_picker',
             'type'  => 'icon',
+            'value'  => [
+                'icon' => 'fas fa-at',
+                'type' => 'dm-font-awesome',
+            ],
             'label' => __( 'Select Icon', '{domain}' ),
             'desc'  => __( 'Select icon description', '{domain}' ),
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
