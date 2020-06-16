@@ -27,14 +27,7 @@ class Post extends Posts {
             'name'   => 'f_name',
             'value'  => 'default text value',
             'desc'   => 'use this area to input text',
-            'label'  => __( 'Text Input One', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'user_url_one',
-            //         'operator' => '==',
-            //         'value'    => "abc",
-            //     ]
-            // ],
+            'label'  => __( 'Text Input One', '{domain}' )
         ] );
 
         /**
@@ -46,14 +39,7 @@ class Post extends Posts {
             'type'   => 'url',
             'value'  => 'http://www.xs.com',
             'label'  => __( 'Enter valid URL One', '{domain}' ),
-            'desc'   => __( 'Url Description', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'f_name',
-            //         'operator' => '==',
-            //         'value'    => "abc",
-            //     ]
-            // ],
+            'desc'   => __( 'Url Description', '{domain}' )
         ] );
 
         /**
@@ -71,20 +57,7 @@ class Post extends Posts {
                 'width'      => 400, // optional, if you want to set the fixed width to iframe
                 'height'     => 400, // optional, if you want to set the fixed height to iframe
                 'keep_ratio' => false,
-            ],
-            // 'conditions' => [
-            //     [
-            //         'control_name' => 'f_name',
-            //         'operator'     => '==',
-            //         'value'        => "abc",
-            //     ],
-            //     [
-            //         'control_name' => 'user_url_one',
-            //         'operator'     => '==',
-            //         'value'        => "www.google.com",
-            //     ]
-
-            // ],
+            ]
         ] );
 
         /**
@@ -100,19 +73,7 @@ class Post extends Posts {
             ],
             'label'  => __( 'Select Icon Three', '{domain}' ),
             'desc'   => __( 'Select icon description', '{domain}' ),
-            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            // 'conditions' => [
-            //     [
-            //         'control_name' => 'user_url_one',
-            //         'operator'     => '==',
-            //         'value'        => "www.google.com",
-            //     ],
-            //     [
-            //         'control_name' => 'f_name',
-            //         'operator'     => '==',
-            //         'value'        => "abc",
-            //     ],
-            // ],
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
         ] );
 
         /**
@@ -270,19 +231,7 @@ class Post extends Posts {
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
-            ],
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
+            ]
         ] );
 
         /**
@@ -302,21 +251,7 @@ class Post extends Posts {
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
-            ],
-            // 'conditions' => [
-            //     [
-
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value' => true,
-
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
+            ]
         ] );
 
         /**
@@ -414,19 +349,7 @@ class Post extends Posts {
             'value'  => [
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
-            ],
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
+            ]
         ] );
 
         /**
@@ -612,14 +535,7 @@ class Post extends Posts {
                     'name'   => 'text_name',
                     'value'  => 'default text value',
                     'desc'   => 'use this area to input text',
-                    'label'  => __( 'Text Input One', '{domain}' ),
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name'  => 'user_url_one',
-                    //         'operator' => '==',
-                    //         'value'    => "abc",
-                    //     ]
-                    // ],
+                    'label'  => __( 'Text Input One', '{domain}' )
                 ],
                 [
                     'box_id' => 'post_box_1',
@@ -667,19 +583,7 @@ class Post extends Posts {
                     ],
                     'label'  => __( 'Select Icon Three', '{domain}' ),
                     'desc'   => __( 'Select icon description', '{domain}' ),
-                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name' => 'user_url_one',
-                    //         'operator'     => '==',
-                    //         'value'        => "www.google.com",
-                    //     ],
-                    //     [
-                    //         'control_name' => 'f_name',
-                    //         'operator'     => '==',
-                    //         'value'        => "abc",
-                    //     ],
-                    // ],
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
                 ],
                 [
                     'box_id'          => 'post_box_2',
@@ -858,19 +762,7 @@ class Post extends Posts {
                     'value'  => [
                         'primary'   => '#FF0000',
                         'secondary' => '#0000FF',
-                    ],
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name'  => 'setting_1',
-                    //         'operator' => '==',
-                    //         'value' => true,
-                    //     ],
-                    //     [
-                    //         'control_name'  => 'setting_3',
-                    //         'operator' => '==',
-                    //         'value' => true,
-                    //     ],
-                    // ],
+                    ]
                 ],
                 [
                     'box_id'  => 'post_box_2',
