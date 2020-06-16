@@ -51,7 +51,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
         /**
          * ===========================================
-         *      Default control start
+         *      Customizer default control start
          * ===========================================
          */
         
@@ -191,7 +191,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'           => 'start_date',
             'section'      => 'devmonsta_text_settings_section',
             'type'         => 'date-picker',
-            'value'        => '2020/05/10 12:00 am',
+            'value'        => '2020/05/10',
             'label'        => __( 'Date Picker', '{domain}' ),
             'desc'         => __( 'date picker description goes here', '{domain}' ),
             'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
