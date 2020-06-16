@@ -28,14 +28,56 @@ class Post extends Posts {
             'value'  => 'default text value',
             'desc'   => 'use this area to input text',
             'label'  => __( 'Text Input One', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'user_url_one',
-            //         'operator' => '==',
-            //         'value'    => "abc",
-            //     ]
-            // ],
         ] );
+
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'text_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on text Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'f_name',
+                    'operator' => '==',
+                    'value'    => "abc",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'text_greater',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on text Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'f_name',
+                    'operator' => '>',
+                    'value'    => "0",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'text_less',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on text Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'f_name',
+                    'operator' => '<',
+                    'value'    => "0",
+                ]
+            ],
+        ] );
+
+
+
 
         /**
          * control for url input
@@ -47,14 +89,53 @@ class Post extends Posts {
             'value'  => 'http://www.xs.com',
             'label'  => __( 'Enter valid URL One', '{domain}' ),
             'desc'   => __( 'Url Description', '{domain}' ),
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'f_name',
-            //         'operator' => '==',
-            //         'value'    => "abc",
-            //     ]
-            // ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'user_url_one',
+                    'operator' => '==',
+                    'value'    => "abc",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_greater',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'user_url_one',
+                    'operator' => '>',
+                    'value'    => "0",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_less',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'user_url_one',
+                    'operator' => '<',
+                    'value'    => "0",
+                ]
+            ],
+        ] );
+
 
         /**
          * control for oembed input
@@ -71,20 +152,52 @@ class Post extends Posts {
                 'width'      => 400, // optional, if you want to set the fixed width to iframe
                 'height'     => 400, // optional, if you want to set the fixed height to iframe
                 'keep_ratio' => false,
+            ]
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'oembed_field_one',
+                    'operator' => '==',
+                    'value'    => "abc",
+                ]
             ],
-            // 'conditions' => [
-            //     [
-            //         'control_name' => 'f_name',
-            //         'operator'     => '==',
-            //         'value'        => "abc",
-            //     ],
-            //     [
-            //         'control_name' => 'user_url_one',
-            //         'operator'     => '==',
-            //         'value'        => "www.google.com",
-            //     ]
-
-            // ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'oembed_greater',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'oembed_field_one',
+                    'operator' => '>',
+                    'value'    => "0",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'oembed_less',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'oembed_field_one',
+                    'operator' => '<',
+                    'value'    => "0",
+                ]
+            ],
         ] );
 
         /**
@@ -100,19 +213,22 @@ class Post extends Posts {
             ],
             'label'  => __( 'Select Icon Three', '{domain}' ),
             'desc'   => __( 'Select icon description', '{domain}' ),
-            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            // 'conditions' => [
-            //     [
-            //         'control_name' => 'user_url_one',
-            //         'operator'     => '==',
-            //         'value'        => "www.google.com",
-            //     ],
-            //     [
-            //         'control_name' => 'f_name',
-            //         'operator'     => '==',
-            //         'value'        => "abc",
-            //     ],
-            // ],
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'icon_picker_one',
+                    'operator' => '==',
+                    'value'    => "fas fa-at",
+                ]
+            ],
         ] );
 
         /**
@@ -133,6 +249,28 @@ class Post extends Posts {
             // Display choices inline instead of list
             'inline'  => false,
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Radio Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'gender_two',
+                    'operator' => '==',
+                    'value'    => "choice-2",
+                ],
+                [
+                    'control_name'  => 'gender_two',
+                    'operator' => '==',
+                    'value'    => "choice-3",
+                ]
+            ],
+        ] );
+
+
 
         /**
          * control for textarea
@@ -146,6 +284,56 @@ class Post extends Posts {
             'value'  => '',
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'txt_area_two',
+                    'operator' => '==',
+                    'value'    => "abc",
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_greater',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'txt_area_two',
+                    'operator' => '>',
+                    'value'    => 0,
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_less',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'txt_area_two',
+                    'operator' => '<',
+                    'value'    => 0,
+                ],
+                [
+                    'control_name'  => 'txt_area_two',
+                    'operator' => '>',
+                    'value'    => 300,
+                ]
+            ],
+        ] );
 
         /**
          * control for checkbox input
@@ -154,10 +342,25 @@ class Post extends Posts {
             'box_id' => 'post_box_2',
             'type'   => 'checkbox',
             'name'   => 'graduate_two',
-            'value'  => false, // checked/unchecked
+            'value'  => true, // checked/unchecked
             'label'  => __( 'Graduated Two', '{domain}' ),
             'desc'   => __( "check if you're graduated", '{domain}' ),
             'text'   => __( 'Yes', '{domain}' ),
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'graduate_two',
+                    'operator' => '==',
+                    'value'    => true,
+                ]
+            ],
         ] );
 
         /**
@@ -172,6 +375,27 @@ class Post extends Posts {
             'value'    => '#FF0000',
             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'color_two',
+                    'operator' => '==',
+                    'value'    => "#ffffff",
+                ],
+                [
+                    'control_name'  => 'color_two',
+                    'operator' => '==',
+                    'value'    => "#0a0000",
+                ]
+            ],
+        ] );
+
 
         /**
          * control for multiple-checkbox input
@@ -194,6 +418,26 @@ class Post extends Posts {
             ],
             'inline'  => false,
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'multiple_checkboxes_two',
+                    'operator' => '==',
+                    'value'    => "choice-3",
+                ],
+                [
+                    'control_name'  => 'multiple_checkboxes_two',
+                    'operator' => '==',
+                    'value'    => "choice-2",
+                ]
+            ],
+        ] );
 
         /**
          * control for hidden input
@@ -213,7 +457,7 @@ class Post extends Posts {
             'box_id'  => 'post_box_2',
             'name'    => 'select_two',
             'type'    => 'select',
-            'value'   => 'choice-3',
+            'value'   => 'choice-1',
             'label'   => __( 'Select Single Two', '{domain}' ),
             'desc'    => __( 'select description goes here', '{domain}' ),
             'choices' => [
@@ -221,6 +465,26 @@ class Post extends Posts {
                 'choice-1' => __( 'Choice One', '{domain}' ),
                 'choice-2' => __( 'Choice Two', '{domain}' ),
                 'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'select_two',
+                    'operator' => '==',
+                    'value'    => "choice-3",
+                ],
+                [
+                    'control_name'  => 'select_two',
+                    'operator' => '==',
+                    'value'    => "choice-2",
+                ]
             ],
         ] );
 
@@ -234,8 +498,8 @@ class Post extends Posts {
             'label'   => __( 'Select Multiple Two', '{domain}' ),
             'desc'    => __( 'multiple select description goes here', '{domain}' ),
             'value'   => [
-                'choice-1',
                 'choice-2',
+                'choice-3',
             ],
             'choices' => [
                 'choice-1' => __( 'Choice One', '{domain}' ),
@@ -243,6 +507,27 @@ class Post extends Posts {
                 'choice-3' => __( 'Choice Three', '{domain}' ),
             ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'oembed_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'select_multiple_two',
+                    'operator' => '==',
+                    'value'    => "choice-3",
+                ],
+                [
+                    'control_name'  => 'select_multiple_two',
+                    'operator' => '==',
+                    'value'    => "choice-2",
+                ]
+            ],
+        ] );
+
 
         /**
          * control for upload input
@@ -256,6 +541,7 @@ class Post extends Posts {
             'multiple' => true,
         ] );
 
+
         /**
          * control for slider input
          */
@@ -265,25 +551,59 @@ class Post extends Posts {
             'label'      => __( 'Wp Slider Two', '{domain}' ),
             'desc'       => __( 'description of slider goes here', '{domain}' ),
             'type'       => 'slider',
-            'value'      => 33,
+            'value'      => 34,
             'properties' => [
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
-            ],
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value'    => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
+            ]
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'slider_widget_two',
+                    'operator' => '==',
+                    'value'    => 50,
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_greater',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'slider_widget_two',
+                    'operator' => '>',
+                    'value'    => 50,
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_less',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'slider_widget_two',
+                    'operator' => '<',
+                    'value'    => 50,
+                ]
+            ],
+        ] );
+
 
         /**
          * control for range-slider input
@@ -302,22 +622,25 @@ class Post extends Posts {
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
-            ],
-            // 'conditions' => [
-            //     [
-
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value' => true,
-
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
+            ]
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_1',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'range_slider_widget_two',
+                    'operator' => '==',
+                    'value'    => '10,33',
+                ]
+            ],
+        ] );
+
+
 
         /**
          * Control for Html input
@@ -332,21 +655,6 @@ class Post extends Posts {
         ] );
 
         /**
-         * control for date-picker input
-         */
-        $this->add_control( [
-            'box_id'       => 'post_box_2',
-            'type'         => 'date-picker',
-            'name'         => 'start_date_one',
-            'value'        => '2020/07/10 11:00 am',
-            'label'        => __( 'Date Picker Two', '{domain}' ),
-            'desc'         => __( 'date picker description goes here', '{domain}' ),
-            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
-            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
-            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
-        ] );
-
-        /**
          * control for rgba-color-picker input
          */
         $this->add_control( [
@@ -358,6 +666,76 @@ class Post extends Posts {
             'value'    => 'rgba(255,25,255,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'rgba_color_two',
+                    'operator' => '==',
+                    'value'    => 'rgba(220,250,255,0.95)',
+                ]
+            ],
+        ] );
+
+        /**
+         * control for date-picker input
+         */
+        $this->add_control( [
+            'box_id'       => 'post_box_2',
+            'type'         => 'date-picker',
+            'name'         => 'start_date_one',
+            'value'        => '2020-07-10',
+            'label'        => __( 'Date Picker Two', '{domain}' ),
+            'desc'         => __( 'date picker description goes here', '{domain}' ),
+            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
+            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'start_date_one',
+                    'operator' => '==',
+                    'value'    => '2020-07-10',
+                ],
+                [
+                    'control_name'  => 'start_date_one',
+                    'operator' => '==',
+                    'value'    => '2020-07-15',
+                ],
+                [
+                    'control_name'  => 'start_date_one',
+                    'operator' => '>',
+                    'value'    => '2020-07-20',
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'start_date_one',
+                    'operator' => '>',
+                    'value'    => '2020-07-20',
+                ]
+            ],
+        ] );
 
         /**
          * control for datetime-picker input
@@ -366,7 +744,7 @@ class Post extends Posts {
             'box_id'          => 'post_box_2',
             'type'            => 'datetime-picker',
             'name'            => 'date_time_picker_two',
-            'value'           => '2020/06/15 10:00 am',
+            'value'           => '2020-06-12 10:00',
             'label'           => __( 'Date Time Picker Two', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
@@ -378,6 +756,41 @@ class Post extends Posts {
                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'date_time_picker_two',
+                    'operator' => '==',
+                    'value'    => '2020-06-15 10:00',
+                ],
+                [
+                    'control_name'  => 'date_time_picker_two',
+                    'operator' => '==',
+                    'value'    => '2020-06-10 12:00',
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'date_time_picker_two',
+                    'operator' => '>',
+                    'value'    => '2020-06-25 12:00',
+                ]
+            ],
+        ] );
 
         /**
          * control for datetime-range input
@@ -386,8 +799,8 @@ class Post extends Posts {
             'box_id'          => 'post_box_2',
             'type'            => 'datetime-range',
             'value'           => [
-                'from' => '2020/05/10 12:00 am',
-                'to'   => '2020/05/18 07:55 pm',
+                'from' => '2020-05-10 12:00 am',
+                'to'   => '2020-05-18 07:55 pm',
             ],
             'name'            => 'date_time_range_picker_three',
             'label'           => __( 'Date Time Range Three', '{domain}' ),
@@ -401,6 +814,27 @@ class Post extends Posts {
                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'date_time_range_picker_three',
+                    'operator' => '==',
+                    'value'    => '2020-06-10 12:00 - 2020-06-18 12:00',
+                ],
+                [
+                    'control_name'  => 'date_time_range_picker_three',
+                    'operator' => '==',
+                    'value'    => '2020-06-10 12:00 to 2020-06-18 12:00',
+                ]
+            ],
+        ] );
+
 
         /**
          * control for gradient input
@@ -414,19 +848,27 @@ class Post extends Posts {
             'value'  => [
                 'primary'   => '#FF0000',
                 'secondary' => '#0000FF',
+            ]
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'gradient',
+                    'operator' => '==',
+                    'value'    => '#FF0000',
+                ],
+                [
+                    'control_name'  => 'gradient',
+                    'operator' => '==',
+                    'value'    => '#0000FF',
+                ]
             ],
-            // 'conditions' => [
-            //     [
-            //         'control_name'  => 'setting_1',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            //     [
-            //         'control_name'  => 'setting_3',
-            //         'operator' => '==',
-            //         'value' => true,
-            //     ],
-            // ],
         ] );
 
         /**
@@ -444,6 +886,36 @@ class Post extends Posts {
             'wpautop'       => true,
             'editor_type'   => false, // tinymce, false: HTML
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'wp_editor_two',
+                    'operator' => '>',
+                    'value'    => 0,
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'wp_editor_two',
+                    'operator' => '==',
+                    'value'    => 'abc',
+                ]
+            ],
+        ] );
 
         /**
          * control for dimension input
@@ -452,7 +924,7 @@ class Post extends Posts {
             'box_id' => 'post_box_2',
             'name'   => 'padding_dimension_two',
             'type'   => 'dimensions',
-            'label'  => __( 'Dimension Input Two', '{domain}' ),
+            'label'  => __( 'Dimension Input', '{domain}' ),
             'desc'   => __( 'Dimension text description', '{domain}' ),
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value'  => [
@@ -464,6 +936,7 @@ class Post extends Posts {
             ],
         ] );
 
+
         /**
          * Control for Thumbnail Image picker Input
          */
@@ -471,7 +944,7 @@ class Post extends Posts {
             'name'    => 'i_p_1',
             'box_id'  => 'post_box_2',
             'type'    => 'image-picker',
-            'value'   => 'value-4',
+            'value'   => 'value-5',
             'attr'    => [
                 'class'    => 'custom-class',
                 'data-foo' => 'bar',
@@ -502,6 +975,27 @@ class Post extends Posts {
                 ],
             ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'i_p_1',
+                    'operator' => '==',
+                    'value'    => 'value-2',
+                ],
+                [
+                    'control_name'  => 'i_p_1',
+                    'operator' => '==',
+                    'value'    => 'value-5',
+                ]
+            ],
+        ] );
+
 
         /**
          * Control for switcher input
@@ -520,6 +1014,22 @@ class Post extends Posts {
                 'hello' => __( 'Hello', '{domain}' ),
             ],
         ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'switcher_two',
+                    'operator' => '==',
+                    'value'    => 'hello',
+                ]
+            ],
+        ] );
+
 
         /**
          * Control for Typography Input
@@ -548,6 +1058,21 @@ class Post extends Posts {
             ],
             'label'      => __( 'Typhography Two', '{domain}' ),
             'desc'       => __( 'Description', '{domain}' ),
+        ] );
+        $this->add_control( [
+            'box_id' => 'post_box_2',
+            'type'   => 'text',
+            'name'   => 'url_equal',
+            'value'  => 'default text value',
+            'desc'   => 'use this area to input text',
+            'label'  => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name'  => 'typo_two',
+                    'operator' => '==',
+                    'value'    => 'Amarante',
+                ]
+            ],
         ] );
 
         /**
