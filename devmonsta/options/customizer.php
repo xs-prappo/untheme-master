@@ -256,7 +256,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 'right'    => '3',
                 'bottom'   => '4',
                 'left'     => '56',
-                'isLinked' => false,
+                'isLinked' => true,
             ],
         ] );
 
@@ -371,19 +371,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'value'      => [
                 'primary'   => '#FF00FF',
                 'secondary' => '#0000FF',
-            ],
-            // 'conditions' => [
-            //     [
-            //         'control_name' => 'setting_1',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            //     [
-            //         'control_name' => 'setting_3',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            // ],
+            ]
         ] );
 
         /**
@@ -430,6 +418,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'desc'    => __( 'Oembed text description', '{domain}' ),
             'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
             'value'   => 'https://www.youtube.com/watch?v=0Nh11GI4-Gc',
+            // 'value'   => 'https://soliloquywp.com/wordpress-best-practices/',
             'preview' => [
                 'width'      => 200, // optional, if you want to set the fixed width to iframe
                 'height'     => 100, // optional, if you want to set the fixed height to iframe
