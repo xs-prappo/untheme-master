@@ -1222,8 +1222,8 @@ class Post extends Posts {
             ],
         ] );
 
-        //  dm_print(dm_p()->option('8', 'color'));
-
+        // dm_print(dm_post()->option('15', 'color_two'));
+        // dm_print(dm_post()->option('15', 'color_three'));
     }
 
 }
