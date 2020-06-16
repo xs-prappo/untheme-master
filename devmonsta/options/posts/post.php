@@ -96,19 +96,19 @@ class Post extends Posts {
                 'height'     => 400, // optional, if you want to set the fixed height to iframe
                 'keep_ratio' => false,
             ],
-            'conditions' => [
-                [
-                    'control_name' => 'f_name',
-                    'operator'     => '==',
-                    'value'        => "abc",
-                ],
-                [
-                    'control_name' => 'user_url_one',
-                    'operator'     => '==',
-                    'value'        => "www.google.com",
-                ]
-               
-            ],
+            // 'conditions' => [
+            //     [
+            //         'control_name' => 'f_name',
+            //         'operator'     => '==',
+            //         'value'        => "abc",
+            //     ],
+            //     [
+            //         'control_name' => 'user_url_one',
+            //         'operator'     => '==',
+            //         'value'        => "www.google.com",
+            //     ]
+
+            // ],
         ] );
 
         /**
@@ -133,16 +133,16 @@ class Post extends Posts {
          * control for icon-picker input
          */
         $this->add_control( [
-            'box_id'     => 'post_box_1',
-            'name'       => 'icon_picker_one',
-            'type'       => 'icon',
-            'value'      => [
+            'box_id' => 'post_box_1',
+            'name'   => 'icon_picker_one',
+            'type'   => 'icon',
+            'value'  => [
                 'icon' => 'fas fa-at',
                 'type' => 'dm-font-awesome',
             ],
-            'label'      => __( 'Select Icon Three', '{domain}' ),
-            'desc'       => __( 'Select icon description', '{domain}' ),
-            'attr'       => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'label'  => __( 'Select Icon Three', '{domain}' ),
+            'desc'   => __( 'Select icon description', '{domain}' ),
+            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
             // 'conditions' => [
             //     [
             //         'control_name' => 'user_url_one',
@@ -1040,6 +1040,29 @@ class Post extends Posts {
                     ],
                 ],
                 [
+                    'box_id' => 'post_box_1',
+                    'type'   => 'text',
+                    'name'   => 'text_name',
+                    'value'  => 'default text value',
+                    'desc'   => 'use this area to input text',
+                    'label'  => __( 'Text Input One', '{domain}' ),
+                    // 'conditions' => [
+                    //     [
+                    //         'control_name'  => 'user_url_one',
+                    //         'operator' => '==',
+                    //         'value'    => "abc",
+                    //     ]
+                    // ],
+                ],
+                [
+                    'box_id' => 'post_box_1',
+                    'name'   => 'user_url_repeater',
+                    'type'   => 'url',
+                    'value'  => 'http://www.px.com',
+                    'label'  => __( 'Enter valid URL Three', '{domain}' ),
+                    'desc'   => __( 'Url Description', '{domain}' ),
+                ],
+                [
                     'box_id'  => 'post_box_1',
                     'name'    => 'oembed_field_repeater',
                     'type'    => 'oembed',
@@ -1066,6 +1089,30 @@ class Post extends Posts {
                     'right-choice' => [
                         'hello' => __( 'Hello', '{domain}' ),
                     ],
+                ],
+                [
+                    'box_id' => 'post_box_1',
+                    'name'   => 'icon_picker_repeater',
+                    'type'   => 'icon',
+                    'value'  => [
+                        'icon' => 'fas fa-at',
+                        'type' => 'dm-font-awesome',
+                    ],
+                    'label'  => __( 'Select Icon Three', '{domain}' ),
+                    'desc'   => __( 'Select icon description', '{domain}' ),
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                    // 'conditions' => [
+                    //     [
+                    //         'control_name' => 'user_url_one',
+                    //         'operator'     => '==',
+                    //         'value'        => "www.google.com",
+                    //     ],
+                    //     [
+                    //         'control_name' => 'f_name',
+                    //         'operator'     => '==',
+                    //         'value'        => "abc",
+                    //     ],
+                    // ],
                 ],
                 [
                     'box_id'          => 'post_box_2',
@@ -1258,6 +1305,148 @@ class Post extends Posts {
                     //     ],
                     // ],
                 ],
+                [
+                    'box_id'  => 'post_box_2',
+                    'type'    => 'radio',
+                    'name'    => 'gender_repeater',
+                    'desc'    => 'use this area to input radio',
+                    'label'   => __( 'Gender', '{domain}' ),
+                    'value'   => 'choice-3',
+                    'choices' => [
+                        'choice-1' => __( 'Male', '{domain}' ),
+                        'choice-2' => __( 'Female', '{domain}' ),
+                        'choice-3' => __( 'Others', '{domain}' ),
+                    ],
+                    // Display choices inline instead of list
+                    'inline'  => false,
+                ],
+                [
+                    'box_id' => 'post_box_2',
+                    'type'   => 'textarea',
+                    'name'   => 'txt_area_repeater',
+                    'label'  => __( 'Text Area Two', '{domain}' ),
+                    'desc'   => 'use this area to input large text',
+                    'value'  => '',
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                ],
+                [
+                    'box_id' => 'post_box_2',
+                    'type'   => 'checkbox',
+                    'name'   => 'graduate_repeater',
+                    'value'  => false, // checked/unchecked
+                    'label'  => __( 'Graduated Three', '{domain}' ),
+                    'desc'   => __( "check if you're graduated", '{domain}' ),
+                    'text'   => __( 'Yes', '{domain}' ),
+                ],
+                [
+                    'box_id'   => 'post_box_2',
+                    'name'     => 'color_repeae',
+                    'type'     => 'color-picker',
+                    'label'    => __( 'Wp Color Picker Two', '{domain}' ),
+                    'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+                    'value'    => '#FF0000',
+                    'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+                ],
+                [
+                    'box_id'  => 'post_box_2',
+                    'name'    => 'select_repeater',
+                    'type'    => 'select',
+                    'value'   => 'choice-3',
+                    'label'   => __( 'Select Single Two', '{domain}' ),
+                    'desc'    => __( 'select description goes here', '{domain}' ),
+                    'choices' => [
+                        ''         => '---',
+                        'choice-1' => __( 'Choice One', '{domain}' ),
+                        'choice-2' => __( 'Choice Two', '{domain}' ),
+                        'choice-3' => __( 'Choice Three', '{domain}' ),
+                    ],
+                ],
+                [
+                    'box_id'   => 'post_box_2',
+                    'name'     => 'upload_image_repeater',
+                    'type'     => 'upload',
+                    'label'    => __( 'Upload Image Two', '{domain}' ),
+                    'desc'     => __( 'Description', '{domain}' ),
+                    'multiple' => true,
+                ],
+                [
+                    'box_id'     => 'post_box_2',
+                    'name'       => 'range_slider_widget_repeater',
+                    'type'       => 'range-slider',
+                    'label'      => __( 'Wp Range Slider Two', '{domain}' ),
+                    'desc'       => __( 'description of range slider goes here', '{domain}' ),
+                    'value'      => [
+                        'from' => 10,
+                        'to'   => 33,
+                    ],
+                    'properties' => [
+                        'min'  => 0,
+                        'max'  => 100,
+                        'step' => 1,
+                    ],
+                ],
+                [
+                    'box_id' => 'post_box_2',
+                    'name'   => 'padding_dimension_repeater',
+                    'type'   => 'dimensions',
+                    'label'  => __( 'Dimension Input Three', '{domain}' ),
+                    'desc'   => __( 'Dimension text description', '{domain}' ),
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                    'value'  => [
+                        'top'      => '9',
+                        'right'    => '10',
+                        'bottom'   => '5',
+                        'left'     => '0',
+                        'isLinked' => true,
+                    ],
+                ],
+                [
+                    'box_id' => 'post_box_2',
+                    'name'   => 'gradient_repeater',
+                    'type'   => 'gradient',
+                    'label'  => __( 'Wp Gradient Picker Three', '{domain}' ),
+                    'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+                    'value'  => [
+                        'primary'   => '#FF0000',
+                        'secondary' => '#0000FF',
+                    ]
+                ],
+                [
+                    'box_id'          => 'post_box_2',
+                    'type'            => 'datetime-range',
+                    'value'           => [
+                        'from' => '2020/05/10 12:00 am',
+                        'to'   => '2020/05/18 07:55 pm',
+                    ],
+                    'name'            => 'date_time_range_picker_repeater',
+                    'label'           => __( 'Date Time Range Two', '{domain}' ),
+                    'desc'            => __( 'date time range picker description', '{domain}' ),
+                    'datetime-picker' => [
+                        'date-format' => 'Y-m-d',            // Format datetime.
+                        'time-format' => 'H:i',              // Format datetime.
+                        'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                        'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                        'timepicker'  => true,               // Show timepicker.
+                        'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                    ],
+                ],
+                [
+                    'box_id'          => 'post_box_2',
+                    'type'            => 'datetime-picker',
+                    'name'            => 'date_time_picker_repeater',
+                    'value'           => '2020/06/15 10:00 am',
+                    'label'           => __( 'Date Time Picker Two', '{domain}' ),
+                    'desc'            => __( 'date time picker description', '{domain}' ),
+                    'datetime-picker' => [
+                        'date-format' => 'Y-m-d',            // Format datetime.
+                        'time-format' => 'H:i',              // Format datetime.
+                        'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                        'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                        'timepicker'  => true,               // Show timepicker.
+                        'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                    ],
+                ]
+
             ],
         ] );
 
