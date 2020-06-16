@@ -763,6 +763,10 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             ],
         ] );
 
+
+        // format: dm_theme_option($option_name)
+        // dm_print(dm_theme_option('dm_date_time'));
+        // dm_print(dm_theme_option('slider_widget'));
     }
 
 }

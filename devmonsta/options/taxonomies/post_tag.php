@@ -459,6 +459,8 @@ class Post_Tag extends Taxonomies {
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
 
+        // dm_print(dm_taxonomy("2", "devmonsta_user_url"));
+
     }
 
 }

@@ -28,6 +28,13 @@ class Post extends Posts {
             'value'  => 'default text value',
             'desc'   => 'use this area to input text',
             'label'  => __( 'Text Input One', '{domain}' ),
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'user_url_one',
+            //         'operator' => '==',
+            //         'value'    => "abc",
+            //     ]
+            // ],
         ] );
 
         /**
@@ -52,6 +59,13 @@ class Post extends Posts {
             'value'  => 'http://www.xs.com',
             'label'  => __( 'Enter valid URL One', '{domain}' ),
             'desc'   => __( 'Url Description', '{domain}' ),
+            // 'conditions' => [
+            //     [
+            //         'control_name'  => 'f_name',
+            //         'operator' => '==',
+            //         'value'    => "abc",
+            //     ]
+            // ],
         ] );
 
         /**
@@ -82,6 +96,19 @@ class Post extends Posts {
                 'height'     => 400, // optional, if you want to set the fixed height to iframe
                 'keep_ratio' => false,
             ],
+            'conditions' => [
+                [
+                    'control_name' => 'f_name',
+                    'operator'     => '==',
+                    'value'        => "abc",
+                ],
+                [
+                    'control_name' => 'user_url_one',
+                    'operator'     => '==',
+                    'value'        => "www.google.com",
+                ]
+               
+            ],
         ] );
 
         /**
@@ -106,16 +133,28 @@ class Post extends Posts {
          * control for icon-picker input
          */
         $this->add_control( [
-            'box_id' => 'post_box_1',
-            'name'   => 'icon_picker_one',
-            'type'   => 'icon',
-            'value'  => [
+            'box_id'     => 'post_box_1',
+            'name'       => 'icon_picker_one',
+            'type'       => 'icon',
+            'value'      => [
                 'icon' => 'fas fa-at',
                 'type' => 'dm-font-awesome',
             ],
-            'label'  => __( 'Select Icon Three', '{domain}' ),
-            'desc'   => __( 'Select icon description', '{domain}' ),
-            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            'label'      => __( 'Select Icon Three', '{domain}' ),
+            'desc'       => __( 'Select icon description', '{domain}' ),
+            'attr'       => ['class' => 'custom-class', 'data-foo' => 'bar'],
+            // 'conditions' => [
+            //     [
+            //         'control_name' => 'user_url_one',
+            //         'operator'     => '==',
+            //         'value'        => "www.google.com",
+            //     ],
+            //     [
+            //         'control_name' => 'f_name',
+            //         'operator'     => '==',
+            //         'value'        => "abc",
+            //     ],
+            // ],
         ] );
 
         /**
@@ -997,7 +1036,7 @@ class Post extends Posts {
                                 'timepicker'  => true,               // Show timepicker.
                                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
                             ],
-                        ]
+                        ],
                     ],
                 ],
                 [
@@ -1218,12 +1257,14 @@ class Post extends Posts {
                     //         'value' => true,
                     //     ],
                     // ],
-                ]
+                ],
             ],
         ] );
 
-        // dm_print(dm_post()->option('15', 'color_two'));
-        // dm_print(dm_post()->option('15', 'color_three'));
+        //format: dm_meta($post_id, $option_id, $default_value= null)
+        // dm_print(dm_meta('15', 'color_two'));
+        // dm_print(dm_meta('15', 'oembed_field_one'));
+
     }
 
 }
