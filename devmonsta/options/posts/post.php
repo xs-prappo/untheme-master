@@ -959,7 +959,46 @@ class Post extends Posts {
                     'lable'    => 'Child repeater 1',
                     'type'     => 'repeater',
                     'add_new'  => 'Add new',
-                    'controls' => [],
+                    'controls' => [
+                        [
+                            'box_id'          => 'post_box_2',
+                            'type'            => 'datetime-range',
+                            'value'           => [
+                                'from' => '2020/05/10 12:00 am',
+                                'to'   => '2020/05/18 07:55 pm',
+                            ],
+                            'name'            => 'date_time_range_picker_child_repeater',
+                            'label'           => __( 'Date Time Range Three', '{domain}' ),
+                            'desc'            => __( 'date time range picker description', '{domain}' ),
+                            'datetime-picker' => [
+                                'date-format' => 'Y-m-d',            // Format datetime.
+                                'time-format' => 'H:i',              // Format datetime.
+                                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                                'timepicker'  => true,               // Show timepicker.
+                                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                            ],
+                        ],
+                        [
+                            'box_id'          => 'post_box_2',
+                            'type'            => 'datetime-range',
+                            'value'           => [
+                                'from' => '2020/05/10 12:00 am',
+                                'to'   => '2020/05/18 07:55 pm',
+                            ],
+                            'name'            => 'date_time_range_picker_child_repeater',
+                            'label'           => __( 'Date Time Range Two', '{domain}' ),
+                            'desc'            => __( 'date time range picker description', '{domain}' ),
+                            'datetime-picker' => [
+                                'date-format' => 'Y-m-d',            // Format datetime.
+                                'time-format' => 'H:i',              // Format datetime.
+                                'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                                'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                                'timepicker'  => true,               // Show timepicker.
+                                'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+                            ],
+                        ]
+                    ],
                 ],
                 [
                     'box_id'  => 'post_box_1',
@@ -1156,6 +1195,29 @@ class Post extends Posts {
                     'editor_height' => 200,
                     'wpautop'       => true,
                     'editor_type'   => false, // tinymce, false: HTML
+                ],
+                [
+                    'box_id' => 'post_box_2',
+                    'name'   => 'gradient_two_repeater',
+                    'type'   => 'gradient',
+                    'label'  => __( 'Wp Gradient Picker Thwo', '{domain}' ),
+                    'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+                    'value'  => [
+                        'primary'   => '#FF0000',
+                        'secondary' => '#0000FF',
+                    ],
+                    // 'conditions' => [
+                    //     [
+                    //         'control_name'  => 'setting_1',
+                    //         'operator' => '==',
+                    //         'value' => true,
+                    //     ],
+                    //     [
+                    //         'control_name'  => 'setting_3',
+                    //         'operator' => '==',
+                    //         'value' => true,
+                    //     ],
+                    // ],
                 ]
             ],
         ] );
