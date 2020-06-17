@@ -240,7 +240,7 @@ class Post extends Posts {
             'name'    => 'gender_two',
             'desc'    => 'use this area to input radio',
             'label'   => __( 'Gender', '{domain}' ),
-            'value'   => 'choice-3',
+            'value'   => 'choice-2',
             'choices' => [
                 'choice-1' => __( 'Male', '{domain}' ),
                 'choice-2' => __( 'Female', '{domain}' ),
@@ -499,15 +499,15 @@ class Post extends Posts {
             'name'       => 'oembed_equal',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'label'      => __( 'Condition on multiselect', '{domain}' ),
             'conditions' => [
                 [
-                    'control_name' => 'select_multiple_two',
+                    'control_name' => 'select_multiple_two[]',
                     'operator'     => '==',
                     'value'        => "choice-3",
                 ],
                 [
-                    'control_name' => 'select_multiple_two',
+                    'control_name' => 'select_multiple_two[]',
                     'operator'     => '==',
                     'value'        => "choice-2",
                 ],
@@ -524,6 +524,23 @@ class Post extends Posts {
             'label'    => __( 'Upload Image Two', '{domain}' ),
             'desc'     => __( 'Description', '{domain}' ),
             'multiple' => true,
+            'value'    => '41'
+        ] );
+        
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Upload', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'upload_image_two',
+                    'operator'     => '==',
+                    'value'        => 42,
+                ]
+            ],
         ] );
 
 
@@ -558,12 +575,12 @@ class Post extends Posts {
             ],
         ] );
         $this->add_control( [
-            'box_id'     => 'post_box_1',
+            'box_id'     => 'post_box_2',
             'type'       => 'text',
             'name'       => 'url_equal',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'label'      => __( 'Condition on Slider Equal', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'slider_widget_two',
@@ -573,12 +590,12 @@ class Post extends Posts {
             ],
         ] );
         $this->add_control( [
-            'box_id'     => 'post_box_1',
+            'box_id'     => 'post_box_2',
             'type'       => 'text',
             'name'       => 'url_greater',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Greater', '{domain}' ),
+            'label'      => __( 'Condition on Slider Greater', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'slider_widget_two',
@@ -593,7 +610,7 @@ class Post extends Posts {
             'name'       => 'url_less',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Less', '{domain}' ),
+            'label'      => __( 'Condition on Slider Less', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'slider_widget_two',
@@ -975,7 +992,7 @@ class Post extends Posts {
             'name'       => 'url_equal',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'label'      => __( 'Condition on Image Picker', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'i_p_1',
@@ -997,7 +1014,7 @@ class Post extends Posts {
             'box_id'       => 'post_box_2',
             'type'         => 'switcher',
             'name'         => 'switcher_two',
-            'value'        => 'goodbye',
+            'value'        => 'hello',
             'label'        => __( 'Switcher Two', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [

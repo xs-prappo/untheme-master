@@ -267,7 +267,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'      => 'devmonsta_text_settings_section',
             'type'         => 'switcher',
             'id'           => 'dm_switcher',
-            'value'        => 'hello',
+            'value'        => 'goodbye',
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
@@ -276,19 +276,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'right-choice' => [
                 'hello' => __( 'Hi', '{domain}' ),
             ],
-            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            // 'conditions'   => [
-            //     [
-            //         'control_name' => 'setting_1',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            //     [
-            //         'control_name' => 'setting_3',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            // ],
+            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar']
         ] );
 
         /**
@@ -384,7 +372,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'   => __( 'Select Multiple', '{domain}' ),
             'desc'    => __( 'multiple select description goes here', '{domain}' ),
             'value'   => [
-                'choice-3',
+                'choice-1',
                 'choice-2',
             ],
             'choices' => [
@@ -498,7 +486,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'      => __( 'Wp Range Slider Example', '{domain}' ),
             'desc'       => __( 'description of range slider goes here', '{domain}' ),
             'value'      => [
-                'from' => 10,
+                'from' => 20,
                 'to'   => 33,
             ],
             'properties' => [
