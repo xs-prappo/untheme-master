@@ -29,14 +29,13 @@ class Post extends Posts {
             'desc'   => 'use this area to input text',
             'label'  => __( 'Text Input One', '{domain}' ),
         ] );
-
         $this->add_control( [
             'box_id'     => 'post_box_1',
             'type'       => 'text',
             'name'       => 'text_equal',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on text Equal', '{domain}' ),
+            'label'      => __( 'Condition Text Equal', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'f_name',
@@ -51,12 +50,12 @@ class Post extends Posts {
             'name'       => 'text_greater',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on text Greater', '{domain}' ),
+            'label'      => __( 'Condition Text Greater', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'f_name',
                     'operator'     => '>',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -66,12 +65,12 @@ class Post extends Posts {
             'name'       => 'text_less',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on text Less', '{domain}' ),
+            'label'      => __( 'Condition Text Less', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'f_name',
                     'operator'     => '<',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -93,7 +92,7 @@ class Post extends Posts {
             'name'       => 'url_equal',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'label'      => __( 'Condition url Equal', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'user_url_one',
@@ -108,12 +107,12 @@ class Post extends Posts {
             'name'       => 'url_greater',
             'value'      => 'default text value',
             'desc'       => 'use this area to input text',
-            'label'      => __( 'Condition on Greater', '{domain}' ),
+            'label'      => __( 'Condition url Greater', '{domain}' ),
             'conditions' => [
                 [
                     'control_name' => 'user_url_one',
                     'operator'     => '>',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -128,7 +127,7 @@ class Post extends Posts {
                 [
                     'control_name' => 'user_url_one',
                     'operator'     => '<',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -176,7 +175,7 @@ class Post extends Posts {
                 [
                     'control_name' => 'oembed_field_one',
                     'operator'     => '>',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -191,7 +190,7 @@ class Post extends Posts {
                 [
                     'control_name' => 'oembed_field_one',
                     'operator'     => '<',
-                    'value'        => "0",
+                    'value'        => 0,
                 ],
             ],
         ] );
@@ -357,7 +356,7 @@ class Post extends Posts {
                 [
                     'control_name' => 'graduate_two',
                     'operator'     => '==',
-                    'value'        => true,
+                    'value'        => "true",
                 ],
             ],
         ] );
@@ -928,7 +927,7 @@ class Post extends Posts {
                 'right'    => '2',
                 'bottom'   => '4',
                 'left'     => '6',
-                'isLinked' => true,
+                'isLinked' => 1,
             ],
         ] );
 
@@ -1064,8 +1063,8 @@ class Post extends Posts {
                     'control_name' => 'typo_two',
                     'operator'     => '==',
                     'value'        => 'Amarante',
-                ],
-            ],
+                ]
+            ]
         ] );
 
         /**
@@ -1085,15 +1084,68 @@ class Post extends Posts {
                     'add_new'  => 'Add new',
                     'controls' => [
                         [
-                            'box_id'          => 'post_box_2',
-                            'type'            => 'datetime-range',
-                            'value'           => [
-                                'from' => '2020/05/10 12:00 am',
-                                'to'   => '2020/05/18 07:55 pm',
+                            'box_id' => 'post_box_1',
+                            'type'   => 'text',
+                            'name'   => 'text_name_child',
+                            'value'  => 'default text value',
+                            'desc'   => 'use this area to input text',
+                            'label'  => __( 'Text Input One', '{domain}' )
+                        ],
+                        [
+                            'box_id' => 'post_box_1',
+                            'name'   => 'user_url_child',
+                            'type'   => 'url',
+                            'value'  => 'http://www.px.com',
+                            'label'  => __( 'Enter valid URL Three', '{domain}' ),
+                            'desc'   => __( 'Url Description', '{domain}' ),
+                        ],
+                        [
+                            'box_id'  => 'post_box_1',
+                            'name'    => 'oembed_field_child',
+                            'type'    => 'oembed',
+                            'label'   => __( 'Oembed Input Repetaer', '{domain}' ),
+                            'desc'    => __( 'Oembed text description', '{domain}' ),
+                            'attr'    => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                            'value'   => 'https://www.youtube.com/watch?v=0Nh11GI4-Gc',
+                            'preview' => [
+                                'width'      => 400, // optional, if you want to set the fixed width to iframe
+                                'height'     => 400, // optional, if you want to set the fixed height to iframe
+                                'keep_ratio' => false,
                             ],
-                            'name'            => 'date_time_range_picker_child_repeater',
-                            'label'           => __( 'Date Time Range Three', '{domain}' ),
-                            'desc'            => __( 'date time range picker description', '{domain}' ),
+                        ],
+                        [
+                            'box_id'       => 'post_box_2',
+                            'type'         => 'switcher',
+                            'name'         => 'switcher_child',
+                            'value'        => 'goodbye',
+                            'label'        => __( 'Switcher Two', '{domain}' ),
+                            'desc'         => __( 'Description', '{domain}' ),
+                            'left-choice'  => [
+                                'goodbye' => __( 'Goodbye', '{domain}' ),
+                            ],
+                            'right-choice' => [
+                                'hello' => __( 'Hello', '{domain}' ),
+                            ],
+                        ],
+                        [
+                            'box_id' => 'post_box_1',
+                            'name'   => 'icon_picker_child',
+                            'type'   => 'icon',
+                            'value'  => [
+                                'icon' => 'fas fa-at',
+                                'type' => 'dm-font-awesome',
+                            ],
+                            'label'  => __( 'Select Icon Three', '{domain}' ),
+                            'desc'   => __( 'Select icon description', '{domain}' ),
+                            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
+                        ],
+                        [
+                            'box_id'          => 'post_box_2',
+                            'type'            => 'datetime-picker',
+                            'name'            => 'date_time_picker_child',
+                            'value'           => '2020/06/15 10:00 am',
+                            'label'           => __( 'Date Time Picker Two', '{domain}' ),
+                            'desc'            => __( 'date time picker description', '{domain}' ),
                             'datetime-picker' => [
                                 'date-format' => 'Y-m-d',            // Format datetime.
                                 'time-format' => 'H:i',              // Format datetime.
@@ -1104,13 +1156,232 @@ class Post extends Posts {
                             ],
                         ],
                         [
+                            'box_id' => 'post_box_2',
+                            'name'   => 'padding_dimension_child',
+                            'type'   => 'dimensions',
+                            'label'  => __( 'Dimension Input Two', '{domain}' ),
+                            'desc'   => __( 'Dimension text description', '{domain}' ),
+                            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                            'value'  => [
+                                'top'      => '8',
+                                'right'    => '2',
+                                'bottom'   => '4',
+                                'left'     => '6',
+                                'isLinked' => true,
+                            ],
+                        ],
+                        [
+                            'name'    => 'i_p_child',
+                            'box_id'  => 'post_box_2',
+                            'type'    => 'image-picker',
+                            'value'   => 'value-4',
+                            'attr'    => [
+                                'class'    => 'custom-class',
+                                'data-foo' => 'bar',
+                            ],
+                            'label'   => __( 'Thumbnail Image Picker One', '{domain}' ),
+                            'desc'    => __( 'Description', '{domain}' ),
+                            'help'    => __( 'Help tip', '{domain}' ),
+                            'choices' => [
+                                'value-1' => [
+                                    'small' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                                    'large' => get_template_directory_uri() . '/images/thumbnail.jpg',
+                                ],
+                                'value-2' => [
+                                    'small' => get_template_directory_uri() . '/images/preview.png',
+                                    'large' => get_template_directory_uri() . '/images/preview.png',
+                                ],
+                                'value-3' => [
+                                    'small' => get_template_directory_uri() . '/images/a.jpg',
+                                    'large' => get_template_directory_uri() . '/images/a.jpg',
+                                ],
+                                'value-4' => [
+                                    'small' => get_template_directory_uri() . '/images/b.jpg',
+                                    'large' => get_template_directory_uri() . '/images/b.jpg',
+                                ],
+                                'value-5' => [
+                                    'small' => get_template_directory_uri() . '/images/c.jpg',
+                                    'large' => get_template_directory_uri() . '/images/c.jpg',
+                                ],
+                            ],
+                        ],
+                        [
+                            'box_id'  => 'post_box_2',
+                            'name'    => 'select_multiple_child',
+                            'type'    => 'multiselect',
+                            'label'   => __( 'Select Multiple Two', '{domain}' ),
+                            'desc'    => __( 'multiple select description goes here', '{domain}' ),
+                            'value'   => [
+                                'choice-1',
+                                'choice-2',
+                            ],
+                            'choices' => [
+                                'choice-1' => __( 'Choice One', '{domain}' ),
+                                'choice-2' => __( 'Choice Two', '{domain}' ),
+                                'choice-3' => __( 'Choice Three', '{domain}' ),
+                            ],
+                        ],
+                        [
+                            'box_id'     => 'post_box_2',
+                            'name'       => 'slider_widget_child',
+                            'label'      => __( 'Wp Slider Two', '{domain}' ),
+                            'desc'       => __( 'description of slider goes here', '{domain}' ),
+                            'type'       => 'slider',
+                            'value'      => 33,
+                            'properties' => [
+                                'min'  => 0,
+                                'max'  => 100,
+                                'step' => 1,
+                            ],
+                        ],
+                        [
+                            'box_id'     => 'post_box_2',
+                            'name'       => 'range_slider_widget_child',
+                            'type'       => 'range-slider',
+                            'label'      => __( 'Wp Range Slider Two', '{domain}' ),
+                            'desc'       => __( 'description of range slider goes here', '{domain}' ),
+                            'value'      => [
+                                'from' => 10,
+                                'to'   => 33,
+                            ],
+                            'properties' => [
+                                'min'  => 0,
+                                'max'  => 100,
+                                'step' => 1,
+                            ],
+                        ],
+                        [
+                            'name'       => 'typo_child',
+                            'box_id'     => 'post_box_2',
+                            'type'       => 'typography',
+                            'value'      => [
+                                'family'         => 'Amarante',
+                                'style'          => 'italic',
+                                'weight'         => 700,
+                                'subset'         => 'latin-ext',
+                                'variation'      => 'regular',
+                                'size'           => 14,
+                                'line_height'    => 13,
+                                'letter_spacing' => -2,
+                                'color'          => '#0000ff',
+                            ],
+                            'components' => [
+                                'family'         => true,
+                                'size'           => true,
+                                'line-height'    => true,
+                                'letter-spacing' => true,
+                                'color'          => true,
+                            ],
+                            'label'      => __( 'Typhography Two', '{domain}' ),
+                            'desc'       => __( 'Description', '{domain}' ),
+                        ],
+                        [
+                            'box_id'   => 'post_box_2',
+                            'name'     => 'upload_image_child',
+                            'type'     => 'upload',
+                            'label'    => __( 'Upload Image Two', '{domain}' ),
+                            'desc'     => __( 'Description', '{domain}' ),
+                            'multiple' => true,
+                        ],
+                        [
+                            'box_id' => 'post_box_2',
+                            'name'   => 'gradient_two_child',
+                            'type'   => 'gradient',
+                            'label'  => __( 'Wp Gradient Picker Thwo', '{domain}' ),
+                            'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
+                            'value'  => [
+                                'primary'   => '#FF0000',
+                                'secondary' => '#0000FF',
+                            ],
+                        ],
+                        [
+                            'box_id'  => 'post_box_2',
+                            'type'    => 'radio',
+                            'name'    => 'gender_child',
+                            'desc'    => 'use this area to input radio',
+                            'label'   => __( 'Gender', '{domain}' ),
+                            'value'   => 'choice-3',
+                            'choices' => [
+                                'choice-1' => __( 'Male', '{domain}' ),
+                                'choice-2' => __( 'Female', '{domain}' ),
+                                'choice-3' => __( 'Others', '{domain}' ),
+                            ],
+                            // Display choices inline instead of list
+                            'inline'  => false,
+                        ],
+                        [
+                            'box_id' => 'post_box_2',
+                            'type'   => 'textarea',
+                            'name'   => 'txt_area_child',
+                            'label'  => __( 'Text Area Two', '{domain}' ),
+                            'desc'   => 'use this area to input large text',
+                            'value'  => '',
+                            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
+                        ],
+                        [
+                            'box_id' => 'post_box_2',
+                            'type'   => 'checkbox',
+                            'name'   => 'graduate_child',
+                            'value'  => false,
+                            'label'  => __( 'Graduated Three', '{domain}' ),
+                            'desc'   => __( "check if you are graduated", '{domain}' ),
+                            'text'   => __( 'Yes', '{domain}' ),
+                        ],
+                        [
+                            'box_id'   => 'post_box_2',
+                            'name'     => 'color_child',
+                            'type'     => 'color-picker',
+                            'label'    => __( 'Wp Color Picker Two', '{domain}' ),
+                            'desc'     => __( 'description of color-picker goes here', '{domain}' ),
+                            'value'    => '#FF0000',
+                            'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
+                        ],
+                        [
+                            'box_id'  => 'post_box_2',
+                            'name'    => 'select_child',
+                            'type'    => 'select',
+                            'value'   => 'choice-3',
+                            'label'   => __( 'Select Single Two', '{domain}' ),
+                            'desc'    => __( 'select description goes here', '{domain}' ),
+                            'choices' => [
+                                ''         => '---',
+                                'choice-1' => __( 'Choice One', '{domain}' ),
+                                'choice-2' => __( 'Choice Two', '{domain}' ),
+                                'choice-3' => __( 'Choice Three', '{domain}' ),
+                            ],
+                        ],
+                        [
+                            'box_id'   => 'post_box_2',
+                            'name'     => 'upload_image_child',
+                            'type'     => 'upload',
+                            'label'    => __( 'Upload Image Two', '{domain}' ),
+                            'desc'     => __( 'Description', '{domain}' ),
+                            'multiple' => true,
+                        ],
+                        [
+                            'box_id'     => 'post_box_2',
+                            'name'       => 'range_slider_widget_child',
+                            'type'       => 'range-slider',
+                            'label'      => __( 'Wp Range Slider Two', '{domain}' ),
+                            'desc'       => __( 'description of range slider goes here', '{domain}' ),
+                            'value'      => [
+                                'from' => 10,
+                                'to'   => 33,
+                            ],
+                            'properties' => [
+                                'min'  => 0,
+                                'max'  => 100,
+                                'step' => 1,
+                            ],
+                        ],
+                        [
                             'box_id'          => 'post_box_2',
                             'type'            => 'datetime-range',
                             'value'           => [
                                 'from' => '2020/05/10 12:00 am',
                                 'to'   => '2020/05/18 07:55 pm',
                             ],
-                            'name'            => 'date_time_range_picker_child_repeater',
+                            'name'            => 'date_time_range_picker_child',
                             'label'           => __( 'Date Time Range Two', '{domain}' ),
                             'desc'            => __( 'date time range picker description', '{domain}' ),
                             'datetime-picker' => [
@@ -1122,6 +1393,17 @@ class Post extends Posts {
                                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
                             ],
                         ],
+                        [
+                            'box_id'       => 'post_box_2',
+                            'type'         => 'date-picker',
+                            'name'         => 'start_date_child',
+                            'value'        => '2020-07-10',
+                            'label'        => __( 'Date Picker Two', '{domain}' ),
+                            'desc'         => __( 'date picker description goes here', '{domain}' ),
+                            'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
+                            'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
+                            'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
+                        ]
                     ],
                 ],
                 [
@@ -1130,14 +1412,7 @@ class Post extends Posts {
                     'name'   => 'text_name',
                     'value'  => 'default text value',
                     'desc'   => 'use this area to input text',
-                    'label'  => __( 'Text Input One', '{domain}' ),
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name'  => 'user_url_one',
-                    //         'operator' => '==',
-                    //         'value'    => "abc",
-                    //     ]
-                    // ],
+                    'label'  => __( 'Text Input One', '{domain}' )
                 ],
                 [
                     'box_id' => 'post_box_1',
@@ -1185,19 +1460,7 @@ class Post extends Posts {
                     ],
                     'label'  => __( 'Select Icon Three', '{domain}' ),
                     'desc'   => __( 'Select icon description', '{domain}' ),
-                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name' => 'user_url_one',
-                    //         'operator'     => '==',
-                    //         'value'        => "www.google.com",
-                    //     ],
-                    //     [
-                    //         'control_name' => 'f_name',
-                    //         'operator'     => '==',
-                    //         'value'        => "abc",
-                    //     ],
-                    // ],
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
                 ],
                 [
                     'box_id'          => 'post_box_2',
@@ -1280,18 +1543,6 @@ class Post extends Posts {
                         'choice-2' => __( 'Choice Two', '{domain}' ),
                         'choice-3' => __( 'Choice Three', '{domain}' ),
                     ],
-                ],
-                [
-                    'box_id' => 'post_box_1',
-                    'name'   => 'icon_picker_repeater',
-                    'type'   => 'icon',
-                    'value'  => [
-                        'icon' => 'fas fa-at',
-                        'type' => 'dm-font-awesome',
-                    ],
-                    'label'  => __( 'Select Icon Three', '{domain}' ),
-                    'desc'   => __( 'Select icon description', '{domain}' ),
-                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
                 ],
                 [
                     'box_id'     => 'post_box_2',
@@ -1471,32 +1722,6 @@ class Post extends Posts {
                     ],
                 ],
                 [
-                    'box_id' => 'post_box_2',
-                    'name'   => 'padding_dimension_repeater',
-                    'type'   => 'dimensions',
-                    'label'  => __( 'Dimension Input Three', '{domain}' ),
-                    'desc'   => __( 'Dimension text description', '{domain}' ),
-                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
-                    'value'  => [
-                        'top'      => '9',
-                        'right'    => '10',
-                        'bottom'   => '5',
-                        'left'     => '0',
-                        'isLinked' => true,
-                    ],
-                ],
-                [
-                    'box_id' => 'post_box_2',
-                    'name'   => 'gradient_repeater',
-                    'type'   => 'gradient',
-                    'label'  => __( 'Wp Gradient Picker Three', '{domain}' ),
-                    'desc'   => __( 'description of gradient-picker goes here', '{domain}' ),
-                    'value'  => [
-                        'primary'   => '#FF0000',
-                        'secondary' => '#0000FF',
-                    ],
-                ],
-                [
                     'box_id'          => 'post_box_2',
                     'type'            => 'datetime-range',
                     'value'           => [
@@ -1531,7 +1756,6 @@ class Post extends Posts {
                         'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
                     ],
                 ],
-
             ],
         ] );
 
