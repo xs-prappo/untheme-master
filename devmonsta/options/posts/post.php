@@ -849,7 +849,6 @@ class Post extends Posts {
             'value'         => 'default value',
             'label'         => __( 'Wp Editor Two', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-            'size'          => 'small',
             'editor_height' => 200,
             'wpautop'       => true,
             'editor_type'   => false, // tinymce, false: HTML
@@ -1541,7 +1540,6 @@ class Post extends Posts {
                     'value'         => 'default value',
                     'label'         => __( 'Wp Editor Two', '{domain}' ),
                     'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-                    'size'          => 'small',
                     'editor_height' => 200,
                     'wpautop'       => true,
                     'editor_type'   => false, // tinymce, false: HTML

@@ -424,10 +424,9 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'value'         => 'default value',
             'label'         => __( 'Wp Editor Example', '{domain}' ),
             'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-            'size'          => 'small',
-            'editor_height' => 400,
+            'editor_height' => 300,
             'wpautop'       => true,
-            'editor_type'   => true, // tinymce, false: HTML
+            'editor_type'   => false,
         ] );
 
         /**
