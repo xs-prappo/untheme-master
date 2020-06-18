@@ -55,119 +55,111 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * ===========================================
          */
         
-        // /**
-        //  * Control for text input
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'dm_ctrl_text_1',
-        //     'type'    => 'text',
-        //     'value'   => 'default text',
-        //     'label'   => __( 'Text Input', 'devmonsta' ),
-        //     'section' => 'devmonsta_text_settings_section',
-        // ] );
+        /**
+         * Control for text input
+         */
+        $this->add_control( [
+            'id'      => 'dm_ctrl_text_1',
+            'type'    => 'text',
+            'label'   => __( 'Text Input', 'devmonsta' ),
+            "default"   => "hello hello chay pilo",
+            'section' => 'devmonsta_text_settings_section',
+        ] );
 
-        // /**
-        //  * control for checkbox input
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'dm_checkbox',
-        //     'section' => 'devmonsta_text_settings_section',
-        //     'type'    => 'checkbox',
-        //     'value'   => false, // checked/unchecked
-        //     'label'   => __( 'Checkbox example', '{domain}' ),
-        //     'desc'    => __( "checkbox example details", '{domain}' ),
-        //     'text'    => __( 'Yes', '{domain}' ),
-        // ] );
+        /**
+         * control for checkbox input
+         */
+        $this->add_control( [
+            'id'      => 'dm_checkbox',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'checkbox',
+            'default'   => true, // checked/unchecked
+            'label'   => __( 'Checkbox example', '{domain}' ),
+            'desc'    => __( "checkbox example details", '{domain}' ),
+            'text'    => __( 'Yes', '{domain}' ),
+        ] );
 
-        // /**
-        //  * control for radio input
-        //  */
-        // $this->add_control( [
-        //     'type'        => 'radio',
-        //     'id'          => 'dm_test_readio',
-        //     'label'       => __( 'Custom Radio Selection' ),
-        //     'description' => __( 'This is a custom radio input.' ),
-        //     'choices'     => [
-        //         'red'   => __( 'Red' ),
-        //         'blue'  => __( 'Blue' ),
-        //         'green' => __( 'Green' ),
-        //     ],
-        //     'section'     => 'devmonsta_text_settings_section',
-        // ] );
+        /**
+         * control for radio input
+         */
+        $this->add_control( [
+            'type'        => 'radio',
+            'id'          => 'dm_test_readio',
+            'label'       => __( 'Custom Radio Selection' ),
+            'description' => __( 'This is a custom radio input.' ),
+            'default'   => 'blue',
+            'choices'     => [
+                'red'   => __( 'Red' ),
+                'blue'  => __( 'Blue' ),
+                'green' => __( 'Green' ),
+            ],
+            'section'     => 'devmonsta_text_settings_section',
+        ] );
 
-        // /**
-        //  * control for dropdown select
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'select',
-        //     'section' => 'devmonsta_text_settings_section',
-        //     'type'    => 'select',
-        //     'value'   => 'choice-3',
-        //     'label'   => __( 'Select Single', '{domain}' ),
-        //     'desc'    => __( 'select description goes here', '{domain}' ),
-        //     'choices' => [
-        //         ''         => '---',
-        //         'choice-1' => __( 'Choice One', '{domain}' ),
-        //         'choice-2' => __( 'Choice Two', '{domain}' ),
-        //         'choice-3' => __( 'Choice Three', '{domain}' ),
-        //     ],
-        // ] );
+        /**
+         * control for dropdown select
+         */
+        $this->add_control( [
+            'id'      => 'select',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'select',
+            'default'   => 'choice-1',
+            'label'   => __( 'Select Single', '{domain}' ),
+            'desc'    => __( 'select description goes here', '{domain}' ),
+            'choices' => [
+                ''         => '---',
+                'choice-1' => __( 'Choice One', '{domain}' ),
+                'choice-2' => __( 'Choice Two', '{domain}' ),
+                'choice-3' => __( 'Choice Three', '{domain}' ),
+            ],
+        ] );
 
-        // /**
-        //  * control for textarea input
-        //  */
-        // $this->add_control( [
-        //     'id'          => 'dm_textarea',
-        //     'type'        => 'textarea',
-        //     'section'     => 'devmonsta_text_settings_section',
-        //     'label'       => __( 'Text area' ),
-        //     'description' => __( 'This is text area desctription' ),
-        //     "value"       => 'default value for text area',
-        // ] );
+        /**
+         * control for textarea input
+         */
+        $this->add_control( [
+            'id'          => 'dm_textarea',
+            'type'        => 'textarea',
+            'section'     => 'devmonsta_text_settings_section',
+            'label'       => __( 'Text area' ),
+            'description' => __( 'This is text area desctription' ),
+            "default"       => 'default value for text area',
+        ] );
 
-        // /**
-        //  * Control for dropdown-page input
-        //  */
-        // $this->add_control( [
-        //     'id'          => 'dm_dropdown_pages',
-        //     'type'        => 'dropdown-pages',
-        //     'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
-        //     'label'       => __( 'Custom Dropdown Pages' ),
-        //     'description' => __( 'This is a custom dropdown pages option.' ),
-        // ] );
+        /**
+         * Control for dropdown-page input
+         */
+        $this->add_control( [
+            'id'          => 'dm_dropdown_pages',
+            'type'        => 'dropdown-pages',
+            'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
+            'label'       => __( 'Custom Dropdown Pages' ),
+            'description' => __( 'This is a custom dropdown pages option.' ),
+        ] );
 
-        // /**
-        //  * control for url input
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'dm_url',
-        //     'section' => 'devmonsta_text_settings_section',
-        //     'type'    => 'url',
-        //     'value'   => 'http://www.xs.com',
-        //     'label'   => __( 'Enter valid URL', '{domain}' ),
-        //     'desc'    => __( 'Url Description', '{domain}' ),
-        // ] );
+        /**
+         * control for url input
+         */
+        $this->add_control( [
+            'id'      => 'dm_url',
+            'section' => 'devmonsta_text_settings_section',
+            'type'    => 'url',
+            'default'   => 'http://www.xs.com',
+            'label'   => __( 'Enter valid URL', '{domain}' ),
+            'desc'    => __( 'Url Description', '{domain}' ),
+        ] );
 
-        // /**
-        //  * Control for color-picker input
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'person_hair_color',
-        //     'label'   => __( 'Hair Color', 'devmonsta' ),
-        //     'type'    => 'color',
-        //     'section' => 'devmonsta_text_settings_section',
-        //     'default' => '#eeee22',
-        // ] );
 
-        // /**
-        //  * Control for media-select input
-        //  */
-        // $this->add_control( [
-        //     'id'      => 'dm_media',
-        //     'type'    => 'media',
-        //     'section' => 'devmonsta_text_settings_section',
-        //     'label'   => __( 'Media', 'devmonsta' ),
-        // ] );
+        /**
+         * Control for media-select input
+         */
+        $this->add_control( [
+            'id'      => 'dm_media',
+            'type'    => 'media',
+            'section' => 'devmonsta_text_settings_section',
+            'label'   => __( 'Media', 'devmonsta' ),
+            "default" => 21
+        ] );
 
         /**
          * ===========================================
