@@ -16,6 +16,45 @@ class Post_Tag extends Taxonomies {
             'desc'  => 'use this area to input text',
             'label' => __( 'First name', '{domain}' ),
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'text_less',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition Text Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'f_name',
+                    'operator'     => '==',
+                    'value'        => "abc",
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'text_less',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition Text Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'f_name',
+                    'operator'     => '<',
+                    'value'        => 0,
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'text_less',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition Text Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'f_name',
+                    'operator'     => '>',
+                    'value'        => 0,
+                ],
+            ],
+        ] );
 
         /**
          * control for url input
@@ -27,6 +66,48 @@ class Post_Tag extends Taxonomies {
             'label' => __( 'Enter valid URL', '{domain}' ),
             'desc'  => __( 'Url Description', '{domain}' ),
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition url Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'user_url',
+                    'operator'     => '==',
+                    'value'        => "abc",
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_greater',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition url Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'user_url',
+                    'operator'     => '>',
+                    'value'        => 0,
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_less',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'user_url',
+                    'operator'     => '<',
+                    'value'        => 0,
+                ],
+            ],
+        ] );
+
 
         /**
          * control for radio input
@@ -44,6 +125,26 @@ class Post_Tag extends Taxonomies {
             ],
             'inline'  => false,
         ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Radio Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'gender',
+                    'operator'     => '==',
+                    'value'        => "choice-2",
+                ],
+                [
+                    'control_name' => 'gender',
+                    'operator'     => '==',
+                    'value'        => "choice-3",
+                ],
+            ],
+        ] );
 
         /**
          * control for textarea
@@ -55,6 +156,52 @@ class Post_Tag extends Taxonomies {
             'desc'  => 'use this area to input large text',
             'value' => 'default text area value',
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'txt_area',
+                    'operator'     => '==',
+                    'value'        => "abc",
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_greater',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'txt_area',
+                    'operator'     => '>',
+                    'value'        => 0,
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_less',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'txt_area',
+                    'operator'     => '<',
+                    'value'        => 0,
+                ],
+                [
+                    'control_name' => 'txt_area',
+                    'operator'     => '>',
+                    'value'        => 300,
+                ],
+            ],
         ] );
 
         /**
