@@ -215,6 +215,21 @@ class Post_Tag extends Taxonomies {
             'desc'  => __( "check if you're graduated", '{domain}' ),
             'text'  => __( 'Yes', '{domain}' ),
         ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Checkbox', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'graduate',
+                    'operator'     => '==',
+                    'value'        => true,
+                ],
+            ],
+        ] );
 
         /**
          * control for color-picker input
@@ -227,6 +242,26 @@ class Post_Tag extends Taxonomies {
             'value'    => '#FF0000',
             'palettes' => ['#ba4e4e', '#0ce9ed', '#941940'],
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Color Picker', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'color',
+                    'operator'     => '==',
+                    'value'        => "#ffffff",
+                ],
+                [
+                    'control_name' => 'color',
+                    'operator'     => '==',
+                    'value'        => "#0a0000",
+                ],
+            ],
+        ] );
+
 
         /**
          * control for multiple-checkbox input
@@ -247,6 +282,26 @@ class Post_Tag extends Taxonomies {
                 'choice-3' => __( 'Choice 3', '{domain}' ),
             ],
             'inline'  => false,
+        ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'multi_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Multi-checkbox', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'multiple_checkboxes[]',
+                    'operator'     => '==',
+                    'value'        => "choice-3",
+                ],
+                [
+                    'control_name' => 'multiple_checkboxes[]',
+                    'operator'     => '==',
+                    'value'        => "choice-2",
+                ],
+            ],
         ] );
 
         /**
@@ -275,6 +330,26 @@ class Post_Tag extends Taxonomies {
                 'choice-3' => __( 'Choice Three', '{domain}' ),
             ],
         ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Select', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'select',
+                    'operator'     => '==',
+                    'value'        => "choice-3",
+                ],
+                [
+                    'control_name' => 'select',
+                    'operator'     => '==',
+                    'value'        => "choice-2",
+                ],
+            ],
+        ] );
 
         /**
          * control for multiple select
@@ -294,6 +369,25 @@ class Post_Tag extends Taxonomies {
                 'choice-3' => __( 'Choice Three', '{domain}' ),
             ],
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on multiselect', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'select_multiple[]',
+                    'operator'     => '==',
+                    'value'        => "choice-3",
+                ],
+                [
+                    'control_name' => 'select_multiple[]',
+                    'operator'     => '==',
+                    'value'        => "choice-2",
+                ],
+            ],
+        ] );
 
         /**
          * control for upload input
@@ -304,6 +398,20 @@ class Post_Tag extends Taxonomies {
             'label'    => __( 'Upload Image', '{domain}' ),
             'desc'     => __( 'Description', '{domain}' ),
             'multiple' => true,
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'upload_image',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Upload', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'upload_image',
+                    'operator'     => '==',
+                    'value'        => 36,
+                ]
+            ],
         ] );
 
         /**
@@ -319,6 +427,48 @@ class Post_Tag extends Taxonomies {
                 'min'  => 0,
                 'max'  => 100,
                 'step' => 1,
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Slider Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'slider_widget',
+                    'operator'     => '==',
+                    'value'        => 50,
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_greater',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Slider Greater', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'slider_widget',
+                    'operator'     => '>',
+                    'value'        => 50,
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_less',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Slider Less', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'slider_widget',
+                    'operator'     => '<',
+                    'value'        => 50,
+                ],
             ],
         ] );
 
@@ -365,6 +515,39 @@ class Post_Tag extends Taxonomies {
             'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
             'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Date', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'start_date',
+                    'operator'     => '==',
+                    'value'        => '2020-07-10',
+                ],
+                [
+                    'control_name' => 'start_date',
+                    'operator'     => '==',
+                    'value'        => '2020-07-15',
+                ]
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Greater Date', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'start_date',
+                    'operator'     => '>',
+                    'value'        => '2020-07-25',
+                ],
+            ],
+        ] );
 
         /**
          * control for rgba-color-picker input
@@ -376,6 +559,20 @@ class Post_Tag extends Taxonomies {
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
             'value'    => 'rgba(255,25,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Rgba', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'rgba_color',
+                    'operator'     => '==',
+                    'value'        => 'rgba(220,250,255,0.95)',
+                ],
+            ],
         ] );
 
         /**
@@ -396,6 +593,40 @@ class Post_Tag extends Taxonomies {
                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
             ],
         ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'date_time_picker',
+                    'operator'     => '==',
+                    'value'        => '2020-06-15 10:00',
+                ],
+                [
+                    'control_name' => 'date_time_picker',
+                    'operator'     => '==',
+                    'value'        => '2020-06-10 12:00',
+                ],
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'date_time_picker',
+                    'operator'     => '>',
+                    'value'        => '2020-06-25 12:00',
+                ],
+            ],
+        ] );
+
 
         /**
          * control for datetime-range input
@@ -416,6 +647,25 @@ class Post_Tag extends Taxonomies {
                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'  => true,               // Show timepicker.
                 'defaultTime' => '12:00',            // If the input value is empty, timepicker will set time use defaultTime.
+            ],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal Date-range', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'date_time_range_picker',
+                    'operator'     => '==',
+                    'value'        => '2020-06-10 12:00 - 2020-06-18 12:00',
+                ],
+                [
+                    'control_name' => 'date_time_range_picker',
+                    'operator'     => '==',
+                    'value'        => '2020-06-10 12:00 to 2020-06-18 06:00',
+                ]
             ],
         ] );
 
@@ -532,6 +782,26 @@ class Post_Tag extends Taxonomies {
                 ],
             ],
         ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Image Picker', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'i_p',
+                    'operator'     => '==',
+                    'value'        => 'value-2',
+                ],
+                [
+                    'control_name' => 'i_p',
+                    'operator'     => '==',
+                    'value'        => 'value-5',
+                ],
+            ],
+        ] );
 
        /**
          * Control for switcher input
@@ -548,19 +818,22 @@ class Post_Tag extends Taxonomies {
             'right-choice' => [
                 'hello' => __( 'Hi', '{domain}' ),
             ],
-            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar'],
-            // 'conditions'   => [
-            //     [
-            //         'control_name' => 'setting_1',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            //     [
-            //         'control_name' => 'setting_3',
-            //         'operator'     => '==',
-            //         'value'        => true,
-            //     ],
-            // ],
+            'attr'         => ['class' => 'custom-class', 'data-foo' => 'bar']
+        ] );
+        $this->add_control( [
+            'box_id'     => 'post_box_2',
+            'type'       => 'text',
+            'name'       => 'url_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Equal', '{domain}' ),
+            'conditions' => [
+                [
+                    'control_name' => 'dm_switcher',
+                    'operator'     => '==',
+                    'value'        => 'goodbye',
+                ],
+            ],
         ] );
 
         /**
@@ -604,6 +877,25 @@ class Post_Tag extends Taxonomies {
             'label' => __( 'Select Icon', '{domain}' ),
             'desc'  => __( 'Select icon description', '{domain}' ),
             'attr'  => ['class' => 'custom-class', 'data-foo' => 'bar'],
+        ] );
+        $this->add_control( [
+            'type'       => 'text',
+            'name'       => 'oembed_equal',
+            'value'      => 'default text value',
+            'desc'       => 'use this area to input text',
+            'label'      => __( 'Condition on Icon with Equal', '{domain}' ),
+            'conditions' => [
+                // [
+                //     'control_name' => 'icon_picker',
+                //     'operator'     => '==',
+                //     'value'        => "fas fa-at",
+                // ],
+                [
+                    'control_name' => 'icon_picker',
+                    'operator'     => '==',
+                    'value'        => "fab fa-500px",
+                ],
+            ],
         ] );
 
         // dm_print(dm_taxonomy("2", "devmonsta_user_url"));
