@@ -30,6 +30,15 @@
 
 <body <?php body_class();?>>
 
+
+<?php 
+
+	//test post and customizer values here
+	// dm_print(dm_theme_option('slider_widget'));
+	// dm_print(dm_theme_option('dm_switcher'));
+
+?>
+
 <a class="screen-reader-text" href="#content">Skip to content</a>
 
 <header class="site-header">

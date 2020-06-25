@@ -202,8 +202,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'value'           => '10-05-2020 12:00',
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format'  => 'Y-m-d',            // Format datetime.
-                'time-format'  => 'H:i',              // Format datetime.
+                'date-format'  => 'Y-m-d H:i',              // Format datetime.
+                'time-24'      => false,
                 'min-date'     => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                 'max-date'     => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'   => true,               // Show timepicker.
@@ -225,8 +225,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'           => __( 'Date Time Range Picker', '{domain}' ),
             'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format' => 'Y-m-d',            // Format datetime.
-                'time-format' => 'H:i',              // Format datetime.
+                'date-format'  => 'Y-m-d H:i',              // Format datetime.
+                'time-24'      => true,
                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'  => true,               // Show timepicker.
@@ -259,7 +259,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'      => 'devmonsta_text_settings_section',
             'type'         => 'switcher',
             'id'           => 'dm_switcher',
-            'value'        => 'goodbye',
+            'value'        => 'hello',
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
             'left-choice'  => [
@@ -459,7 +459,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section'    => 'devmonsta_text_settings_section',
             'label'      => __( 'Wp Slider Example', '{domain}' ),
             'desc'       => __( 'description of slider goes here', '{domain}' ),
-            'value'      => 33,
+            'value'      => 68,
             'properties' => [
                 'min'  => 0,
                 'max'  => 100,
@@ -734,7 +734,6 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
         // format: dm_theme_option($option_name)
         // dm_print(dm_theme_option('dm_date_time'));
-        // dm_print(dm_theme_option('slider_widget'));
     }
 
 }

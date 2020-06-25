@@ -523,7 +523,7 @@ class Post extends Posts {
             'label'    => __( 'Upload Image Two', '{domain}' ),
             'desc'     => __( 'Description', '{domain}' ),
             'multiple' => true,
-            'value'    => '41'
+            'value'    => '41',
         ] );
         $this->add_control( [
             'box_id'     => 'post_box_2',
@@ -537,10 +537,9 @@ class Post extends Posts {
                     'control_name' => 'upload_image_two',
                     'operator'     => '==',
                     'value'        => 36,
-                ]
+                ],
             ],
         ] );
-
 
         /**
          * control for hidden input
@@ -552,7 +551,6 @@ class Post extends Posts {
             'name'   => 'hidden_field',
             'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
         ] );
-
 
         /**
          * control for slider input
@@ -707,7 +705,7 @@ class Post extends Posts {
                     'control_name' => 'start_date_one',
                     'operator'     => '==',
                     'value'        => '2020-07-15',
-                ]
+                ],
             ],
         ] );
         $this->add_control( [
@@ -737,8 +735,8 @@ class Post extends Posts {
             'label'           => __( 'Date Time Picker Two', '{domain}' ),
             'desc'            => __( 'date time picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format' => 'Y-m-d',            // Format datetime.
-                'time-format' => 'H:i',              // Format datetime.
+                'date-format' => 'Y-m-d H:i', // Format datetime.
+                'time-24'     => false,
                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'  => true,               // Show timepicker.
@@ -795,8 +793,8 @@ class Post extends Posts {
             'label'           => __( 'Date Time Range Three', '{domain}' ),
             'desc'            => __( 'date time range picker description', '{domain}' ),
             'datetime-picker' => [
-                'date-format' => 'Y-m-d',            // Format datetime.
-                'time-format' => 'H:i',              // Format datetime.
+                'date-format' => 'Y-m-d H:i', // Format datetime.
+                'time-24'     => false,
                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                 'timepicker'  => true,               // Show timepicker.
@@ -820,7 +818,7 @@ class Post extends Posts {
                     'control_name' => 'date_time_range_picker_three',
                     'operator'     => '==',
                     'value'        => '2020-06-10 12:00 to 2020-06-18 06:00',
-                ]
+                ],
             ],
         ] );
 
@@ -1016,7 +1014,7 @@ class Post extends Posts {
                             'name'   => 'text_name_child',
                             'value'  => 'default text value',
                             'desc'   => 'use this area to input text',
-                            'label'  => __( 'Text Input One', '{domain}' )
+                            'label'  => __( 'Text Input One', '{domain}' ),
                         ],
                         [
                             'box_id' => 'post_box_1',
@@ -1064,7 +1062,7 @@ class Post extends Posts {
                             ],
                             'label'  => __( 'Select Icon Three', '{domain}' ),
                             'desc'   => __( 'Select icon description', '{domain}' ),
-                            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
+                            'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
                         ],
                         [
                             'box_id'          => 'post_box_2',
@@ -1074,8 +1072,8 @@ class Post extends Posts {
                             'label'           => __( 'Date Time Picker Two', '{domain}' ),
                             'desc'            => __( 'date time picker description', '{domain}' ),
                             'datetime-picker' => [
-                                'date-format' => 'Y-m-d',            // Format datetime.
-                                'time-format' => 'H:i',              // Format datetime.
+                                'date-format' => 'Y-m-d H:i', // Format datetime.
+                                'time-24'     => true,
                                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                                 'timepicker'  => true,               // Show timepicker.
@@ -1312,8 +1310,8 @@ class Post extends Posts {
                             'label'           => __( 'Date Time Range Two', '{domain}' ),
                             'desc'            => __( 'date time range picker description', '{domain}' ),
                             'datetime-picker' => [
-                                'date-format' => 'Y-m-d',            // Format datetime.
-                                'time-format' => 'H:i',              // Format datetime.
+                                'date-format' => 'Y-m-d H:i', // Format datetime.
+                                'time-24'     => true,
                                 'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                                 'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                                 'timepicker'  => true,               // Show timepicker.
@@ -1330,7 +1328,7 @@ class Post extends Posts {
                             'monday-first' => true,         // The week will begin with Monday; for Sunday, set to false
                             'min-date'     => "10-05-2020", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                             'max-date'     => null,         // By default there is not maximum date. Set a date in format Y-m-d as a start date
-                        ]
+                        ],
                     ],
                 ],
                 [
@@ -1339,7 +1337,7 @@ class Post extends Posts {
                     'name'   => 'text_name',
                     'value'  => 'default text value',
                     'desc'   => 'use this area to input text',
-                    'label'  => __( 'Text Input One', '{domain}' )
+                    'label'  => __( 'Text Input One', '{domain}' ),
                 ],
                 [
                     'box_id' => 'post_box_1',
@@ -1387,7 +1385,7 @@ class Post extends Posts {
                     ],
                     'label'  => __( 'Select Icon Three', '{domain}' ),
                     'desc'   => __( 'Select icon description', '{domain}' ),
-                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar']
+                    'attr'   => ['class' => 'custom-class', 'data-foo' => 'bar'],
                 ],
                 [
                     'box_id'          => 'post_box_2',
@@ -1397,8 +1395,8 @@ class Post extends Posts {
                     'label'           => __( 'Date Time Picker Two', '{domain}' ),
                     'desc'            => __( 'date time picker description', '{domain}' ),
                     'datetime-picker' => [
-                        'date-format' => 'Y-m-d',            // Format datetime.
-                        'time-format' => 'H:i',              // Format datetime.
+                        'date-format' => 'Y-m-d H:i', // Format datetime.
+                        'time-24'     => true,
                         'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                         'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                         'timepicker'  => true,               // Show timepicker.
@@ -1658,8 +1656,8 @@ class Post extends Posts {
                     'label'           => __( 'Date Time Range Two', '{domain}' ),
                     'desc'            => __( 'date time range picker description', '{domain}' ),
                     'datetime-picker' => [
-                        'date-format' => 'Y-m-d',            // Format datetime.
-                        'time-format' => 'H:i',              // Format datetime.
+                        'date-format' => 'Y-m-d H:i', // Format datetime.
+                        'time-24'     => true,
                         'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                         'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                         'timepicker'  => true,               // Show timepicker.
@@ -1674,8 +1672,8 @@ class Post extends Posts {
                     'label'           => __( 'Date Time Picker Two', '{domain}' ),
                     'desc'            => __( 'date time picker description', '{domain}' ),
                     'datetime-picker' => [
-                        'date-format' => 'Y-m-d',            // Format datetime.
-                        'time-format' => 'H:i',              // Format datetime.
+                        'date-format' => 'Y-m-d H:i', // Format datetime.
+                        'time-24'     => true,
                         'min-date'    => "10-05-2020 12:00", // By default minimum date will be current day. Set a date in format Y-m-d as a start date
                         'max-date'    => null,               // By default there is not maximum date. Set a date in format Y-m-d as a start date
                         'timepicker'  => true,               // Show timepicker.
