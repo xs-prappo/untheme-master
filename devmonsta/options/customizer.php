@@ -61,7 +61,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_control( [
             'id'      => 'dm_ctrl_text_1',
             'type'    => 'text',
-            'label'   => __( 'Text Input', 'devmonsta' ),
+            'label'   => __( 'Devmonsta default Text Label', 'devmonsta' ),
+            'description' => __( 'This is a Text input desc.', 'devmonsta' ),
             "default"   => "hello hello chay pilo",
             'section' => 'devmonsta_text_settings_section',
         ] );
@@ -74,8 +75,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'checkbox',
             'default'   => true, // checked/unchecked
-            'label'   => __( 'Checkbox example', '{domain}' ),
-            'desc'    => __( "checkbox example details", '{domain}' ),
+            'label'   => __( 'Devmonsta default Checkbox label', '{domain}' ),
+            'description' => __( 'This is a Checkbox input desc.', 'devmonsta' ),
             'text'    => __( 'Yes', '{domain}' ),
         ] );
 
@@ -85,8 +86,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_control( [
             'type'        => 'radio',
             'id'          => 'dm_test_readio',
-            'label'       => __( 'Custom Radio Selection' ),
-            'description' => __( 'This is a custom radio input.' ),
+            'label'       => __( 'Radio Selection label', 'devmonsta' ),
+            'description' => __( 'This is a custom radio input desc.', 'devmonsta' ),
             'default'   => 'blue',
             'choices'     => [
                 'red'   => __( 'Red' ),
@@ -104,8 +105,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'select',
             'default'   => 'choice-1',
-            'label'   => __( 'Select Single', '{domain}' ),
-            'desc'    => __( 'select description goes here', '{domain}' ),
+            'label'   => __( 'Select Single label', '{domain}' ),
+            'description'    => __( 'select description goes here', '{domain}' ),
             'choices' => [
                 ''         => '---',
                 'choice-1' => __( 'Choice One', '{domain}' ),
@@ -121,8 +122,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'          => 'dm_textarea',
             'type'        => 'textarea',
             'section'     => 'devmonsta_text_settings_section',
-            'label'       => __( 'Text area' ),
-            'description' => __( 'This is text area desctription' ),
+            'label'       => __( 'Text area label' ),
+            'description' => __( 'This is text area desctription', 'devmonsta' ),
             "default"       => 'default value for text area',
         ] );
 
@@ -133,7 +134,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'          => 'dm_dropdown_pages',
             'type'        => 'dropdown-pages',
             'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
-            'label'       => __( 'Custom Dropdown Pages' ),
+            'label'       => __( 'Custom Dropdown Pages label', 'devmonsta' ),
             'description' => __( 'This is a custom dropdown pages option.' ),
         ] );
 
@@ -145,8 +146,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'url',
             'default'   => 'http://www.xs.com',
-            'label'   => __( 'Enter valid URL', '{domain}' ),
-            'desc'    => __( 'Url Description', '{domain}' ),
+            'label'   => __( 'Enter valid URL label', '{domain}' ),
+            'description'    => __( 'Url Description', '{domain}' ),
         ] );
 
 
@@ -157,7 +158,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'      => 'dm_media',
             'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
-            'label'   => __( 'Media', 'devmonsta' ),
+            'label'   => __( 'Media label', 'devmonsta' ),
+            'description' => __( 'Media description goes here', 'devmonsta' ),
             "default" => 21
         ] );
 
