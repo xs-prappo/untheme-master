@@ -15,16 +15,39 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'description'    => __( 'Devmonsta options panel', 'devmonsta' ),
         ] );
 
+        $this->add_panel([
+            'id'             => 'banner',
+            'title'          => __('banner settings', 'sassico'),
+            'panel'    => 'devmonsta_panel',
+        ]);
+
+        $this->add_section([
+            'id'       => 'abc',
+            'title'    => __('General Settings', 'sassico'),
+            'panel'    => 'banner',
+            'priority' => 10,
+        ]);
+        $this->add_control([
+            'id'      => 'logo',
+            'type'    => 'media',
+            'description' => 'some descriptin',
+            'section' => 'abc',
+            'label'   => esc_html__('Main Logo', 'sassico'),
+            'desc'   => esc_html__("It's the main logo, mostly it will be shown on dark or coloreful type area.
+            ", 'sassico'),
+        ]);
+
+        $this->add_panel([
+            'id'             => 'l_2',
+            'title'          => 'Level 2',
+            'panel'          => 'devmonsta_panel',
+        ]);
+
         /**
          * Sections will go inside panel
          * sections will hold controls
          */
-        $this->add_section( [
-            'id'       => 'devmonsta_color_settings_section',
-            'title'    => __( 'Box settings', 'devmonsta' ),
-            'panel'    => 'devmonsta_panel',
-            'priority' => 10,
-        ] );
+
 
         $this->add_section( [
             'id'       => 'devmonsta_text_settings_section',
@@ -49,12 +72,25 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
 
 
+        $this->add_section([
+            'id'       => 'test_level',
+            'title'    => 'Level',
+            'panel'    => 'l_2',
+        ]);
+
+        $this->add_control([
+            'id'       => 'lvl_control_1',
+            'label'    => 'Text',
+            'type'     => 'text',
+            'section'  => 'test_level',
+        ]);
+
         /**
          * ===========================================
          *      Customizer default control start
          * ===========================================
          */
-        
+
         /**
          * Control for text input
          */
@@ -515,7 +551,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'label'      => __( 'Typhography', '{domain}' ),
             'desc'       => __( 'Description', '{domain}' ),
         ] );
-        
+
         /**
          * ===========================================
          *      Custom control end
