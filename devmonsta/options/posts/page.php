@@ -40,7 +40,7 @@ class Page extends Posts{
             'desc'   => __( 'Url Description', '{domain}' ),
         ] );
 
-        // dm_print(dm_meta('18', 'f_name_1'));
+        // devm_print(devm_meta('18', 'f_name_1'));
     }
 
 }

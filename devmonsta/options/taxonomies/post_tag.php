@@ -808,7 +808,7 @@ class Post_Tag extends Taxonomies {
          */
         $this->add_control( [
             'type'         => 'switcher',
-            'name'         => 'dm_switcher',
+            'name'         => 'devm_switcher',
             'value'        => 'hello',
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
@@ -829,7 +829,7 @@ class Post_Tag extends Taxonomies {
             'label'      => __( 'Condition on Equal', '{domain}' ),
             'conditions' => [
                 [
-                    'control_name' => 'dm_switcher',
+                    'control_name' => 'devm_switcher',
                     'operator'     => '==',
                     'value'        => 'goodbye',
                 ],
@@ -872,7 +872,7 @@ class Post_Tag extends Taxonomies {
             'type'  => 'icon',
             'value'  => [
                 'icon' => 'fas fa-at',
-                'type' => 'dm-font-awesome',
+                'type' => 'devm-font-awesome',
             ],
             'label' => __( 'Select Icon', '{domain}' ),
             'desc'  => __( 'Select icon description', '{domain}' ),
@@ -898,7 +898,7 @@ class Post_Tag extends Taxonomies {
             ],
         ] );
 
-        // dm_print(dm_taxonomy("2", "devmonsta_user_url"));
+        // devm_print(devm_taxonomy("2", "devmonsta_user_url"));
 
     }
 

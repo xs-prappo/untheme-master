@@ -57,14 +57,14 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
         $this->add_section( [
-            'id'       => 'dm_repeater_section',
+            'id'       => 'devm_repeater_section',
             'title'    => 'Devmonsta repeater section',
             'panel'    => 'devmonsta_panel',
             'priority' => 10,
         ] );
 
         $this->add_section( [
-            'id'       => 'dm_new_controls',
+            'id'       => 'devm_new_controls',
             'title'    => 'New controls',
             'panel'    => 'devmonsta_panel',
             'priority' => 10,
@@ -95,7 +95,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * Control for text input
          */
         $this->add_control( [
-            'id'      => 'dm_ctrl_text_1',
+            'id'      => 'devm_ctrl_text_1',
             'type'    => 'text',
             'label'   => __( 'Devmonsta default Text Label', 'devmonsta' ),
             'description' => __( 'This is a Text input desc.', 'devmonsta' ),
@@ -107,7 +107,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * control for checkbox input
          */
         $this->add_control( [
-            'id'      => 'dm_checkbox',
+            'id'      => 'devm_checkbox',
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'checkbox',
             'default'   => true, // checked/unchecked
@@ -121,7 +121,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          */
         $this->add_control( [
             'type'        => 'radio',
-            'id'          => 'dm_test_readio',
+            'id'          => 'devm_test_readio',
             'label'       => __( 'Radio Selection label', 'devmonsta' ),
             'description' => __( 'This is a custom radio input desc.', 'devmonsta' ),
             'default'   => 'blue',
@@ -155,7 +155,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * control for textarea input
          */
         $this->add_control( [
-            'id'          => 'dm_textarea',
+            'id'          => 'devm_textarea',
             'type'        => 'textarea',
             'section'     => 'devmonsta_text_settings_section',
             'label'       => __( 'Text area label' ),
@@ -167,7 +167,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * Control for dropdown-page input
          */
         $this->add_control( [
-            'id'          => 'dm_dropdown_pages',
+            'id'          => 'devm_dropdown_pages',
             'type'        => 'dropdown-pages',
             'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
             'label'       => __( 'Custom Dropdown Pages label', 'devmonsta' ),
@@ -178,7 +178,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * control for url input
          */
         $this->add_control( [
-            'id'      => 'dm_url',
+            'id'      => 'devm_url',
             'section' => 'devmonsta_text_settings_section',
             'type'    => 'url',
             'default'   => 'http://www.xs.com',
@@ -191,7 +191,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * Control for media-select input
          */
         $this->add_control( [
-            'id'      => 'dm_media',
+            'id'      => 'devm_media',
             'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
             'label'   => __( 'Media label', 'devmonsta' ),
@@ -233,7 +233,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
          * control for datetime-picker input
          */
         $this->add_control( [
-            'id'              => 'dm_date_time',
+            'id'              => 'devm_date_time',
             'section'         => 'devmonsta_text_settings_section',
             'type'            => 'datetime-picker',
             'label'           => __( 'Date Time Picker', '{domain}' ),
@@ -296,7 +296,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_control( [
             'section'      => 'devmonsta_text_settings_section',
             'type'         => 'switcher',
-            'id'           => 'dm_switcher',
+            'id'           => 'devm_switcher',
             'value'        => 'hello',
             'label'        => __( 'Switcher', '{domain}' ),
             'desc'         => __( 'Description', '{domain}' ),
@@ -468,7 +468,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'     => 'rgba-color-picker',
             'label'    => __( 'Wp RGBA Color Picker Example', '{domain}' ),
             'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
-            'value'    => 'rgba(255,255,0,0.95)',
+            'value'    => 'rgba(255,20,0,0.95)',
             'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
         ] );
 
@@ -481,7 +481,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'type'    => 'icon',
             'value'  => [
                 'icon' => 'fas fa-at',
-                'type' => 'dm-font-awesome',
+                'type' => 'devm-font-awesome',
             ],
             'label'   => __( 'Select Icon', '{domain}' ),
             'desc'    => __( 'Select icon description', '{domain}' ),
@@ -563,23 +563,23 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         // New controls
 
         $this->add_control( [
-            'id'      => 'dm_toggle',
+            'id'      => 'devm_toggle',
             'label'   => __( 'Toggle', 'devmonsta' ),
-            'section' => 'dm_new_controls',
+            'section' => 'devm_new_controls',
             'type'    => 'toggle',
         ] );
 
         $this->add_control( [
-            'id'      => 'dm_accordion',
+            'id'      => 'devm_accordion',
             'lable'   => __( 'Accordion', 'devmonsta' ),
-            'section' => 'dm_new_controls',
+            'section' => 'devm_new_controls',
             'type'    => 'toggle',
         ] );
 
         $this->add_control( [
-            'id'          => 'dm_accordion',
+            'id'          => 'devm_accordion',
             'lable'       => __( 'Accordion', 'devmonsta' ),
-            'section'     => 'dm_new_controls',
+            'section'     => 'devm_new_controls',
             'type'        => 'accordion',
             'description' => [
                 'Title' => 'Sotry fo title',
@@ -587,9 +587,9 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
         $this->add_control( [
-            'id'          => 'dm_html_editor',
+            'id'          => 'devm_html_editor',
             'lable'       => __( 'HTML Editor', 'devmonsta' ),
-            'section'     => 'dm_new_controls',
+            'section'     => 'devm_new_controls',
             'type'        => 'html-editor',
         ] );
 
@@ -597,7 +597,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'              => 'devmonsta_repeater_control',
             'label'           => 'List',
             'type'            => 'repeater',
-            'section'         => 'dm_repeater_section',
+            'section'         => 'devm_repeater_section',
             'add_button_text' => __( 'Add new', 'devmonsta' ),
             'fields'          => [
                 [
@@ -639,7 +639,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
                 ],
                 [
-                    'id'          => 'dm_sum_test_control_kk',
+                    'id'          => 'devm_sum_test_control_kk',
                     'type'        => 'test-control',
                     'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
                     'label'       => __( 'Custom Dropdown Pages' ),
@@ -647,7 +647,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 ],
                 [
                     'type'        => 'radio',
-                    'id'          => 'dm_test_readio_for_repeater',
+                    'id'          => 'devm_test_readio_for_repeater',
                     'label'       => __( 'Custom Radio Selection' ),
                     'description' => __( 'This is a custom radio input.' ),
                     'choices'     => [
@@ -664,7 +664,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'              => 'devmonsta_repeater_popup_control',
             'label'           => 'Popup',
             'type'            => 'addable-popup',
-            'section'         => 'dm_repeater_section',
+            'section'         => 'devm_repeater_section',
             'add_button_text' => __( 'Add new', 'devmonsta' ),
             'fields'          => [
                 [
@@ -706,7 +706,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
 
                 ],
                 [
-                    'id'          => 'dm_sum_test_control_kk_popup',
+                    'id'          => 'devm_sum_test_control_kk_popup',
                     'type'        => 'test-control',
                     'section'     => 'devmonsta_text_settings_section', // Add a default or your own section
                     'label'       => __( 'Custom Dropdown Pages' ),
@@ -714,7 +714,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
                 ],
                 [
                     'type'        => 'radio',
-                    'id'          => 'dm_test_readio_for_repeater_popup',
+                    'id'          => 'devm_test_readio_for_repeater_popup',
                     'label'       => __( 'Custom Radio Selection' ),
                     'description' => __( 'This is a custom radio input.' ),
                     'choices'     => [
@@ -744,14 +744,14 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
         $control_1 = [
-            'id'      => 'dm_media',
+            'id'      => 'devm_media',
             'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
             'label'   => __( 'Media' ),
         ];
 
         $control_2 = [
-            'id'      => 'dm_media',
+            'id'      => 'devm_media',
             'type'    => 'media',
             'section' => 'devmonsta_text_settings_section',
             'label'   => __( 'Media' ),
@@ -770,8 +770,8 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         ] );
 
 
-        // format: dm_theme_option($option_name)
-        // dm_print(dm_theme_option('dm_date_time'));
+        // format: devm_theme_option($option_name)
+        // devm_print(devm_theme_option('devm_date_time'));
     }
 
 }

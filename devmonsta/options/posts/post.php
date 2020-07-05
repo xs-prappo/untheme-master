@@ -204,7 +204,7 @@ class Post extends Posts {
             'type'   => 'icon',
             'value'  => [
                 'icon' => 'fas fa-at',
-                'type' => 'dm-font-awesome',
+                'type' => 'devm-font-awesome',
             ],
             'label'  => __( 'Select Icon Three', '{domain}' ),
             'desc'   => __( 'Select icon description', '{domain}' ),
@@ -1058,7 +1058,7 @@ class Post extends Posts {
                             'type'   => 'icon',
                             'value'  => [
                                 'icon' => 'fas fa-at',
-                                'type' => 'dm-font-awesome',
+                                'type' => 'devm-font-awesome',
                             ],
                             'label'  => __( 'Select Icon Three', '{domain}' ),
                             'desc'   => __( 'Select icon description', '{domain}' ),
@@ -1381,7 +1381,7 @@ class Post extends Posts {
                     'type'   => 'icon',
                     'value'  => [
                         'icon' => 'fas fa-at',
-                        'type' => 'dm-font-awesome',
+                        'type' => 'devm-font-awesome',
                     ],
                     'label'  => __( 'Select Icon Three', '{domain}' ),
                     'desc'   => __( 'Select icon description', '{domain}' ),
@@ -1683,9 +1683,9 @@ class Post extends Posts {
             ],
         ] );
 
-        //format: dm_meta($post_id, $option_id, $default_value= null)
-        // dm_print(dm_meta('15', 'color_two'));
-        // dm_print(dm_meta('15', 'oembed_field_one'));
+        //format: devm_meta($post_id, $option_id, $default_value= null)
+        // devm_print(devm_meta('15', 'color_two'));
+        // devm_print(devm_meta('15', 'oembed_field_one'));
 
     }
 
