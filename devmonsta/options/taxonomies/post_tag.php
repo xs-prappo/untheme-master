@@ -678,22 +678,22 @@ class Post_Tag extends Taxonomies {
             'label'      => __( 'Wp Gradient Picker Example', '{domain}' ),
             'desc'       => __( 'description of gradient-picker goes here', '{domain}' ),
             'value'      => [
-                'primary'   => '#FF0000',
+                'primary'   => '#F36066',
                 'secondary' => '#0000FF',
             ],
-            'conditions' => [
-                [
-                    'control_name' => 'setting_1',
-                    'operator'     => '==',
-                    'value'        => true,
+            // 'conditions' => [
+            //     [
+            //         'control_name' => 'setting_1',
+            //         'operator'     => '==',
+            //         'value'        => true,
 
-                ],
-                [
-                    'control_name' => 'setting_3',
-                    'operator'     => '==',
-                    'value'        => true,
-                ],
-            ],
+            //     ],
+            //     [
+            //         'control_name' => 'setting_3',
+            //         'operator'     => '==',
+            //         'value'        => true,
+            //     ],
+            // ],
         ] );
 
         /**
