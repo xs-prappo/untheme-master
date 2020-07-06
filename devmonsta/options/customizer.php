@@ -18,7 +18,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_panel([
             'id'             => 'banner',
             'title'          => __('banner settings', 'sassico'),
-            'panel'    => 'devmonsta_panel',
+            'panel'          => 'devmonsta_panel',
         ]);
 
         $this->add_section([
@@ -27,6 +27,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'panel'    => 'banner',
             'priority' => 10,
         ]);
+
         $this->add_control([
             'id'      => 'logo',
             'type'    => 'media',
@@ -41,6 +42,12 @@ class Customizer extends \Devmonsta\Libs\Customizer {
             'id'             => 'l_2',
             'title'          => 'Level 2',
             'panel'          => 'devmonsta_panel',
+        ]);
+
+        $this->add_panel([
+            'id'        => 'l_3',
+            'title'     => 'Level 3',
+            'panel'     => 'l_2',
         ]);
 
         /**
@@ -75,7 +82,7 @@ class Customizer extends \Devmonsta\Libs\Customizer {
         $this->add_section([
             'id'       => 'test_level',
             'title'    => 'Level',
-            'panel'    => 'l_2',
+            'panel'    => 'l_3',
         ]);
 
         $this->add_control([
