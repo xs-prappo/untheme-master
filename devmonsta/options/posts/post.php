@@ -645,19 +645,6 @@ class Post extends Posts {
             'name'   => 'html_one',
             'value'  => 'My <b>custom</b> <em>HTML</em> <i>Italic<i> <p>Paragraph</p>',
         ] );
-
-        /**
-         * control for rgba-color-picker input
-         */
-        $this->add_control( [
-            'box_id'   => 'post_box_2',
-            'name'     => 'rgba_color_two',
-            'type'     => 'rgba-color-picker',
-            'label'    => __( 'Wp RGBA Color Picker Two', '{domain}' ),
-            'desc'     => __( 'description of rgba-color-picker goes here', '{domain}' ),
-            'value'    => 'rgba(255,25,255,0.95)',
-            'palettes' => ['#ba4e4e', '#5f9419', '#381994'],
-        ] );
         $this->add_control( [
             'box_id'     => 'post_box_2',
             'type'       => 'text',
@@ -1532,17 +1519,6 @@ class Post extends Posts {
                     'multiple' => true,
                 ],
                 [
-                    'box_id'        => 'post_box_2',
-                    'name'          => 'wp_editor_repeater',
-                    'type'          => 'wp-editor',
-                    'value'         => 'default value',
-                    'label'         => __( 'Wp Editor Two', '{domain}' ),
-                    'desc'          => __( 'description of wp-editor goes here', '{domain}' ),
-                    'editor_height' => 200,
-                    'wpautop'       => true,
-                    'editor_type'   => false, // tinymce, false: HTML
-                ],
-                [
                     'box_id' => 'post_box_2',
                     'name'   => 'gradient_two_repeater',
                     'type'   => 'gradient',
@@ -1552,18 +1528,6 @@ class Post extends Posts {
                         'primary'   => '#FF0000',
                         'secondary' => '#0000FF',
                     ],
-                    // 'conditions' => [
-                    //     [
-                    //         'control_name'  => 'setting_1',
-                    //         'operator' => '==',
-                    //         'value' => true,
-                    //     ],
-                    //     [
-                    //         'control_name'  => 'setting_3',
-                    //         'operator' => '==',
-                    //         'value' => true,
-                    //     ],
-                    // ],
                 ],
                 [
                     'box_id'  => 'post_box_2',
